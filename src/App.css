@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #FFFFFF;
+}
+
 .Header {
   display: flex;
   justify-content: space-between;
@@ -81,4 +85,75 @@
   font-weight: 600;
   font-size: 24px;
   text-decoration: underline;
+}
+
+.News-container {
+  width: 100%;
+}
+
+.News-tip {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: row;
+  text-decoration: none;
+}
+.News-tip .box {
+  flex-basis: 46%;
+  height: 100%;
+}
+.News-tip .box .box-text {
+  margin: 17px 0px;
+  color: #d30000;
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 21px;
+}
+.News-tip .box .box-header {
+  width: 100%;
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 10px;
+}
+.News-tip .box .box-hint {
+  width: 100%;
+  color: grey;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 13px;
+}
+.News-tip .box .news-writer {
+  margin-bottom: 10px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17px;
+  color: grey;
+}
+.News-tip .box .news-date {
+  color: #707070;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.News-tip .box-special {
+  height: 360px;
+}
+.News-tip .box-special img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.News-tip .box-message {
+  padding-left: 30px;
 }/*# sourceMappingURL=App.css.map */
