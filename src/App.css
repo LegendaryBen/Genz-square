@@ -1,0 +1,50 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  height: 90px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+}
+.Header span {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  transform: translateX(50px);
+}
+.Header .subscribe {
+  display: flex;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+}
+.Header .subscribe .sub-children {
+  margin-left: 30px;
+}
+.Header .subscribe .sub-btn {
+  text-decoration: none;
+  background-color: #d30000;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 19px;
+  transition: 300ms;
+}
+.Header .subscribe .sub-btn:hover {
+  background-color: darkred;
+}
+.Header .subscribe .sign-in {
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 19px;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,35 @@
+@mixin flex{
+    display:flex;
+}
+
+@mixin flexDirection($direction){
+    flex-direction:$direction;
+}
+
+@mixin justify($position){
+    justify-content:$position;
+}
+
+@mixin align($position){
+    align-items:$position;
+}
+
+@mixin border($properties...){
+    border:$properties;
+}
+
+@mixin padding($properties...){
+    padding:$properties;
+}
+
+@mixin margin($properties...){
+    margin:$properties;
+}
+
+@mixin archivo{
+    font-family: 'Archivo', sans-serif;
+}
+
+@mixin clash{
+    font-family: 'Clash Display', sans-serif;
+}

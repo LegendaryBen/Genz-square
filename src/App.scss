@@ -1,0 +1,33 @@
+@import "./partials/reset";
+@import "./partials/mixins";
+@import "./partials/variables";
+
+*,*::after,*::before{
+    @include reset;
+}
+
+.Header{
+    @include flex;@include justify(space-between);@include align(center);@include padding(20px 80px);
+    height:90px;width:100%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);background-color:$white-btn;
+    span{
+        @include clash;font-weight:600;font-size:24px;line-height:29px;transform:translateX(50px)
+    }
+    .subscribe{
+        @include flex;@include align(center);@include archivo;
+        .sub-children{
+            margin-left:30px;
+        }
+        .sub-btn{
+            text-decoration:none;background-color:$red-btn;color:$white-btn;@include padding(15px 30px);
+            font-weight:600;font-size:18px;line-height:19px;transition:300ms;
+            &:hover{
+                background-color:$dark-red;
+            }
+        }
+        .sign-in{
+            color:$black;font-weight:600;font-size:18px;line-height:19px;
+        }
+    }
+}
+
+
