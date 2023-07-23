@@ -13,7 +13,7 @@ body{
 .Header{
     @include flex;@include justify(space-between);@include align(center);@include padding(20px 80px);
     height:90px;width:100%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);background-color:$white-btn;
-    position:fixed;top:0;left:0;right:0;
+    position:fixed;top:0;left:0;right:0;z-index:100;
     span{
         @include clash;font-weight:600;font-size:24px;line-height:29px;transform:translateX(50px)
     }
@@ -80,7 +80,7 @@ body{
     .box-special{
         height:360px;
         img{
-            width:100%;height:100%;object-fit:contain;
+            width:100%;height:100%;object-fit:cover;
         }
     }
     .box-message{
@@ -91,7 +91,7 @@ body{
 
 .News-slides{
     width:100%;height:280px;@include flex;
-    margin-top:50px;overflow:auto;
+    margin-top:50px;overflow:hidden;padding-bottom:10px;
     
 }
 
@@ -104,7 +104,7 @@ body{
         @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
 
         &:hover{
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 4px 0px  rgba(0, 0, 0, 0.2);
         }
     }
 
@@ -141,3 +141,94 @@ body{
         object-fit: cover;
     }
 }
+
+
+.arrow-parent-container{
+    width:100%;height:40px;@include flex;@include justify(center);@include align(center);
+    padding-top:20px;margin-top:10px;
+    .arrow-container{
+        flex-basis:10%;height:100%;@include flex;@include justify(space-between);
+        @include align(center);
+    }
+}
+
+
+.New-magazine{
+    width:100%;margin-top:100px;position:relative;background-color:$white2;padding-left:60px;
+    .new{
+        position: absolute;top:-70px;left:70px;
+    }
+    .magazine{
+        width:352px;text-align: center;height:100%;@include clash;font-size: 36px;font-weight: 600;
+        line-height: 44px;white-space:nowrap;
+        .fancy{
+            height:39px;width:352px;
+        }
+    }
+}
+
+
+.Magazine-cover{
+    width:100%;height:720px;background-color:$white2;@include flex;
+    .cover{
+        height:100%;
+    }
+    .main-cover{
+        @include flex;@include justify(flex-end);padding-right:100px;flex-basis:45%;padding-top:40px;
+        .img-cover1{
+            height:550px;width:388px;
+            .img-cover{
+                height:100%;width:100%;object-fit: cover;
+            }
+            .month{
+                @include clash;font-size: 24px;font-weight: 600;line-height: 30px;margin-top:10px;
+            }
+        }
+    }
+}
+
+
+.cover-details{
+    padding-right:40px;flex-basis:55%;
+    .logo{
+        @include flex;@include clash;font-size: 40px;font-weight: 600;line-height: 59px;
+        margin-bottom:15px;padding-top:20px;@include align(center);
+        img{
+            margin-right:10px;height:60px;width:60px;object-fit: contain;
+        }
+    }
+    .month-sales{
+        @include clash;font-size: 30px;font-weight: 600;line-height:30px;color:$green;margin-bottom:15px;
+    }
+
+    .access{
+        @include clash;font-size: 33px;font-weight: 600;line-height:35px;color:$black;
+        margin-bottom:50px;
+    }
+
+    .access-special{
+        color:$green;
+    }
+    
+    ul{
+        padding-left:17px;margin-bottom:50px;
+        li{
+            @include archivo;font-size: 20px;font-weight: 400;line-height: 22px;color:$black;margin-bottom:20px;
+        }
+    }
+
+    .code{
+        @include archivo;font-size: 20px;font-weight: 400;line-height: 22px;color:$black;
+        margin-bottom:40px;
+        .code-special{
+            color:$green;
+        }
+    }
+
+    a{
+        @include flex;@include justify(center);@include align(center);height:50px;
+        background-color:$green;color:$white-btn;text-decoration:none;width:250px;
+        @include archivo;font-size: 20px;font-weight: 600;line-height: 22px;
+    }
+}
+

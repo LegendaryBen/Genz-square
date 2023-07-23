@@ -21,6 +21,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
 }
 .Header span {
   font-family: "Clash Display", sans-serif;
@@ -152,7 +153,7 @@ body {
 .News-tip .box-special img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .News-tip .box-message {
   padding-left: 30px;
@@ -163,7 +164,8 @@ body {
   height: 280px;
   display: flex;
   margin-top: 50px;
-  overflow: auto;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .Slides {
@@ -234,4 +236,158 @@ body {
 }
 .Slides img {
   object-fit: cover;
+}
+
+.arrow-parent-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+.arrow-parent-container .arrow-container {
+  flex-basis: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.New-magazine {
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  background-color: #FAFAFA;
+  padding-left: 60px;
+}
+.New-magazine .new {
+  position: absolute;
+  top: -70px;
+  left: 70px;
+}
+.New-magazine .magazine {
+  width: 352px;
+  text-align: center;
+  height: 100%;
+  font-family: "Clash Display", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  white-space: nowrap;
+}
+.New-magazine .magazine .fancy {
+  height: 39px;
+  width: 352px;
+}
+
+.Magazine-cover {
+  width: 100%;
+  height: 720px;
+  background-color: #FAFAFA;
+  display: flex;
+}
+.Magazine-cover .cover {
+  height: 100%;
+}
+.Magazine-cover .main-cover {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  flex-basis: 45%;
+  padding-top: 40px;
+}
+.Magazine-cover .main-cover .img-cover1 {
+  height: 550px;
+  width: 388px;
+}
+.Magazine-cover .main-cover .img-cover1 .img-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.Magazine-cover .main-cover .img-cover1 .month {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.cover-details {
+  padding-right: 40px;
+  flex-basis: 55%;
+}
+.cover-details .logo {
+  display: flex;
+  font-family: "Clash Display", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 59px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  align-items: center;
+}
+.cover-details .logo img {
+  margin-right: 10px;
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+.cover-details .month-sales {
+  font-family: "Clash Display", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #00C24E;
+  margin-bottom: 15px;
+}
+.cover-details .access {
+  font-family: "Clash Display", sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 35px;
+  color: black;
+  margin-bottom: 50px;
+}
+.cover-details .access-special {
+  color: #00C24E;
+}
+.cover-details ul {
+  padding-left: 17px;
+  margin-bottom: 50px;
+}
+.cover-details ul li {
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  color: black;
+  margin-bottom: 20px;
+}
+.cover-details .code {
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  color: black;
+  margin-bottom: 40px;
+}
+.cover-details .code .code-special {
+  color: #00C24E;
+}
+.cover-details a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #00C24E;
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 250px;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
 }/*# sourceMappingURL=App.css.map */
