@@ -390,4 +390,45 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 22px;
+}
+
+.Stories {
+  width: 100%;
+  height: 50px;
+  margin-top: 110px;
+  padding-left: 60px;
+  font-family: "Clash Display", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.Stories-button-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 60px;
+  padding-right: 30px;
+}
+.Stories-button-container .Story-buttons {
+  width: 140px;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 300ms;
+  border: 1px solid #CCCCCC;
+  margin-right: 50px;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  color: black;
+  margin-bottom: 15px;
+}
+.Stories-button-container .Story-buttons:hover {
+  background-color: #00C24E;
+  color: #FFFFFF;
 }/*# sourceMappingURL=App.css.map */

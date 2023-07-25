@@ -1,12 +1,12 @@
 import React from 'react'
 import Arrow from './Arrow'
-import fancy from '../images/fancy.svg';
 
-const Magazine = ({text}) => {
+
+const Magazine = ({text,image}) => {
     return (
         <div className='magazine'>
             <span>{text}</span><br/>
-            <Arrow image={fancy} cls="fancy"/>
+            <Arrow image={image} cls="fancy"/>
         </div>
     )
 }
