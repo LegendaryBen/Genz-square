@@ -9,7 +9,7 @@ const News_tip2 = (props) => {
         <div className='News-container'>
             <div to="/" className='News-tip2'>
                 <div className='box-special1'>
-                    <img src={box} a />
+                    <img src={box}  />
                 </div>
                 <Message2/>
             </div>

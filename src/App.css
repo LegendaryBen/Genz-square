@@ -549,4 +549,81 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 22px;
+}
+
+.Magazine-snippets-container {
+  width: 100%;
+  height: 480px;
+  margin-top: 60px;
+  padding: 0px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Magazine-snippets-container .snippets-container {
+  flex-basis: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets {
+  height: 100%;
+  flex-basis: 24%;
+  background-color: #FAFAFA;
+  text-decoration: none;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-img {
+  width: 100%;
+  height: 45%;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info {
+  padding: 0px 10px;
+  padding-top: 10px;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippets-topic {
+  color: #d30000;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  margin-bottom: 10px;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-msg {
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-id {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-id img {
+  margin-right: 10px;
+  object-fit: contain;
+  height: 24px;
+  width: 24px;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-id span {
+  font-family: "Clash Display", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: black;
+}
+.Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-date {
+  color: #707070;
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
 }/*# sourceMappingURL=App.css.map */
