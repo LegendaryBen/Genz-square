@@ -626,4 +626,133 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 13px;
+}
+
+.Footer {
+  width: 100%;
+  background-color: #FAFAFA;
+  margin-top: 100px;
+  padding: 40px 60px;
+}
+.Footer .News-letter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+.Footer .News-letter .News-letter-one .letter-topic {
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+.Footer .News-letter .News-letter-one .letter-info {
+  color: #707070;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.Footer .News-letter .Subcribe-now {
+  display: flex;
+  align-items: center;
+}
+.Footer .News-letter .Subcribe-now .subscribe-email {
+  margin-right: 10px;
+  width: 310px;
+  height: 49px;
+  padding: 7px;
+  border: 1px solid #CCCCCC;
+  display: flex;
+  align-items: center;
+}
+.Footer .News-letter .Subcribe-now .subscribe-msg {
+  width: 100%;
+}
+.Footer .News-letter .Subcribe-now .subscribe-msg input {
+  outline: none;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  width: 100%;
+  padding: 10px 10px;
+  border: none;
+}
+.Footer .News-letter .Subcribe-now .sub-msg {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  margin-right: 1px;
+}
+.Footer .News-letter .Subcribe-now .submit {
+  outline: none;
+  padding: 14px 30px;
+  transition: 300ms;
+  background-color: #d30000;
+  border: none;
+  color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.Footer .News-letter .Subcribe-now .submit:hover {
+  background-color: darkred;
+}
+.Footer .News-letter .News-letter-two {
+  display: flex;
+}
+.Footer .News-letter .News-letter-two .details {
+  margin-left: 40px;
+}
+.Footer .News-letter .News-letter-two .name {
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-family: Clash Display;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 25px;
+}
+.Footer .News-letter .News-letter-two .podcast {
+  color: #707070;
+  font-family: "Archivo", sans-serif;
+  font-family: Archivo;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 15px;
+}
+.Footer .News-letter .News-letter-two .podcast1 {
+  color: #707070;
+}
+.Footer .News-letter .News-letter-two a {
+  text-decoration: none;
+}
+.Footer .socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Footer .socials .copyright {
+  color: #707070;
+  flex-basis: 80%;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.Footer .socials .main-socials {
+  display: flex;
+  flex-basis: 20%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.Footer .socials .main-socials a {
+  margin-left: 30px;
 }/*# sourceMappingURL=App.css.map */

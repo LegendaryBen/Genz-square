@@ -358,3 +358,99 @@ body{
     }
 }
 
+.Footer{
+    width:100%;background-color:$white2;margin-top:100px;@include padding(40px 60px);
+
+    .News-letter{
+        width:100%;@include flex;@include justify(space-between);@include flexDirection(row);
+        margin-bottom:40px;
+
+        .News-letter-one{
+
+            .letter-topic{
+                color:$black;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;
+                margin-bottom:15px;
+            }
+
+            .letter-info{
+                color:$grey2;@include archivo;font-size: 16px;font-weight: 400;line-height:20px;
+                margin-bottom:20px;
+            }
+        }
+
+
+        .Subcribe-now{
+            @include flex;@include align(center);
+
+            .subscribe-email{
+                margin-right:10px;width:310px;height:49px;padding:7px;@include border(1px solid $grey3);
+                @include flex;@include align(center);
+            }
+
+            .subscribe-msg{
+                width:100%;
+                input{
+                    outline:none;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
+                    width:100%;@include padding(10px 10px);@include border(none);
+                }
+            }
+
+            .sub-msg{
+                height:20px;width:20px;object-fit:contain;margin-right:1px;
+            }
+
+            .submit{
+                outline:none;@include padding(14px 30px);transition:300ms;
+                background-color:$red-btn;@include border(none);color:$white-btn;
+                @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+                &:hover{
+                    background-color:$dark-red;
+                }
+            }
+        }
+
+        .News-letter-two{
+            @include flex;
+            .details{
+                margin-left:40px;
+            }
+            .name{
+                color:$black;@include clash;font-family: Clash Display;font-size: 20px;font-weight: 600;
+                line-height: 25px;margin-bottom:25px;
+            }
+
+            .podcast{
+                color:$grey2;@include archivo;font-family: Archivo;font-size: 15px;font-weight: 400;line-height: 17px;
+                margin-bottom:15px;
+            }
+
+            .podcast1{
+                color:$grey2;
+            }
+
+            a{
+                text-decoration:none;
+            }
+
+        }
+
+    }
+
+    .socials{
+        @include flex; @include align(center);@include justify(space-between);
+
+        .copyright{
+            color:$grey2;flex-basis:80%;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
+        }
+
+        .main-socials{
+            @include flex;flex-basis:20%;@include align(center);@include justify(flex-end);
+            
+            a{
+                margin-left:30px;
+            }
+        }
+    }
+
+}
+
