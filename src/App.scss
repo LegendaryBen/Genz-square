@@ -30,7 +30,7 @@ body{
             }
         }
         .sign-in{
-            color:$black;font-weight:600;font-size:18px;line-height:19px;
+            color:$black;font-weight:600;font-size:18px;line-height:19px;text-decoration:none;
         }
     }
 }
@@ -457,7 +457,7 @@ body{
 
 
 .search-bar{
-    width:100%;height:100vh;background-color:$white-btn;position:fixed;z-index:150;top:0%;left:0;right:0;
+    width:100%;height:100vh;background-color:$white-btn;position:fixed;z-index:150;top:-150%;left:0;right:0;
 
     .search-box{
         width:100%;height:150px;margin-top:120px;border-bottom:1px solid $grey;padding-top:50px;
@@ -478,4 +478,112 @@ body{
     }
 
 
+}
+
+
+.Ham-menu{
+    width:100%;height:100vh;background-color:rgba(0, 0, 0,0.1);position:fixed;top:0;left:0;right:0;z-index:140;
+    backdrop-filter:blur(5px);overflow:hidden;display:none;
+
+    .sidebar{
+        width:35%;height:inherit;background-color:$white-btn;overflow:auto;
+        scrollbar-width:thin;scrollbar-color:$white-btn;transform:translateX(-100%);
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+          
+            &::-webkit-scrollbar-thumb {
+                background-color:$white-btn;
+            }
+          
+            &::-webkit-scrollbar-track {
+                background-color:$white-btn; 
+            }
+
+        .cancle{
+            width:100%;@include flex;@include align(center);@include justify(space-between);@include padding(20px);
+            margin-bottom:10px;
+
+            img{
+                width:24px;height:24px;object-fit: contain;
+            }
+
+            .mobile-genz{
+                color:$black;@include clash;font-size: 18px;font-weight: 600;line-height: 17px;display:none;
+            }
+
+            a{
+                @include align(center);@include justify(center);
+                background-color:$red-btn;@include padding(10px 30px);color:$white-btn;text-decoration:none;
+                @include archivo;font-size:15px;font-weight: 600;line-height: 13px;display:none;
+
+            }
+        }
+
+        .Mobile-search-box{
+            width:100%;@include justify(space-between);@include align(center);@include padding(20px);
+            display:none;
+            .search-box{
+                flex-basis:70%;height:50px;@include border(1px solid $grey);@include flex;@include align(center);
+                @include padding(0px 10px);
+
+                .input{
+                    flex-basis:85%;
+                    input{
+                        width:100%;@include padding(15px 0px);outline:none;@include border(none);
+                        @include clash;font-size: 13px;font-weight: 600;line-height:14px;color:$grey2;
+
+                    }
+                }
+
+                img{
+                    margin-right:10px;height:24px;width:24px;
+                }
+                
+            }
+
+            a{
+                text-decoration:none;color:$red-btn;@include archivo;font-size: 15px;font-weight: 600;
+                line-height: 13px;
+            }
+        }
+
+        .ham-sections{
+            @include padding(0px 20px);margin-bottom:20px;
+
+            a{
+                text-decoration:none;color:$black;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;
+            }
+        }
+
+        .products{
+            @include padding(18px 20px);text-decoration:none;color:$black;
+            @include clash;font-size: 20px;font-weight: 600;line-height: 25px;margin-bottom:0px; 
+        }
+
+        .main-products{
+            @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;@include padding(0px 20px);
+            margin-bottom:15px;
+
+            a{
+                text-decoration:none;color:$grey2;
+            }
+        }
+
+        .side-socials{
+            @include padding(20px 20px);@include flex;@include align(center);
+
+            a{
+                margin-right:40px;
+            }
+        }
+
+        .social-msg{
+            @include padding(20px 20px 80px 20px);color:$grey2;//styleName: N.Regular 16;
+            @include archivo;font-size: 16px;font-weight: 400;line-height:24px;
+        }
+
+
+    }
 }

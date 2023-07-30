@@ -13,6 +13,7 @@ import News_tip2 from '../components/News-tip2'
 import Magazine_snippets_container from '../components/Magazine-snippets-container'
 import Footer from '../components/Footer'
 import Search_Bar from '../components/Search-Bar'
+import Ham_menu from '../components/Ham-menu'
 
 const Home = () => {
     return (
@@ -32,6 +33,7 @@ const Home = () => {
             <Magazine_snippets_container/>
             <Footer/>
             <Search_Bar/>
+            <Ham_menu/>
         </>
     )
 }

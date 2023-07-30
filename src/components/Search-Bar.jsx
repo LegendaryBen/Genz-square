@@ -3,6 +3,7 @@ import Category2 from './categories2'
 import Arrow from './Arrow'
 import cancle from '../images/cancle1.svg'
 import search from '../images/small-search.svg'
+import {Link} from 'react-router-dom'
 
 const Search_Bar = () => {
     return (
@@ -14,7 +15,9 @@ const Search_Bar = () => {
                     <div className="search-item">
                         <input type="text" placeholder='search anything...'/>
                     </div>
-                    <Arrow image={search} cls=''/>
+                    <Link>
+                        <Arrow image={search} cls=''/>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -12,9 +12,9 @@ const Header = () => {
             </span>
             <div className='subscribe'>
                 <Link to="/" className='sub-children sub-btn'>SUBSCRIBE</Link>
-                <div className='sub-children sign-in'>
+                <Link to='/' className='sub-children sign-in'>
                     SIGN IN 
-                </div>
+                </Link>
                 <img src={search} alt="" className='sub-children' />
             </div>
         </div>

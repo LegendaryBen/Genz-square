@@ -56,6 +56,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   line-height: 19px;
+  text-decoration: none;
 }
 
 .categories {
@@ -763,7 +764,7 @@ body {
   background-color: #FFFFFF;
   position: fixed;
   z-index: 150;
-  top: 0%;
+  top: -150%;
   left: 0;
   right: 0;
 }
@@ -795,4 +796,162 @@ body {
   font-size: 36px;
   font-weight: 600;
   line-height: 44px;
+}
+
+.Ham-menu {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 140;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  display: none;
+}
+.Ham-menu .sidebar {
+  width: 35%;
+  height: inherit;
+  background-color: #FFFFFF;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #FFFFFF;
+  transform: translateX(-100%);
+}
+.Ham-menu .sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.Ham-menu .sidebar::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+}
+.Ham-menu .sidebar::-webkit-scrollbar-track {
+  background-color: #FFFFFF;
+}
+.Ham-menu .sidebar .cancle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.Ham-menu .sidebar .cancle img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.Ham-menu .sidebar .cancle .mobile-genz {
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 17px;
+  display: none;
+}
+.Ham-menu .sidebar .cancle a {
+  align-items: center;
+  justify-content: center;
+  background-color: #d30000;
+  padding: 10px 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 13px;
+  display: none;
+}
+.Ham-menu .sidebar .Mobile-search-box {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  display: none;
+}
+.Ham-menu .sidebar .Mobile-search-box .search-box {
+  flex-basis: 70%;
+  height: 50px;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.Ham-menu .sidebar .Mobile-search-box .search-box .input {
+  flex-basis: 85%;
+}
+.Ham-menu .sidebar .Mobile-search-box .search-box .input input {
+  width: 100%;
+  padding: 15px 0px;
+  outline: none;
+  border: none;
+  font-family: "Clash Display", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #707070;
+}
+.Ham-menu .sidebar .Mobile-search-box .search-box img {
+  margin-right: 10px;
+  height: 24px;
+  width: 24px;
+}
+.Ham-menu .sidebar .Mobile-search-box a {
+  text-decoration: none;
+  color: #d30000;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 13px;
+}
+.Ham-menu .sidebar .ham-sections {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+.Ham-menu .sidebar .ham-sections a {
+  text-decoration: none;
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.Ham-menu .sidebar .products {
+  padding: 18px 20px;
+  text-decoration: none;
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 0px;
+}
+.Ham-menu .sidebar .main-products {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  padding: 0px 20px;
+  margin-bottom: 15px;
+}
+.Ham-menu .sidebar .main-products a {
+  text-decoration: none;
+  color: #707070;
+}
+.Ham-menu .sidebar .side-socials {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+}
+.Ham-menu .sidebar .side-socials a {
+  margin-right: 40px;
+}
+.Ham-menu .sidebar .social-msg {
+  padding: 20px 20px 80px 20px;
+  color: #707070;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }/*# sourceMappingURL=App.css.map */
