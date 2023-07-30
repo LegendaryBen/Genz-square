@@ -454,3 +454,28 @@ body{
 
 }
 
+
+
+.search-bar{
+    width:100%;height:100vh;background-color:$white-btn;position:fixed;z-index:150;top:0%;left:0;right:0;
+
+    .search-box{
+        width:100%;height:150px;margin-top:120px;border-bottom:1px solid $grey;padding-top:50px;
+        @include flex;@include justify(center);
+
+        .search-items{
+            flex-basis:50%;@include flex;@include justify(space-between);@include align(center);
+
+            .search-item{
+                flex-basis:60%;
+
+                input{
+                    width:100%;outline:none;@include padding(20px 20px);@include border(none);color:$grey2;
+                    @include clash;font-size: 36px;font-weight: 600;line-height: 44px;
+                }
+            }
+        }
+    }
+
+
+}

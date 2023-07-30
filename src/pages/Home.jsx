@@ -12,6 +12,7 @@ import Stories_button_container from '../components/Stories-button-container'
 import News_tip2 from '../components/News-tip2'
 import Magazine_snippets_container from '../components/Magazine-snippets-container'
 import Footer from '../components/Footer'
+import Search_Bar from '../components/Search-Bar'
 
 const Home = () => {
     return (
@@ -30,6 +31,7 @@ const Home = () => {
             <News_tip2/>
             <Magazine_snippets_container/>
             <Footer/>
+            <Search_Bar/>
         </>
     )
 }

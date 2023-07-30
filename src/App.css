@@ -755,4 +755,44 @@ body {
 }
 .Footer .socials .main-socials a {
   margin-left: 30px;
+}
+
+.search-bar {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  position: fixed;
+  z-index: 150;
+  top: 0%;
+  left: 0;
+  right: 0;
+}
+.search-bar .search-box {
+  width: 100%;
+  height: 150px;
+  margin-top: 120px;
+  border-bottom: 1px solid grey;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.search-bar .search-box .search-items {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-bar .search-box .search-items .search-item {
+  flex-basis: 60%;
+}
+.search-bar .search-box .search-items .search-item input {
+  width: 100%;
+  outline: none;
+  padding: 20px 20px;
+  border: none;
+  color: #707070;
+  font-family: "Clash Display", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
 }/*# sourceMappingURL=App.css.map */

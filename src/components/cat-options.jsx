@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Cat_options = ({name}) => {
     return (
-        <Link to="/" className='cat-options'>{name}</Link>
+        <Link className='cat-options'>{name}</Link>
     )
 }
 
