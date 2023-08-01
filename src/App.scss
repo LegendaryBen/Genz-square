@@ -14,8 +14,38 @@ body{
     @include flex;@include justify(space-between);@include align(center);@include padding(20px 80px);
     height:90px;width:100%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);background-color:$white-btn;
     position:fixed;top:0;left:0;right:0;z-index:100;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(20px 40px);
+    }
+
+    @include maxScreen($tablet){
+        @include padding(20px 40px);
+    }
+
+    @include maxScreen($mobile1){
+        @include padding(20px 20px);
+    }
+
+    @include maxScreen($mobile2){
+        @include padding(20px 10px);
+    }
+
+
     span{
-        @include clash;font-weight:600;font-size:24px;line-height:29px;transform:translateX(50px)
+        @include clash;font-weight:600;font-size:24px;line-height:29px;transform:translateX(50px);
+
+        @include maxScreen($tablet){
+            font-size:21px;line-height:25px;
+        }
+
+        @include maxScreen($mobile1){
+            font-size:17px;line-height:17px;transform:translateX(30px);
+        }
+
+        @include maxScreen($mobile2){
+            transform:translateX(20px);
+        }
     }
     .subscribe{
         @include flex;@include align(center);@include archivo;
@@ -28,17 +58,67 @@ body{
             &:hover{
                 background-color:$dark-red;
             }
+
+            @include maxScreen($tablet){
+                font-size:15px;@include padding(12px 25px);
+            }
+
+            @include maxScreen($mobile1){
+                font-size:13px;@include padding(10px 20px);
+            }
+
+            @include maxScreen($mobile2){
+                @include padding(10px 10px);
+            }
+
+        }
+
+        img{
+            @include display(block);
+
+            @include maxScreen($tablet){
+                @include display(none);
+            }
         }
         .sign-in{
-            color:$black;font-weight:600;font-size:18px;line-height:19px;text-decoration:none;
+            color:$black;font-weight:600;font-size:18px;line-height:19px;text-decoration:none;@include display(block);
+
+            @include maxScreen($tablet){
+                @include display(none);
+            }
+
         }
     }
 }
 
 .categories{
     width:100%;height:70px;background-color:$black;@include flex;@include justify(center);@include align(center);
+    @include padding(0px 0px);overflow:hidden;
+
+    @include maxScreen($tablet){
+        overflow:auto;@include justify(flex-start); @include padding(0px 60px);
+    }
+
+    @include maxScreen($tablet){
+         @include padding(0px 30px);
+    }
+
     .cat-container{
         height:100%;width:80%;@include flex;@include justify(space-between);@include align(center);
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            min-width:85%;
+        }
+
+        @include maxScreen($tablet){
+            min-width:1000px;
+        }
+
+        @include maxScreen($mobile1){
+            min-width:900px;
+        }
+    
+
     }
     .cat-options{
         color:$white-btn;text-decoration:none;transition:300ms;@include clash;font-weight:200;font-size:18px;
@@ -56,25 +136,76 @@ body{
 .News-tip{
     width:100%;height:380px;@include flex;@include justify(center);@include align(center);margin-top:50px;
     @include flexDirection(row);text-decoration:none;@include padding(0px 60px);
+
+    @include maxScreen($tablet){
+        height:740px; @include flexDirection(column);@include padding(0px 30px);
+    }
+
+    @include maxScreen($mobile1){
+        height:600px;flex-basis:100%;
+    }
+
+
+
     .box{
         flex-basis:46%;height:100%;
+
+        @include maxScreen($tablet){
+            height:350px;flex-basis:100%;
+        }
+
+        @include maxScreen($mobile1){
+            height:250px;flex-basis:100%;
+        }
       
         .box-text{
             @include margin(17px 0px);color:$red-btn;@include archivo;font-weight:500;font-size:20px;line-height:21px;
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                @include margin(7px 0px);
+            }
+
         }
         .box-header{
             width:100%;color:$black;@include clash;font-weight:600;font-size:36px;line-height:44px;margin-bottom:10px;
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                font-size:33px;line-height:37px;
+            }
+
+            @include maxScreen($tablet){
+                font-size:30px;line-height:34px;
+            }
+
+            @include maxScreen($mobile1){
+                font-size:20px;line-height:24px;
+            }
+
+
         }
         .box-hint{
             width:100%;color:$grey;@include archivo;font-weight:400;font-size:20px;line-height:25px;margin-bottom:13px;
+
+            @include maxScreen($mobile1){
+                font-size:14px;line-height:17px;
+            }
         }
 
         .news-writer{
             margin-bottom:10px;@include archivo;font-weight:500;font-size:16px;line-height:17px;color:$grey;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
         }
 
         .news-date{
             color:$grey2;@include archivo;font-size:16px;font-weight:400;line-height:17px;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
+
         }
     }
     .box-special{
@@ -82,26 +213,62 @@ body{
         img{
             width:100%;height:100%;object-fit:cover;
         }
+
+        @include maxScreen($tablet){
+            height:350px;
+        }
+
+        @include maxScreen($mobile1){
+            height:250px;
+        }
+
     }
     .box-message{
         padding-left:30px;flex-basis:54%;
+
+        @include maxScreen($tablet){
+            padding-left:0px;flex-basis:100%;
+        }
+      
     }
 }
 
 
 .News-slides{
-    width:100%;height:280px;@include flex;
+    width:100%;height:280px;@include flex;@include flexDirection(row);
     margin-top:60px;overflow:hidden;padding-bottom:10px;
+
+    @include maxScreen($tablet){
+        height:540px;flex-basis:50%;margin-top:10px;overflow:auto;
+    }
+
+    @include maxScreen($mobile1){
+        height:520px;
+    }
     
+    @include maxScreen($mobile2){
+        margin-top:50px;
+    }
 }
 
 
 .Slides{
     min-width:650px;height:100%;margin-right:15px;
+
+    @include maxScreen($tablet){
+        min-width:350px;
+    }
+
     a{
         @include flex;@include flexDirection(row);@include align(center);max-width:650px;height:100%;
         text-decoration:none;background-color:$white2;transition:300ms;
         @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
+
+
+        @include maxScreen($tablet){
+            @include flexDirection(column);
+        }
+
 
         &:hover{
             box-shadow: 0px 2px 4px 0px  rgba(0, 0, 0, 0.2);
@@ -113,27 +280,57 @@ body{
     }
 
     .slide-section{
-        width:50%;height:100%;@include padding(0px 10px 0px 0px);
+        width:50%;height:100%;@include padding(0px 10px 0px 0px);object-fit:cover;
+
+        
+        @include maxScreen($tablet){
+            width:100%;height:50%;@include padding(0px 0px 0px 0px);
+        }
+
         .text{
-            color:$red-btn;@include margin(10px 0px)
+            color:$red-btn;@include margin(10px 0px);@include padding(0px);
+
+            @include maxScreen($tablet){
+                @include margin(8px 0px);@include padding(0px 10px);
+            }
         }
 
         .text-head{
             @include clash;font-size: 20px;font-weight: 600;line-height: 25px;width:100%;word-wrap: break-word;
-            color:$black;
+            color:$black;@include padding(0px);
+
+            @include maxScreen($tablet){
+                @include padding(0px 10px);font-size:16px;line-height: 20px;
+            }
+
         }
 
         .text-hint{
             @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;color: $grey;@include margin(10px 0px);
+            @include padding(0px);
+
+            @include maxScreen($tablet){
+                @include padding(0px 10px);font-size: 13px;
+            }
+
         }
 
         .text-writer{
-            @include archivo;font-size: 12px;font-weight: 500;line-height: 13px;color:$grey2;
+            @include archivo;font-size: 12px;font-weight: 500;line-height: 13px;color:$grey2; @include padding(0px);
+
+            @include maxScreen($tablet){
+                @include padding(0px 10px);font-size: 10px;
+            }
         }
 
         .text-date{
             @include archivo;font-size: 12px;font-weight: 400;line-height: 13px;@include margin(10px 0px);
-            color:$grey2;
+            color:$grey2;@include padding(0px);
+
+            @include maxScreen($tablet){
+                @include padding(0px 10px);font-size:10px;
+            }
+
         }
     }
 
@@ -149,39 +346,121 @@ body{
     .arrow-container{
         flex-basis:10%;height:100%;@include flex;@include justify(space-between);
         @include align(center);
+
+        @include maxScreen($tablet){
+            flex-basis:20%;
+        }
+    
+
+
     }
 }
 
 
 .New-magazine{
     width:100%;margin-top:100px;position:relative;background-color:$white2;padding-left:60px;
+
+    
+    @include maxScreen($tablet){
+        padding-left:30px;
+
+    }
+
+    @include maxScreen($mobile1){
+        padding-left:20px;
+
+    }
+
+
     .new{
         position: absolute;top:-70px;left:70px;
+
+        @include maxScreen($tablet){
+            left:30px;
+        }
+
     }
     .magazine{
         width:352px;text-align: center;height:100%;@include clash;font-size: 36px;font-weight: 600;
         line-height: 44px;white-space:nowrap;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            font-size: 33px;
+        }
+
+        @include maxScreen($tablet){
+            font-size:30px;
+        }
+
+        @include maxScreen($mobile1){
+            font-size:25px;line-height:24px; width:300px;
+        }
+
         .fancy{
             height:39px;width:352px;
+
+            @include maxScreen($mobile1){
+                width:300px;
+            }
         }
     }
 }
 
 
 .Magazine-cover{
-    width:100%;height:720px;background-color:$white2;@include flex;
+    width:100%;height:720px;background-color:$white2;@include flex;@include flexDirection(row);
+
+    @include maxScreen($tablet){
+        height:1320px;@include flexDirection(column);
+    }
+
+    @include maxScreen($mobile1){
+        height:1150px;
+    }
+
     .cover{
         height:100%;
+
+        @include maxScreen($tablet){
+            height:403px;
+        }
+
+        @include maxScreen($mobile1){
+            height:350px;
+        }
+
     }
     .main-cover{
-        @include flex;@include justify(flex-end);padding-right:100px;flex-basis:45%;padding-top:40px;
+        @include flex;@include justify(flex-end);padding-right:100px;flex-basis:45%;padding-top:40px;padding-left:0;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            padding-right:35px;
+        }
+
+        @include maxScreen($tablet){
+            padding-left:30px;padding-right:0px;@include justify(flex-start);flex-basis:100%;
+        }
+
+        @include maxScreen($tablet){
+            padding-left:20px;
+        }
+
         .img-cover1{
             height:550px;width:388px;
+
+            @include maxScreen($mobile1){
+                height:350px;width:305px;
+            }
+
             .img-cover{
                 height:100%;width:100%;object-fit: cover;
             }
             .month{
                 @include clash;font-size: 24px;font-weight: 600;line-height: 30px;margin-top:10px;
+
+                @include maxScreen($mobile1){
+                    font-size:19px;line-height:19px;
+                }
             }
         }
     }
@@ -189,21 +468,81 @@ body{
 
 
 .cover-details{
-    padding-right:40px;flex-basis:55%;
+    padding-right:40px;flex-basis:55%;padding-left:0px;padding-top:0px;padding-bottom:0px;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        padding-right:30px;
+    }
+
+    @include maxScreen($tablet){
+        padding-left:30px;padding-right:30px;padding-top:10px;flex-basis:100%;
+    }
+
+    @include maxScreen($mobile1){
+        padding-left:20px;padding-top:0px;padding-bottom:70px;
+    }
+
+
     .logo{
         @include flex;@include clash;font-size: 40px;font-weight: 600;line-height: 59px;
         margin-bottom:15px;padding-top:20px;@include align(center);
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            font-size:35px;
+        }
+
+        @include maxScreen($tablet){
+            font-size:30px;margin-bottom:8px;
+        }
+
+        @include maxScreen($mobile1){
+            font-size:24px;margin-bottom:10px;line-height:21px;
+        }
+
         img{
             margin-right:10px;height:60px;width:60px;object-fit: contain;
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                height:40px;width:40px;
+            }
+
+            @include maxScreen($tablet){
+                height:30px;width:30px;
+            }
+
         }
     }
     .month-sales{
         @include clash;font-size: 30px;font-weight: 600;line-height:30px;color:$green;margin-bottom:15px;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            margin-bottom:13px;font-size:27px;
+        }
+
+        @include maxScreen($tablet){
+            font-size:24px; margin-bottom:8px;
+        }
+
+        @include maxScreen($mobile1){
+            font-size:20px; margin-bottom:8px;line-height:24px;
+        }
+
+
     }
 
     .access{
         @include clash;font-size: 33px;font-weight: 600;line-height:35px;color:$black;
         margin-bottom:50px;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            margin-bottom:40px;font-size:28px;
+        }
+
+        @include maxScreen($tablet){
+            font-size:26px; margin-bottom:30px;
+        }
+
+
     }
 
     .access-special{
@@ -214,12 +553,27 @@ body{
         padding-left:17px;margin-bottom:50px;
         li{
             @include archivo;font-size: 20px;font-weight: 400;line-height: 22px;color:$black;margin-bottom:20px;
+
+            @include maxScreen($tablet){
+                font-size:16px;margin-bottom:16px;
+            }
+
         }
+
+        
     }
 
     .code{
         @include archivo;font-size: 20px;font-weight: 400;line-height: 22px;color:$black;
         margin-bottom:40px;
+
+        @include maxScreen($tablet){
+            font-size:18px;
+        }
+        @include maxScreen($mobile1){
+            font-size:15px;
+        }
+
         .code-special{
             color:$green;
         }
@@ -229,6 +583,15 @@ body{
         @include flex;@include justify(center);@include align(center);height:50px;
         background-color:$green;color:$white-btn;text-decoration:none;width:250px;
         @include archivo;font-size: 20px;font-weight: 600;line-height: 22px;
+
+        @include maxScreen($tablet){
+            font-size:18px;width:220px;
+        }
+
+        @include maxScreen($mobile1){
+            font-size:16px;width:120px;
+        }
+
     }
 }
 
@@ -236,14 +599,51 @@ body{
 .Stories{
     width:100%;height:50px;margin-top:110px;padding-left:60px;@include clash;
     font-size: 36px;font-weight: 600;line-height:30px;margin-bottom:40px;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        font-size: 33px;margin-top:80px;
+    }
+
+    @include maxScreen($tablet){
+        font-size:30px; margin-top:40px;padding-left:30px;
+    }
+
+    @include maxScreen($mobile1){
+        font-size:26px; margin-top:40px;padding-left:20px;
+    } 
+
+
 }
 
 .Stories-button-container{
     width:100%;@include flex;flex-wrap:wrap;padding-left:60px;padding-right:30px;
+
+    @include maxScreen($tablet){
+        padding-left:30px;
+    }
+
+    @include maxScreen($mobile1){
+        padding-left:20px;
+    }
+
+
     .Story-buttons{
         width:140px;height:51px;@include flex;@include justify(center);@include align(center);
         text-decoration:none;transition:300ms;@include border(1px solid $grey3);margin-right:50px;
         @include archivo;font-size: 18px;font-weight: 500;line-height: 20px;color:$black;margin-bottom:15px;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            margin-right:30px;
+        }
+
+        @include maxScreen($tablet){
+            margin-right:20px;
+        }
+
+        @include maxScreen($mobile1){
+            margin-right:10px;width:100px;height:31px;;font-size: 14px;line-height: 20px;
+        }
+
         &:hover{
             background-color:$green;color:$white-btn;
         }
@@ -252,14 +652,74 @@ body{
 
 .New-magazine2{
     width:100%;margin-top:100px;position:relative;background-color:$white-btn;padding-left:60px;
+
+    
+    @include minMaxScreen($laptop-min,$laptop-max){
+        margin-top:80px;
+    }
+
+    @include maxScreen($tablet){
+        padding-left:30px; margin-top:0px;
+    }
+
+    @include maxScreen($mobile1){
+        padding-left:20px; margin-top:0px;
+    }
+
+    @include maxScreen($mobile2){
+        margin-top:50px;
+    }
+
+
     .new2{
         position: absolute;top:0px;left:450px;
+
+        @include maxScreen($tablet){
+            left:400px;
+        }
+
+        @include maxScreen($mobile1){
+            left:310px;
+        }
+
+        @include maxScreen($mobile2){
+            left:270px;
+        }
+
     }
     .magazine{
         width:352px;text-align: center;height:100%;@include clash;font-size: 36px;font-weight: 600;
         line-height: 44px;white-space:nowrap;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            font-size: 33px;
+        }
+
+        
+        @include maxScreen($tablet){
+            font-size:31px;
+        }
+
+        @include maxScreen($mobile1){
+            width:300px; font-size:25px;
+        }
+
+        @include maxScreen($mobile2){
+            width:280px;font-size:20px;
+        }
+
         .fancy{
             height:39px;width:352px;
+
+            @include maxScreen($tablet){
+                height:39px;width:332px
+            }
+
+            @include maxScreen($mobile1){
+                height:39px;width:300px
+            }
+
+
         }
     }
 }
@@ -268,8 +728,18 @@ body{
 .News-tip2{
     width:100%;height:390px;@include flex;@include align(center);margin-top:10px;@include padding(0px 60px);
     @include flexDirection(row);text-decoration:none;
+
+    @include maxScreen($tablet){
+        @include flexDirection(column);height:780px;@include padding(0px 30px);
+    }
+
     .box-special1{
         height:380px;flex-basis:46%;
+
+        @include maxScreen($tablet){
+            flex-basis:100%;
+        }
+
         img{
             height:100%;object-fit:cover;width:100%;
         }
@@ -277,14 +747,44 @@ body{
 
     .box-special2{
         flex-basis:54%;height:100%;padding-left:30px;
+
+        @include maxScreen($tablet){
+            flex-basis:100%;padding-left:0px;
+        }
+
         .box-text2{
             @include margin(17px 0px);color:$red-btn;@include archivo;font-weight:500;font-size:20px;line-height:21px;
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                @include margin(7px 0px);
+            }
+
         }
+
         .box-header2{
             width:100%;color:$black;@include clash;font-weight:600;font-size:36px;line-height:44px;margin-bottom:10px;
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                font-size:33px;line-height:36px;
+            }
+
+            @include maxScreen($tablet){
+                font-size:30px;
+            }
+
+            @include maxScreen($mobile1){
+                font-size:22px;line-height:28px;
+            }
+
+
         }
         .box-hint2{
             width:100%;color:$grey;@include archivo;font-weight:400;font-size:20px;line-height:25px;margin-bottom:13px;
+
+            @include maxScreen($mobile1){
+                font-size:16px;line-height:22px;
+            }
+
         }
         .tiny{
             @include flex;@include align(center);@include clash;font-size: 16px;font-weight: 600;line-height: 20px;
@@ -301,6 +801,16 @@ body{
             text-decoration:none;background-color:$green;color:$white-btn;width: 228px;height:54px;
             @include flex;@include justify(center);@include align(center);margin-top:15px;
             @include archivo;font-size: 20px;font-weight: 600;line-height: 22px;
+
+            @include maxScreen($tablet){
+                width:200px;font-size:18px;
+            }
+
+            @include maxScreen($mobile1){
+                width:150px;font-size:15px;height:34px;
+            }
+
+
         }
     }
 
@@ -308,15 +818,34 @@ body{
 
 
 .Magazine-snippets-container{
-    width:100%;height:480px;margin-top:60px;@include padding(0px 60px);
+    width:100%;height:420px;margin-top:60px;@include padding(0px 60px);
     @include flex;@include justify(center);@include align(center);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(0px 40px); 
+    }
+
+    @include maxScreen($tablet){
+        @include padding(0px 30px);margin-top:20px;height:1680px;
+    }
+
 
     .snippets-container{
         flex-basis:100%;height:100%;@include flex;@include align(center);@include justify(space-between);
+        @include flexDirection(row);
+
+        @include maxScreen($tablet){
+            @include flexDirection(column);
+        }
 
         .Magazine-snippets{
 
-            height:100%;flex-basis:24%;background-color:$white2;text-decoration:none;
+            height:100%;flex-basis:24%;background-color:$white2;text-decoration:none;margin-bottom:0px;
+
+            @include maxScreen($tablet){
+                margin-top:20px;height:420px;flex-basis:100%;
+            }
+            
 
             .Magazine-snippets-img{
 
@@ -333,10 +862,17 @@ body{
                 .snippets-topic{
                     color:$red-btn;@include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
                     margin-bottom:10px;
+
                 }
                 .snippet-msg{
                     color:$black;@include clash;font-size:20px;font-weight: 600;line-height: 23px;
                     margin-bottom:10px;
+
+                    @include minMaxScreen($laptop-min,$laptop-max){
+                        font-size:16px;line-height:18px;
+                    }
+
+
                 }
 
                 .snippet-id{
@@ -347,6 +883,12 @@ body{
 
                     span{
                         @include clash;font-size:16px;font-weight: 600;line-height: 20px;color:$black;
+
+                        @include minMaxScreen($laptop-min,$laptop-max){
+                            font-size:13px;
+                        }
+
+
                     }
                 }
 
@@ -361,11 +903,28 @@ body{
 .Footer{
     width:100%;background-color:$white2;margin-top:100px;@include padding(40px 60px);
 
+    @include maxScreen($tablet){
+        @include padding(40px 30px);
+    }
+
+    @include maxScreen($mobile1){
+        margin-top:50px;
+    }
+
     .News-letter{
         width:100%;@include flex;@include justify(space-between);@include flexDirection(row);
         margin-bottom:40px;
 
+        @include maxScreen($tablet){
+            @include flexDirection(column);
+        }
+
         .News-letter-one{
+            padding-bottom:0px;
+
+            @include maxScreen($tablet){
+                padding-bottom:40px;
+            }
 
             .letter-topic{
                 color:$black;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;
@@ -380,18 +939,28 @@ body{
 
 
         .Subcribe-now{
-            @include flex;@include align(center);
+            @include flex;@include align(center);@include flexDirection(row);width:auto;
+
+            @include maxScreen($mobile1){
+                @include flexDirection(column);
+            }
 
             .subscribe-email{
                 margin-right:10px;width:310px;height:49px;padding:7px;@include border(1px solid $grey3);
-                @include flex;@include align(center);
+                @include flex;@include align(center);margin-bottom:0px;
+
+                @include maxScreen($mobile1){
+                    margin-bottom:10px;width:100%;
+                }
+
             }
 
             .subscribe-msg{
                 width:100%;
                 input{
                     outline:none;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
-                    width:100%;@include padding(10px 10px);@include border(none);
+                    width:100%;@include padding(10px 10px);@include border(none);background-color:$white2;
+
                 }
             }
 
@@ -400,11 +969,15 @@ body{
             }
 
             .submit{
-                outline:none;@include padding(14px 30px);transition:300ms;
+                outline:none;@include padding(14px 30px);transition:300ms;transform:translateX(0px);
                 background-color:$red-btn;@include border(none);color:$white-btn;
-                @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+                @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;width:auto;
                 &:hover{
                     background-color:$dark-red;
+                }
+
+                @include maxScreen($mobile1){
+                    width:100%;transform:translateX(-5px);
                 }
             }
         }
@@ -412,7 +985,13 @@ body{
         .News-letter-two{
             @include flex;
             .details{
-                margin-left:40px;
+                margin-left:40px;margin-right:0px;
+
+
+                @include maxScreen($tablet){
+                    margin-left:0px;margin-right:30px;
+                }
+
             }
             .name{
                 color:$black;@include clash;font-family: Clash Display;font-size: 20px;font-weight: 600;
@@ -485,9 +1064,20 @@ body{
     width:100%;height:100vh;background-color:rgba(0, 0, 0,0.1);position:fixed;top:0;left:0;right:0;z-index:140;
     backdrop-filter:blur(5px);overflow:hidden;display:none;
 
+
     .sidebar{
-        width:35%;height:inherit;background-color:$white-btn;overflow:auto;
-        scrollbar-width:thin;scrollbar-color:$white-btn;transform:translateX(-100%);
+        width:50%;height:inherit;background-color:$white-btn;overflow:auto;
+        scrollbar-width:thin;scrollbar-color:$white-btn;transform:translateX(-100%); 
+
+
+        @include maxScreen($tablet){ 
+            width:70%;
+        }
+
+        @include maxScreen($mobile1){ 
+            width:100%;
+        }
+
 
             &::-webkit-scrollbar {
                 width: 6px;
@@ -510,7 +1100,17 @@ body{
             }
 
             .mobile-genz{
-                color:$black;@include clash;font-size: 18px;font-weight: 600;line-height: 17px;display:none;
+                color:$black;@include clash;font-size: 14px;font-weight: 600;line-height: 17px;display:none;
+                
+                @include maxScreen($tablet){
+                    @include display(block);
+                }
+
+                @include maxScreen($mobile2){
+                    @include display(none);
+                }
+
+
             }
 
             a{
@@ -518,12 +1118,21 @@ body{
                 background-color:$red-btn;@include padding(10px 30px);color:$white-btn;text-decoration:none;
                 @include archivo;font-size:15px;font-weight: 600;line-height: 13px;display:none;
 
+                @include maxScreen($tablet){
+                    @include flex;
+                }
+
             }
         }
 
         .Mobile-search-box{
             width:100%;@include justify(space-between);@include align(center);@include padding(20px);
             display:none;
+
+            @include maxScreen($tablet){
+                @include flex;
+            }
+
             .search-box{
                 flex-basis:70%;height:50px;@include border(1px solid $grey);@include flex;@include align(center);
                 @include padding(0px 10px);
@@ -580,7 +1189,7 @@ body{
         }
 
         .social-msg{
-            @include padding(20px 20px 80px 20px);color:$grey2;//styleName: N.Regular 16;
+            @include padding(20px 20px 80px 20px);color:$grey2;
             @include archivo;font-size: 16px;font-weight: 400;line-height:24px;
         }
 
