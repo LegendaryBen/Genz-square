@@ -1,9 +1,15 @@
 import React from 'react'
 
-const Arrow = ({image,cls}) => {
+const Arrow = ({image,cls,act}) => {
     return (
         <>
-            <img src={image} className = {`${!cls?'':cls}`}/>
+            <img src={image} className = {`${!cls?'':cls}`} onClick={()=>{
+                if(act){
+                    act();
+                }else{
+                    return;
+                }
+            }}/>
         </>
     )
 }
