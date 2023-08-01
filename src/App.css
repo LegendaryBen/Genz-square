@@ -33,7 +33,7 @@ body {
     padding: 20px 40px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Header {
     padding: 20px 20px;
   }
@@ -56,7 +56,7 @@ body {
     line-height: 25px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Header span {
     font-size: 17px;
     line-height: 17px;
@@ -95,7 +95,7 @@ body {
     padding: 12px 18px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Header .subscribe .sub-btn {
     font-size: 13px;
     padding: 10px 10px;
@@ -150,7 +150,7 @@ body {
     padding: 0px 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .categories {
     height: 50px;
   }
@@ -172,7 +172,7 @@ body {
     min-width: 1000px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .categories .cat-container {
     min-width: 900px;
   }
@@ -214,7 +214,7 @@ body {
     padding: 0px 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip {
     height: 600px;
     flex-basis: 100%;
@@ -230,7 +230,7 @@ body {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip .box {
     height: 250px;
     flex-basis: 100%;
@@ -270,7 +270,7 @@ body {
     line-height: 34px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip .box .box-header {
     font-size: 20px;
     line-height: 24px;
@@ -285,7 +285,7 @@ body {
   line-height: 25px;
   margin-bottom: 13px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip .box .box-hint {
     font-size: 14px;
     line-height: 17px;
@@ -299,7 +299,7 @@ body {
   line-height: 17px;
   color: grey;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip .box .news-writer {
     font-size: 12px;
     line-height: 13px;
@@ -312,7 +312,7 @@ body {
   font-weight: 400;
   line-height: 17px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip .box .news-date {
     font-size: 12px;
     line-height: 13px;
@@ -331,7 +331,7 @@ body {
     height: 350px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip .box-special {
     height: 250px;
   }
@@ -364,7 +364,7 @@ body {
     overflow: auto;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-slides {
     height: 520px;
     margin-top: 40px;
@@ -534,7 +534,7 @@ body {
     padding-left: 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .New-magazine {
     padding-left: 20px;
   }
@@ -569,7 +569,7 @@ body {
     font-size: 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .New-magazine .magazine {
     font-size: 25px;
     line-height: 24px;
@@ -580,7 +580,7 @@ body {
   height: 39px;
   width: 352px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .New-magazine .magazine .fancy {
     width: 300px;
   }
@@ -599,7 +599,7 @@ body {
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Magazine-cover {
     height: 1150px;
   }
@@ -612,7 +612,7 @@ body {
     height: 403px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Magazine-cover .cover {
     height: 350px;
   }
@@ -638,7 +638,7 @@ body {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Magazine-cover .main-cover {
     padding-left: 30px;
   }
@@ -647,7 +647,7 @@ body {
   height: 550px;
   width: 388px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Magazine-cover .main-cover .img-cover1 {
     height: 350px;
     width: 305px;
@@ -665,7 +665,7 @@ body {
   line-height: 30px;
   margin-top: 10px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Magazine-cover .main-cover .img-cover1 .month {
     font-size: 19px;
     line-height: 19px;
@@ -692,7 +692,7 @@ body {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .cover-details {
     padding-left: 30px;
     padding-top: 0px;
@@ -720,7 +720,7 @@ body {
     margin-bottom: 8px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .cover-details .logo {
     font-size: 24px;
     margin-bottom: 10px;
@@ -765,7 +765,7 @@ body {
     margin-bottom: 8px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .cover-details .month-sales {
     font-size: 20px;
     margin-bottom: 8px;
@@ -826,7 +826,7 @@ body {
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .cover-details .code {
     font-size: 15px;
   }
@@ -854,7 +854,7 @@ body {
     width: 220px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .cover-details a {
     font-size: 16px;
     width: 120px;
@@ -885,7 +885,7 @@ body {
     padding-left: 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Stories {
     font-size: 26px;
     margin-top: 40px;
@@ -905,7 +905,7 @@ body {
     padding-left: 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Stories-button-container {
     padding-left: 30px;
   }
@@ -937,7 +937,7 @@ body {
     margin-right: 20px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Stories-button-container .Story-buttons {
     margin-right: 10px;
     width: 100px;
@@ -969,9 +969,9 @@ body {
     margin-top: 0px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .New-magazine2 {
-    padding-left: 20px;
+    padding-left: 30px;
     margin-top: 40px;
   }
 }
@@ -990,9 +990,9 @@ body {
     left: 400px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .New-magazine2 .new2 {
-    left: 310px;
+    left: 290px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -1020,10 +1020,11 @@ body {
     font-size: 31px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .New-magazine2 .magazine {
     width: 300px;
     font-size: 25px;
+    text-align: left;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -1043,7 +1044,7 @@ body {
     width: 332px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .New-magazine2 .magazine .fancy {
     height: 39px;
     width: 280px;
@@ -1126,7 +1127,7 @@ body {
     font-size: 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip2 .box-special2 .box-header2 {
     font-size: 22px;
     line-height: 28px;
@@ -1141,7 +1142,7 @@ body {
   line-height: 25px;
   margin-bottom: 13px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip2 .box-special2 .box-hint2 {
     font-size: 16px;
     line-height: 22px;
@@ -1191,7 +1192,7 @@ body {
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .News-tip2 .box-special2 .readmore {
     width: 150px;
     font-size: 15px;
@@ -1324,7 +1325,7 @@ body {
     padding: 40px 30px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Footer {
     margin-top: 50px;
   }
@@ -1371,7 +1372,7 @@ body {
   flex-direction: row;
   width: auto;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Footer .News-letter .Subcribe-now {
     flex-direction: column;
   }
@@ -1386,7 +1387,7 @@ body {
   align-items: center;
   margin-bottom: 0px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Footer .News-letter .Subcribe-now .subscribe-email {
     margin-bottom: 10px;
     width: 100%;
@@ -1429,7 +1430,7 @@ body {
 .Footer .News-letter .Subcribe-now .submit:hover {
   background-color: darkred;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Footer .News-letter .Subcribe-now .submit {
     width: 100%;
     transform: translateX(-5px);
@@ -1478,7 +1479,7 @@ body {
   justify-content: space-between;
   flex-direction: row;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Footer .socials {
     flex-direction: column;
   }
@@ -1492,7 +1493,7 @@ body {
   line-height: 17px;
   margin-bottom: 0px;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .Footer .socials .copyright {
     margin-bottom: 20px;
   }
@@ -1513,10 +1514,10 @@ body {
   background-color: #FFFFFF;
   position: fixed;
   z-index: 150;
-  top: -150%;
+  top: -200%;
   left: 0;
   right: 0;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .search-bar .search-box {
   width: 100%;
@@ -1566,7 +1567,7 @@ body {
     width: 70%;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 470px) {
   .sidebar {
     width: 100%;
   }

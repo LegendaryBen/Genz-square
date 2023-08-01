@@ -13,6 +13,7 @@ const Search_Bar = () => {
 
     return (
         <div className='search-bar' style={{top:!drop?"-200%":"0%"}}>
+
             <Category2 margin='0px'/>
             <div className="search-box">
                 <div className="search-items">
