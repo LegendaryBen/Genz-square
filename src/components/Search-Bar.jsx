@@ -12,7 +12,11 @@ const Search_Bar = () => {
 
 
     return (
+<<<<<<< HEAD
         <div className='search-bar' style={{top:!drop?"-200%":"0%"}}>
+=======
+        <div className='search-bar' style={{top:!drop?"-100%":"0%"}}>
+>>>>>>> bb8880892489f5968e3e12830ce1083302ea02d7
             <Category2 margin='0px'/>
             <div className="search-box">
                 <div className="search-items">
