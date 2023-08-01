@@ -92,18 +92,18 @@ body {
 @media only screen and (max-width: 1023px) {
   .Header .subscribe .sub-btn {
     font-size: 15px;
-    padding: 12px 25px;
+    padding: 12px 18px;
   }
 }
 @media only screen and (max-width: 426px) {
   .Header .subscribe .sub-btn {
     font-size: 13px;
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
 }
 @media only screen and (max-width: 320px) {
   .Header .subscribe .sub-btn {
-    padding: 10px 10px;
+    padding: 5px 8px;
   }
 }
 .Header .subscribe img {
@@ -148,6 +148,11 @@ body {
 @media only screen and (max-width: 1023px) {
   .categories {
     padding: 0px 30px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .categories {
+    height: 50px;
   }
 }
 .categories .cat-container {
@@ -362,6 +367,7 @@ body {
 @media only screen and (max-width: 426px) {
   .News-slides {
     height: 520px;
+    margin-top: 40px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -632,9 +638,9 @@ body {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 426px) {
   .Magazine-cover .main-cover {
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }
 .Magazine-cover .main-cover .img-cover1 {
@@ -688,7 +694,7 @@ body {
 }
 @media only screen and (max-width: 426px) {
   .cover-details {
-    padding-left: 20px;
+    padding-left: 30px;
     padding-top: 0px;
     padding-bottom: 70px;
   }
@@ -883,7 +889,7 @@ body {
   .Stories {
     font-size: 26px;
     margin-top: 40px;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }
 
@@ -901,7 +907,7 @@ body {
 }
 @media only screen and (max-width: 426px) {
   .Stories-button-container {
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }
 .Stories-button-container .Story-buttons {
@@ -966,7 +972,7 @@ body {
 @media only screen and (max-width: 426px) {
   .New-magazine2 {
     padding-left: 20px;
-    margin-top: 0px;
+    margin-top: 40px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -1029,6 +1035,7 @@ body {
 .New-magazine2 .magazine .fancy {
   height: 39px;
   width: 352px;
+  transform: translateY(0px);
 }
 @media only screen and (max-width: 1023px) {
   .New-magazine2 .magazine .fancy {
@@ -1039,7 +1046,8 @@ body {
 @media only screen and (max-width: 426px) {
   .New-magazine2 .magazine .fancy {
     height: 39px;
-    width: 300px;
+    width: 280px;
+    transform: translateY(-15px);
   }
 }
 
@@ -1468,6 +1476,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+}
+@media only screen and (max-width: 426px) {
+  .Footer .socials {
+    flex-direction: column;
+  }
 }
 .Footer .socials .copyright {
   color: #707070;
@@ -1476,6 +1490,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 17px;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 426px) {
+  .Footer .socials .copyright {
+    margin-bottom: 20px;
+  }
 }
 .Footer .socials .main-socials {
   display: flex;
@@ -1493,9 +1513,10 @@ body {
   background-color: #FFFFFF;
   position: fixed;
   z-index: 150;
-  top: -150%;
+  top: -200%;
   left: 0;
   right: 0;
+  transition: 0.3s;
 }
 .search-bar .search-box {
   width: 100%;
@@ -1527,48 +1548,39 @@ body {
   line-height: 44px;
 }
 
-.Ham-menu {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 140;
-  backdrop-filter: blur(5px);
-  overflow: hidden;
-  display: none;
-}
-.Ham-menu .sidebar {
+.sidebar {
   width: 50%;
-  height: inherit;
+  height: 100vh;
   background-color: #FFFFFF;
-  overflow: auto;
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #FFFFFF;
-  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 140;
+  transition: all 0.5s;
 }
 @media only screen and (max-width: 1023px) {
-  .Ham-menu .sidebar {
+  .sidebar {
     width: 70%;
   }
 }
 @media only screen and (max-width: 426px) {
-  .Ham-menu .sidebar {
+  .sidebar {
     width: 100%;
   }
 }
-.Ham-menu .sidebar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
   width: 6px;
 }
-.Ham-menu .sidebar::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
   background-color: #FFFFFF;
 }
-.Ham-menu .sidebar::-webkit-scrollbar-track {
+.sidebar::-webkit-scrollbar-track {
   background-color: #FFFFFF;
 }
-.Ham-menu .sidebar .cancle {
+.sidebar .cancle {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1576,12 +1588,12 @@ body {
   padding: 20px;
   margin-bottom: 10px;
 }
-.Ham-menu .sidebar .cancle img {
+.sidebar .cancle img {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
-.Ham-menu .sidebar .cancle .mobile-genz {
+.sidebar .cancle .mobile-genz {
   color: black;
   font-family: "Clash Display", sans-serif;
   font-size: 14px;
@@ -1590,16 +1602,16 @@ body {
   display: none;
 }
 @media only screen and (max-width: 1023px) {
-  .Ham-menu .sidebar .cancle .mobile-genz {
+  .sidebar .cancle .mobile-genz {
     display: block;
   }
 }
 @media only screen and (max-width: 320px) {
-  .Ham-menu .sidebar .cancle .mobile-genz {
+  .sidebar .cancle .mobile-genz {
     display: none;
   }
 }
-.Ham-menu .sidebar .cancle a {
+.sidebar .cancle a {
   align-items: center;
   justify-content: center;
   background-color: #d30000;
@@ -1613,11 +1625,11 @@ body {
   display: none;
 }
 @media only screen and (max-width: 1023px) {
-  .Ham-menu .sidebar .cancle a {
+  .sidebar .cancle a {
     display: flex;
   }
 }
-.Ham-menu .sidebar .Mobile-search-box {
+.sidebar .Mobile-search-box {
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -1625,11 +1637,11 @@ body {
   display: none;
 }
 @media only screen and (max-width: 1023px) {
-  .Ham-menu .sidebar .Mobile-search-box {
+  .sidebar .Mobile-search-box {
     display: flex;
   }
 }
-.Ham-menu .sidebar .Mobile-search-box .search-box {
+.sidebar .Mobile-search-box .search-box {
   flex-basis: 70%;
   height: 50px;
   border: 1px solid grey;
@@ -1637,10 +1649,10 @@ body {
   align-items: center;
   padding: 0px 10px;
 }
-.Ham-menu .sidebar .Mobile-search-box .search-box .input {
+.sidebar .Mobile-search-box .search-box .input {
   flex-basis: 85%;
 }
-.Ham-menu .sidebar .Mobile-search-box .search-box .input input {
+.sidebar .Mobile-search-box .search-box .input input {
   width: 100%;
   padding: 15px 0px;
   outline: none;
@@ -1651,12 +1663,12 @@ body {
   line-height: 14px;
   color: #707070;
 }
-.Ham-menu .sidebar .Mobile-search-box .search-box img {
+.sidebar .Mobile-search-box .search-box img {
   margin-right: 10px;
   height: 24px;
   width: 24px;
 }
-.Ham-menu .sidebar .Mobile-search-box a {
+.sidebar .Mobile-search-box a {
   text-decoration: none;
   color: #d30000;
   font-family: "Archivo", sans-serif;
@@ -1664,11 +1676,11 @@ body {
   font-weight: 600;
   line-height: 13px;
 }
-.Ham-menu .sidebar .ham-sections {
+.sidebar .ham-sections {
   padding: 0px 20px;
   margin-bottom: 20px;
 }
-.Ham-menu .sidebar .ham-sections a {
+.sidebar .ham-sections a {
   text-decoration: none;
   color: black;
   font-family: "Clash Display", sans-serif;
@@ -1676,7 +1688,7 @@ body {
   font-weight: 600;
   line-height: 25px;
 }
-.Ham-menu .sidebar .products {
+.sidebar .products {
   padding: 18px 20px;
   text-decoration: none;
   color: black;
@@ -1686,7 +1698,7 @@ body {
   line-height: 25px;
   margin-bottom: 0px;
 }
-.Ham-menu .sidebar .main-products {
+.sidebar .main-products {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1694,19 +1706,19 @@ body {
   padding: 0px 20px;
   margin-bottom: 15px;
 }
-.Ham-menu .sidebar .main-products a {
+.sidebar .main-products a {
   text-decoration: none;
   color: #707070;
 }
-.Ham-menu .sidebar .side-socials {
+.sidebar .side-socials {
   padding: 20px 20px;
   display: flex;
   align-items: center;
 }
-.Ham-menu .sidebar .side-socials a {
+.sidebar .side-socials a {
   margin-right: 40px;
 }
-.Ham-menu .sidebar .social-msg {
+.sidebar .social-msg {
   padding: 20px 20px 80px 20px;
   color: #707070;
   font-family: "Archivo", sans-serif;

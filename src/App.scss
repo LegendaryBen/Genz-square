@@ -60,15 +60,15 @@ body{
             }
 
             @include maxScreen($tablet){
-                font-size:15px;@include padding(12px 25px);
+                font-size:15px;@include padding(12px 18px);
             }
 
             @include maxScreen($mobile1){
-                font-size:13px;@include padding(10px 20px);
+                font-size:13px;@include padding(10px 10px);
             }
 
             @include maxScreen($mobile2){
-                @include padding(10px 10px);
+                @include padding(5px 8px);
             }
 
         }
@@ -102,6 +102,10 @@ body{
     @include maxScreen($tablet){
          @include padding(0px 30px);
     }
+
+    @include maxScreen($mobile1){
+        height:50px;
+   }
 
     .cat-container{
         height:100%;width:80%;@include flex;@include justify(space-between);@include align(center);
@@ -243,7 +247,7 @@ body{
     }
 
     @include maxScreen($mobile1){
-        height:520px;
+        height:520px; margin-top:40px;
     }
     
     @include maxScreen($mobile2){
@@ -441,8 +445,8 @@ body{
             padding-left:30px;padding-right:0px;@include justify(flex-start);flex-basis:100%;
         }
 
-        @include maxScreen($tablet){
-            padding-left:20px;
+        @include maxScreen($mobile1){
+            padding-left:30px;
         }
 
         .img-cover1{
@@ -479,7 +483,7 @@ body{
     }
 
     @include maxScreen($mobile1){
-        padding-left:20px;padding-top:0px;padding-bottom:70px;
+        padding-left:30px;padding-top:0px;padding-bottom:70px;
     }
 
 
@@ -609,7 +613,7 @@ body{
     }
 
     @include maxScreen($mobile1){
-        font-size:26px; margin-top:40px;padding-left:20px;
+        font-size:26px; margin-top:40px;padding-left:30px;
     } 
 
 
@@ -623,7 +627,7 @@ body{
     }
 
     @include maxScreen($mobile1){
-        padding-left:20px;
+        padding-left:30px;
     }
 
 
@@ -663,7 +667,7 @@ body{
     }
 
     @include maxScreen($mobile1){
-        padding-left:20px; margin-top:0px;
+        padding-left:20px; margin-top:40px;
     }
 
     @include maxScreen($mobile2){
@@ -709,14 +713,15 @@ body{
         }
 
         .fancy{
-            height:39px;width:352px;
+            height:39px;width:352px;transform:translateY(0px);
 
             @include maxScreen($tablet){
                 height:39px;width:332px
             }
 
             @include maxScreen($mobile1){
-                height:39px;width:300px
+                height:39px;width:280px;transform:translateY(-15px);
+
             }
 
 
@@ -1016,10 +1021,19 @@ body{
     }
 
     .socials{
-        @include flex; @include align(center);@include justify(space-between);
+        @include flex; @include align(center);@include justify(space-between);@include flexDirection(row);
+
+        @include maxScreen($mobile1){
+            @include flexDirection(column);
+        }
 
         .copyright{
             color:$grey2;flex-basis:80%;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
+            margin-bottom:0px;
+
+            @include maxScreen($mobile1){
+                margin-bottom:20px;
+            }
         }
 
         .main-socials{
@@ -1036,7 +1050,8 @@ body{
 
 
 .search-bar{
-    width:100%;height:100vh;background-color:$white-btn;position:fixed;z-index:150;top:-150%;left:0;right:0;
+    width:100%;height:100vh;background-color:$white-btn;position:fixed;z-index:150;top:-200%;left:0;right:0;
+    transition:0.3s;
 
     .search-box{
         width:100%;height:150px;margin-top:120px;border-bottom:1px solid $grey;padding-top:50px;
@@ -1060,14 +1075,11 @@ body{
 }
 
 
-.Ham-menu{
-    width:100%;height:100vh;background-color:rgba(0, 0, 0,0.1);position:fixed;top:0;left:0;right:0;z-index:140;
-    backdrop-filter:blur(5px);overflow:hidden;display:none;
-
 
     .sidebar{
-        width:50%;height:inherit;background-color:$white-btn;overflow:auto;
-        scrollbar-width:thin;scrollbar-color:$white-btn;transform:translateX(-100%); 
+        width:50%;height:100vh;background-color:$white-btn;overflow-y:auto; 
+        scrollbar-width:thin;scrollbar-color:$white-btn;position:fixed;top:0;left:-100%;z-index:140;
+        transition: all 0.5s ;
 
 
         @include maxScreen($tablet){ 
@@ -1190,9 +1202,8 @@ body{
 
         .social-msg{
             @include padding(20px 20px 80px 20px);color:$grey2;
-            @include archivo;font-size: 16px;font-weight: 400;line-height:24px;
+            @include archivo;font-size: 16px;font-weight: 400;line-height:24px; 
         }
 
 
     }
-}

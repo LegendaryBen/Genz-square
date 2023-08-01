@@ -1,11 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Cancle from './Cancle'
 import Mobile_search from './Mobile-search'
 import Ham_sections from './Ham-sections'
 import Products from './Products'
 import Side_socials from './Side-socials'
+import {Ham} from '../contexts/Hambar'
 
 const Ham_menu = () => {
+
+   const{slide} = useContext(Ham);
 
     const opt = [
         {
@@ -48,8 +51,7 @@ const Ham_menu = () => {
    
 
     return (
-        <div className='Ham-menu'>
-            <div className="sidebar">
+            <div className="sidebar" style={{left:!slide?"-100%":"0%"}}>
                <Cancle/>
                <Mobile_search/>
                {
@@ -67,7 +69,6 @@ const Ham_menu = () => {
                     Gen-Z Square® and its related marks are registered trademarks of Gen-Z Square LLC
                </div>
             </div>
-        </div>
     )
 }
 
