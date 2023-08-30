@@ -15,8 +15,8 @@ const Header = () => {
                 GEN-Z SQUARE
             </span>
             <div className='subscribe'>
-                <Link to="/" className='sub-children sub-btn'>SUBSCRIBE</Link>
-                <Link to='/' className='sub-children sign-in'>
+                <Link to="" className='sub-children sub-btn'>SUBSCRIBE</Link>
+                <Link to='' className='sub-children sign-in'>
                     SIGN IN 
                 </Link>
                 <img src={search} alt="" className='sub-children' onClick={down} />
