@@ -7,7 +7,7 @@ import twitter from "../images/twitter.svg"
 import whatsapp from "../images/whatsapp.svg"
 import { Link } from 'react-router-dom'
 
-const Read_Magazine = (props) => {
+const Read_Magazine = () => {
     return (
         <div className='Read-magazine'>
             <div className="Read-cat">

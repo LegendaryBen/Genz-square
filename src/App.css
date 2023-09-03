@@ -1802,4 +1802,235 @@ body {
 }
 .Read-magazine .Read-socials-icons a {
   margin-left: 25px;
+}
+
+.Read-content-container {
+  width: 100%;
+  height: 1100px;
+  background-color: white;
+  margin-top: 100px;
+  padding: 0px 70px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 50px;
+  flex-direction: row;
+  position: relative;
+}
+.Read-content-container .Hidden-content {
+  background-color: white;
+  flex-basis: 72%;
+  height: 1100px;
+  position: relative;
+  overflow: hidden;
+}
+.Read-content-container .Hidden-content .content {
+  padding: 0px 40px 0px 0px;
+  font-family: "Archivo", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: black;
+}
+.Read-content-container .Hidden-content .overlay-content {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, transparent 4%, white 96%);
+}
+.Read-content-container .Hidden-content .overlay-prices {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  left: 0;
+  background-color: #EAECEA;
+  padding: 30px 70px;
+}
+.Read-content-container .Hidden-content .overlay-prices .subscriber {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 40px;
+}
+.Read-content-container .Hidden-content .overlay-prices .subscriber a {
+  margin-left: 5px;
+  color: #184BFF;
+}
+.Read-content-container .Hidden-content .overlay-prices .percent-off {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: black;
+  margin-bottom: 30px;
+}
+.Read-content-container .Hidden-content .overlay-prices .percent-off span {
+  color: #00C24E;
+}
+.Read-content-container .Hidden-content .overlay-prices .benefits {
+  padding-left: 15px;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 60px;
+}
+.Read-content-container .Hidden-content .overlay-prices .benefits li {
+  margin-bottom: 20px;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices {
+  height: 400px;
+  flex-basis: 31%;
+  background-color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #707070;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .plans {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .trial-price {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .first-year {
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .other-years {
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  color: grey;
+  margin-bottom: 20px;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial a {
+  background-color: #00C24E;
+  width: 174px;
+  padding: 10px 0px;
+  color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+}
+.Read-content-container .Other-magazine-stories {
+  flex-basis: 28%;
+  height: 1100px;
+  overflow: auto;
+  position: relative;
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 70px;
+  scrollbar-width: thin;
+}
+.Read-content-container .Other-magazine-stories::-webkit-scrollbar {
+  width: 6px;
+}
+.Read-content-container .Other-magazine-stories::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+}
+.Read-content-container .Other-magazine-stories::-webkit-scrollbar-track {
+  background-color: #FFFFFF;
+}
+.Read-content-container .Other-magazine-stories .more-stories-header {
+  position: absolute;
+  top: 0px;
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  left: 70px;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card {
+  width: 100%;
+  min-height: 471px;
+  margin-bottom: 30px;
+  background-color: #FAFAFA;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card img {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card .more-stories-content {
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card .more-stories-content .content-header {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #d30000;
+  margin-bottom: 20px;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card .more-stories-content .content-body {
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: black;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card .more-stories-content .company-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card .more-stories-content .company-name img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card .more-stories-content .company-name div {
+  font-family: "Clash Display", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.Read-content-container .Other-magazine-stories .more-stories-card .more-stories-content .content-date {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #707070;
 }/*# sourceMappingURL=App.css.map */
