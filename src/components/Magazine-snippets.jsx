@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Magazine_snippets = () => {
     return (
-        <Link to='/'className='Magazine-snippets'>
+        <Link to='/magazine'className='Magazine-snippets'>
             <div className='Magazine-snippets-img'>
                 <Arrow image={map} cls=''/>
             </div>

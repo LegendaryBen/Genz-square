@@ -7,7 +7,7 @@ const News_tip = () => {
     return (
 
         <div className='News-container'>
-            <Link to="/" className='News-tip'>
+            <Link to="" className='News-tip'>
                 <div className='box box-special'>
                     <img src={mack} alt="" />
                 </div>

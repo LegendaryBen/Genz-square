@@ -23,7 +23,7 @@ const Message2 = (props) => {
             <div className='box-special1-date'>
                 August, 2023 
             </div>
-            <Link className="readmore">
+            <Link to="/magazine" className="readmore">
                 Read More
             </Link>
         </div>
