@@ -2292,4 +2292,217 @@ body {
   font-weight: 400;
   line-height: 13px;
   color: #707070;
+}
+
+.Login {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+.Login .userInputs {
+  flex-basis: 55%;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+.Login .userInputs .loginfancy {
+  width: 100%;
+  padding-left: 40px;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  font-family: "Clash Display", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  height: 7%;
+}
+.Login .userInputs .loginfancy img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.Login .userInputs .userDetails {
+  width: 100%;
+  height: 93%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.Login .userInputs .userDetails .Warning {
+  width: 100%;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #d30000;
+  margin-bottom: 20px;
+}
+.Login .userInputs .userDetails .createAccount {
+  text-align: center;
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.Login .userInputs .userDetails .getStarted {
+  width: 100%;
+  text-align: center;
+  color: #707070;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  margin-bottom: 30px;
+}
+.Login .userInputs .userDetails .google-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.Login .userInputs .userDetails .google-container .google {
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.Login .userInputs .userDetails .or {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.Login .userInputs .userDetails .or .line {
+  width: 40%;
+  height: 2px;
+  background-color: #CCCCCC;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Login .userInputs .userDetails .or .line div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #707070;
+  border-radius: 50%;
+}
+.Login .userInputs .userDetails .Inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Login .userInputs .userDetails .Inputs .inputs-box {
+  width: 40%;
+}
+.Login .userInputs .userDetails .Inputs .inputs-box .label {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  color: black;
+  margin-bottom: 5px;
+}
+.Login .userInputs .userDetails .Inputs .inputs-box .label span {
+  color: #d30000;
+}
+.Login .userInputs .userDetails .Inputs .inputs-box input {
+  width: 100%;
+  padding: 10px 12px;
+  outline: none;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  border-radius: 5px;
+}
+.Login .userInputs .userDetails .checkbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Login .userInputs .userDetails .checkbox .terms-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.Login .userInputs .userDetails .checkbox .terms-container input {
+  padding: 40px;
+}
+.Login .userInputs .userDetails .checkbox .terms-container div {
+  margin-left: 10px;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.Login .userInputs .userDetails .submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Login .userInputs .userDetails .submit .button {
+  width: 40%;
+  height: 45px;
+  background-color: black;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.Login .userInputs .userDetails .sign-in {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Login .userInputs .userDetails .sign-in .sign-up-text {
+  width: 40%;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  color: grey;
+}
+.Login .userInputs .userDetails .sign-in .sign-up-text a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #184BFF;
+}
+.Login .userStyle {
+  flex-basis: 45%;
+  height: 100vh;
+}
+.Login .userStyle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }/*# sourceMappingURL=App.css.map */

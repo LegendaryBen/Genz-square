@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Searchbar from './contexts/Searchbar'
 import Hambar from './contexts/Hambar'
 const Magazine = lazy(()=> import("./pages/Magazine"));
+const Login = lazy(()=> import("./pages/Login"));
 
 
 function App() {
@@ -18,6 +19,11 @@ function App() {
             <Route path='/magazine' element={
               <Suspense fallback="loading...">
                 <Magazine/>
+              </Suspense>
+            }/>
+            <Route path='/login' element={
+              <Suspense fallback="loading...">
+                <Login/>
               </Suspense>
             }/>
           </Routes>
