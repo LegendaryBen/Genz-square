@@ -2305,6 +2305,12 @@ body {
   height: 100vh;
   background-color: #FFFFFF;
 }
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs {
+    flex-basis: 100%;
+    overflow: auto;
+  }
+}
 .Login .userInputs .loginfancy {
   width: 100%;
   padding-left: 40px;
@@ -2317,6 +2323,23 @@ body {
   line-height: 20px;
   height: 7%;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .loginfancy {
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .loginfancy {
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 14px;
+    height: 50px;
+  }
+}
 .Login .userInputs .loginfancy img {
   width: 15px;
   height: 15px;
@@ -2328,6 +2351,17 @@ body {
   flex-direction: column;
   display: flex;
   justify-content: center;
+  padding-top: 0px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails {
+    padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails {
+    height: 600px;
+  }
 }
 .Login .userInputs .userDetails .Warning {
   width: 100%;
@@ -2338,6 +2372,19 @@ body {
   line-height: 17px;
   color: #d30000;
   margin-bottom: 20px;
+  padding: 0px 40px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .Warning {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .Warning {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
 }
 .Login .userInputs .userDetails .createAccount {
   text-align: center;
@@ -2349,6 +2396,20 @@ body {
   margin-bottom: 10px;
   width: 100%;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .createAccount {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .createAccount {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+}
 .Login .userInputs .userDetails .getStarted {
   width: 100%;
   text-align: center;
@@ -2359,6 +2420,20 @@ body {
   line-height: 17px;
   margin-bottom: 30px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .getStarted {
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 13px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .getStarted {
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 13px;
+  }
+}
 .Login .userInputs .userDetails .google-container {
   width: 100%;
   display: flex;
@@ -2366,10 +2441,35 @@ body {
   align-items: center;
   margin-bottom: 40px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .google-container {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .google-container {
+    margin-bottom: 30px;
+  }
+}
 .Login .userInputs .userDetails .google-container .google {
-  width: 40%;
+  width: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .google-container .google {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .google-container .google {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .Login .userInputs .userDetails .google-container .google {
+    width: 80%;
+  }
 }
 .Login .userInputs .userDetails .or {
   width: 100%;
@@ -2378,14 +2478,39 @@ body {
   justify-content: center;
   margin-bottom: 30px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .or {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .or {
+    margin-bottom: 20px;
+  }
+}
 .Login .userInputs .userDetails .or .line {
-  width: 40%;
+  width: 50%;
   height: 2px;
   background-color: #CCCCCC;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .or .line {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .or .line {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .Login .userInputs .userDetails .or .line {
+    width: 80%;
+  }
 }
 .Login .userInputs .userDetails .or .line div {
   width: 50px;
@@ -2401,6 +2526,20 @@ body {
   color: #707070;
   border-radius: 50%;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .or .line div {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .or .line div {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+  }
+}
 .Login .userInputs .userDetails .Inputs {
   width: 100%;
   display: flex;
@@ -2408,8 +2547,33 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .Inputs {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .Inputs {
+    margin-bottom: 15px;
+  }
+}
 .Login .userInputs .userDetails .Inputs .inputs-box {
-  width: 40%;
+  width: 50%;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .Inputs .inputs-box {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .Inputs .inputs-box {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .Login .userInputs .userDetails .Inputs .inputs-box {
+    width: 80%;
+  }
 }
 .Login .userInputs .userDetails .Inputs .inputs-box .label {
   font-family: "Archivo", sans-serif;
@@ -2419,6 +2583,16 @@ body {
   color: black;
   margin-bottom: 5px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .Inputs .inputs-box .label {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .Inputs .inputs-box .label {
+    font-size: 15px;
+  }
+}
 .Login .userInputs .userDetails .Inputs .inputs-box .label span {
   color: #d30000;
 }
@@ -2427,12 +2601,22 @@ body {
   padding: 10px 12px;
   outline: none;
   border: 1px solid #CCCCCC;
-  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 17px;
   border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .Inputs .inputs-box input {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .Inputs .inputs-box input {
+    font-size: 12px;
+  }
 }
 .Login .userInputs .userDetails .checkbox {
   width: 100%;
@@ -2441,13 +2625,39 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .checkbox {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .checkbox {
+    margin-bottom: 15px;
+  }
+}
 .Login .userInputs .userDetails .checkbox .terms-container {
-  width: 40%;
+  width: 50%;
   display: flex;
   align-items: center;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .checkbox .terms-container {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .checkbox .terms-container {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .Login .userInputs .userDetails .checkbox .terms-container {
+    width: 80%;
+  }
+}
 .Login .userInputs .userDetails .checkbox .terms-container input {
   padding: 40px;
+  outline: none;
 }
 .Login .userInputs .userDetails .checkbox .terms-container div {
   margin-left: 10px;
@@ -2456,6 +2666,16 @@ body {
   font-weight: 400;
   line-height: 17px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .checkbox .terms-container div {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .checkbox .terms-container div {
+    font-size: 13px;
+  }
+}
 .Login .userInputs .userDetails .submit {
   width: 100%;
   display: flex;
@@ -2463,8 +2683,18 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .submit {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .submit {
+    margin-bottom: 15px;
+  }
+}
 .Login .userInputs .userDetails .submit .button {
-  width: 40%;
+  width: 50%;
   height: 45px;
   background-color: black;
   color: #FFFFFF;
@@ -2478,6 +2708,27 @@ body {
   line-height: 20px;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .submit .button {
+    width: 60%;
+    font-size: 15px;
+    line-height: 16px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .submit .button {
+    width: 60%;
+    font-size: 15px;
+    line-height: 16px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .Login .userInputs .userDetails .submit .button {
+    width: 80%;
+  }
+}
 .Login .userInputs .userDetails .sign-in {
   width: 100%;
   display: flex;
@@ -2485,12 +2736,29 @@ body {
   align-items: center;
 }
 .Login .userInputs .userDetails .sign-in .sign-up-text {
-  width: 40%;
+  width: 50%;
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 17px;
   color: grey;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Login .userInputs .userDetails .sign-in .sign-up-text {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userInputs .userDetails .sign-in .sign-up-text {
+    width: 60%;
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .Login .userInputs .userDetails .sign-in .sign-up-text {
+    width: 80%;
+  }
 }
 .Login .userInputs .userDetails .sign-in .sign-up-text a {
   margin-left: 10px;
@@ -2500,6 +2768,12 @@ body {
 .Login .userStyle {
   flex-basis: 45%;
   height: 100vh;
+  display: block;
+}
+@media only screen and (max-width: 1023px) {
+  .Login .userStyle {
+    display: none;
+  }
 }
 .Login .userStyle img {
   width: 100%;
