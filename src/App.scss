@@ -1986,33 +1986,65 @@ body{
     margin-top:100px;width:100%;@include flex;@include padding(0px 70px);
     @include flexDirection(row);margin-bottom:150px;
 
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(0px 30px);
+    }
+
+    @include maxScreen($tablet){
+        @include padding(0px 30px);@include flexDirection(column);margin-bottom:50px;
+    }
+
+
+
     .full-story-container{
-        position: relative;flex-basis:72%;
+        position: relative;flex-basis:72%;margin-bottom:0px;height:1143px;overflow: auto;
+        scrollbar-width:thin;
+
+        @include maxScreen($tablet){
+            margin-bottom:130px;overflow: visible;flex-basis: auto;height: auto;
+        }
+
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+      
+        &::-webkit-scrollbar-thumb {
+            background-color:$white-btn;
+        }
+      
+        &::-webkit-scrollbar-track {
+            background-color:$white-btn; 
+        }
+
+
+        
 
         .story-text{
             font-size: 22px;font-weight: 400;line-height: 36px;@include archivo;
-            height:1100px;overflow:auto;scrollbar-width:thin;
+            @include padding(0px 20px 0px 0px);position:relative;
 
-            &::-webkit-scrollbar {
-                width: 6px;
+            
+            @include maxScreen($tablet){
+                @include padding(0px);font-size:18px;line-height:30px;
             }
-          
-            &::-webkit-scrollbar-thumb {
-                background-color:$white-btn;
-            }
-          
-            &::-webkit-scrollbar-track {
-                background-color:$white-btn; 
+
+
+            .Goto-magazine{
+                text-decoration:none;@include flex;@include justify(center);@include align(center);
+                color:$white-btn;background-color:$green;width:157px;height:43px;
+                font-size: 14px;font-weight: 600;line-height: 15px;@include archivo;position: absolute;
+                bottom:-48px;left:0px;
+
+                @include maxScreen($tablet){
+                    font-size:13px;line-height:12px;width:140px;
+                }
+    
             }
     
         }
 
-        .Goto-magazine{
-            text-decoration:none;@include flex;@include justify(center);@include align(center);
-            color:$white-btn;background-color:$green;width:157px;height:43px;
-            font-size: 14px;font-weight: 600;line-height: 15px;@include archivo;position: absolute;
-            bottom:-48px;left:0;
-        }
+       
     }
 
      

@@ -2789,29 +2789,59 @@ body {
   flex-direction: row;
   margin-bottom: 150px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Show-full-story {
+    padding: 0px 30px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Show-full-story {
+    padding: 0px 30px;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
 .Show-full-story .full-story-container {
   position: relative;
   flex-basis: 72%;
+  margin-bottom: 0px;
+  height: 1143px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+@media only screen and (max-width: 1023px) {
+  .Show-full-story .full-story-container {
+    margin-bottom: 130px;
+    overflow: visible;
+    flex-basis: auto;
+    height: auto;
+  }
+}
+.Show-full-story .full-story-container::-webkit-scrollbar {
+  width: 6px;
+}
+.Show-full-story .full-story-container::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+}
+.Show-full-story .full-story-container::-webkit-scrollbar-track {
+  background-color: #FFFFFF;
 }
 .Show-full-story .full-story-container .story-text {
   font-size: 22px;
   font-weight: 400;
   line-height: 36px;
   font-family: "Archivo", sans-serif;
-  height: 1100px;
-  overflow: auto;
-  scrollbar-width: thin;
+  padding: 0px 20px 0px 0px;
+  position: relative;
 }
-.Show-full-story .full-story-container .story-text::-webkit-scrollbar {
-  width: 6px;
+@media only screen and (max-width: 1023px) {
+  .Show-full-story .full-story-container .story-text {
+    padding: 0px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
-.Show-full-story .full-story-container .story-text::-webkit-scrollbar-thumb {
-  background-color: #FFFFFF;
-}
-.Show-full-story .full-story-container .story-text::-webkit-scrollbar-track {
-  background-color: #FFFFFF;
-}
-.Show-full-story .full-story-container .Goto-magazine {
+.Show-full-story .full-story-container .story-text .Goto-magazine {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -2826,7 +2856,14 @@ body {
   font-family: "Archivo", sans-serif;
   position: absolute;
   bottom: -48px;
-  left: 0;
+  left: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .Show-full-story .full-story-container .story-text .Goto-magazine {
+    font-size: 13px;
+    line-height: 12px;
+    width: 140px;
+  }
 }
 .Show-full-story .Other-magazine-stories2 {
   flex-basis: 28%;
