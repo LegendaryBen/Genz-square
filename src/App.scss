@@ -1980,3 +1980,153 @@ body{
     }
 
 
+//style for the trending screen
+
+.Show-full-story{
+    margin-top:100px;width:100%;@include flex;@include padding(0px 70px);
+    @include flexDirection(row);margin-bottom:150px;
+
+    .full-story-container{
+        position: relative;flex-basis:72%;
+
+        .story-text{
+            font-size: 22px;font-weight: 400;line-height: 36px;@include archivo;
+            height:1100px;overflow:auto;scrollbar-width:thin;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+          
+            &::-webkit-scrollbar-thumb {
+                background-color:$white-btn;
+            }
+          
+            &::-webkit-scrollbar-track {
+                background-color:$white-btn; 
+            }
+    
+        }
+
+        .Goto-magazine{
+            text-decoration:none;@include flex;@include justify(center);@include align(center);
+            color:$white-btn;background-color:$green;width:157px;height:43px;
+            font-size: 14px;font-weight: 600;line-height: 15px;@include archivo;position: absolute;
+            bottom:-48px;left:0;
+        }
+    }
+
+     
+    .Other-magazine-stories2{
+        flex-basis:28%;height:1100px;overflow:auto;position:relative;
+        padding-top:70px;@include flex;@include align(center);@include flexDirection(column);
+        padding-left:70px;scrollbar-width:thin;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            padding-left:20px;padding-top:50px;
+        }
+
+        @include maxScreen($tablet){
+            padding-left:0px;padding-top:50px;flex-basis:auto;height: auto;
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+      
+        &::-webkit-scrollbar-thumb {
+            background-color:$white-btn;
+        }
+      
+        &::-webkit-scrollbar-track {
+            background-color:$white-btn; 
+        }
+
+
+        .more-stories-header{
+            position:absolute;top:0px;color:$black;@include clash;font-size: 24px;font-weight: 600;
+            line-height: 30px;left:70px;
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                left:20px;font-size:20px;
+            }
+
+            @include maxScreen($tablet){
+                left:0;
+            }
+
+            @include maxScreen($mobile1){
+                font-size:18px;line-height:15px;
+            }
+    
+        }
+
+
+        .more-stories-card{
+            width:100%;min-height:480px;margin-bottom:30px;background-color:$white2;text-decoration:none;
+
+            img{
+                width:100%;height:40%;object-fit:cover;
+            }
+
+            .more-stories-content{
+                width:100%;height:50%;@include padding(20px);
+
+                @include minMaxScreen($laptop-min,$laptop-max){
+                    @include padding(15px);
+                }
+
+                .content-header{
+                    @include archivo; font-size:16px;font-weight: 500;line-height: 17px;color:$red-btn;
+                    margin-bottom:20px;
+
+                    @include minMaxScreen($laptop-min,$laptop-max){
+                        font-size:14px;margin-bottom:15px;
+                    }
+
+                }
+
+                .content-body{
+                    @include clash;font-size: 20px;font-weight: 600;line-height: 25px;
+                    margin-bottom:20px;color:$black;
+
+                    @include minMaxScreen($laptop-min,$laptop-max){
+                        font-size:18px;margin-bottom:15px;line-height:23px;
+                    }
+
+                    @include maxScreen($mobile1){
+                        font-size:18px;line-height:23px;
+                    }
+                }
+
+                .company-name{
+                    @include flex;@include align(center);margin-bottom:20px;color:$black;
+
+                    img{
+                        width:24px;height:24px;object-fit:contain;margin-right:10px;
+                    }
+
+                    div{
+                        @include clash;font-size: 16px;font-weight: 600;line-height: 20px;
+
+                        @include minMaxScreen($laptop-min,$laptop-max){
+                            line-height:18px;
+                        }
+
+                        @include maxScreen($mobile1){
+                            font-size:16px;line-height:18px;
+                        }
+                    }
+                }
+
+                .content-date{
+                    @include archivo;font-size: 12px;font-weight: 400;line-height: 13px;color:$grey2;
+                }
+            }
+
+
+        }
+    }
+
+}
+
+

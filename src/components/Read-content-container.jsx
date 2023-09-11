@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Various_price from './Various-price'
-import More_stories_card from './More-stories-card'
+import Other_magazine_stories from './Other-magazine-stories'
+
 
 const Read_content_container = () => {
     return (
@@ -90,14 +91,7 @@ const Read_content_container = () => {
                     </div>
                 </div>
             </div>
-            <div className="Other-magazine-stories">
-                <div className="more-stories-header">
-                    More stories
-                </div>
-                <More_stories_card/>
-                <More_stories_card/>
-                <More_stories_card/>
-            </div>
+           <Other_magazine_stories/>
         </div>
     )
 }
