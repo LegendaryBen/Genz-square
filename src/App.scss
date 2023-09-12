@@ -1078,7 +1078,7 @@ body{
 
     .sidebar{
         width:50%;height:100vh;background-color:$white-btn;overflow-y:auto; 
-        scrollbar-width:thin;scrollbar-color:$white-btn;position:fixed;top:0;left:-100%;z-index:140;
+        scrollbar-width:thin;scrollbar-color:$grey3;position:fixed;top:0;left:-100%;z-index:140;
         transition: all 0.5s ;
 
 
@@ -1093,14 +1093,17 @@ body{
 
             &::-webkit-scrollbar {
                 width: 6px;
+                border-radius:10px;
             }
           
             &::-webkit-scrollbar-thumb {
-                background-color:$white-btn;
+                background-color:$grey3;
+                border-radius:10px;
             }
           
             &::-webkit-scrollbar-track {
-                background-color:$white-btn; 
+                background-color:$white-btn;
+                border-radius:10px;
             }
 
         .cancle{
@@ -1510,7 +1513,7 @@ body{
     .Other-magazine-stories{
         flex-basis:28%;height:1100px;overflow:auto;position:relative;
         padding-top:70px;@include flex;@include align(center);@include flexDirection(column);
-        padding-left:70px;scrollbar-width:thin;
+        padding-left:70px;scrollbar-width:thin;scrollbar-color:$grey3;
 
         @include minMaxScreen($laptop-min,$laptop-max){
             padding-left:20px;padding-top:50px;
@@ -1522,14 +1525,17 @@ body{
 
         &::-webkit-scrollbar {
             width: 6px;
+            border-radius:10px;
         }
       
         &::-webkit-scrollbar-thumb {
             background-color:$white-btn;
+            border-radius:10px;
         }
       
         &::-webkit-scrollbar-track {
             background-color:$white-btn; 
+            border-radius:10px;
         }
 
 
@@ -1998,7 +2004,7 @@ body{
 
     .full-story-container{
         position: relative;flex-basis:72%;margin-bottom:0px;height:1143px;overflow: auto;
-        scrollbar-width:thin;
+        scrollbar-width:thin;scrollbar-color:$grey3;
 
         @include maxScreen($tablet){
             margin-bottom:130px;overflow: visible;flex-basis: auto;height: auto;
@@ -2007,14 +2013,17 @@ body{
 
         &::-webkit-scrollbar {
             width: 6px;
+            border-radius:10px;
         }
       
         &::-webkit-scrollbar-thumb {
-            background-color:$white-btn;
+            background-color:$grey3;
+            border-radius:10px;
         }
       
         &::-webkit-scrollbar-track {
-            background-color:$white-btn; 
+            background-color:$white-btn;
+            border-radius:10px;
         }
 
 
@@ -2051,7 +2060,7 @@ body{
     .Other-magazine-stories2{
         flex-basis:28%;height:1100px;overflow:auto;position:relative;
         padding-top:70px;@include flex;@include align(center);@include flexDirection(column);
-        padding-left:70px;scrollbar-width:thin;
+        padding-left:70px;scrollbar-width:thin;scrollbar-color:$grey3;
 
         @include minMaxScreen($laptop-min,$laptop-max){
             padding-left:20px;padding-top:50px;
@@ -2063,14 +2072,17 @@ body{
 
         &::-webkit-scrollbar {
             width: 6px;
+            border-radius:10px;
         }
       
         &::-webkit-scrollbar-thumb {
             background-color:$white-btn;
+            border-radius:10px;
         }
       
         &::-webkit-scrollbar-track {
             background-color:$white-btn; 
+            border-radius:10px;
         }
 
 

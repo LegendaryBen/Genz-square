@@ -1555,7 +1555,7 @@ body {
   background-color: #FFFFFF;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #FFFFFF;
+  scrollbar-color: #CCCCCC;
   position: fixed;
   top: 0;
   left: -100%;
@@ -1574,12 +1574,15 @@ body {
 }
 .sidebar::-webkit-scrollbar {
   width: 6px;
+  border-radius: 10px;
 }
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: #FFFFFF;
+  background-color: #CCCCCC;
+  border-radius: 10px;
 }
 .sidebar::-webkit-scrollbar-track {
   background-color: #FFFFFF;
+  border-radius: 10px;
 }
 .sidebar .cancle {
   width: 100%;
@@ -2149,6 +2152,7 @@ body {
   flex-direction: column;
   padding-left: 70px;
   scrollbar-width: thin;
+  scrollbar-color: #CCCCCC;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1350px) {
   .Read-content-container .Other-magazine-stories {
@@ -2166,12 +2170,15 @@ body {
 }
 .Read-content-container .Other-magazine-stories::-webkit-scrollbar {
   width: 6px;
+  border-radius: 10px;
 }
 .Read-content-container .Other-magazine-stories::-webkit-scrollbar-thumb {
   background-color: #FFFFFF;
+  border-radius: 10px;
 }
 .Read-content-container .Other-magazine-stories::-webkit-scrollbar-track {
   background-color: #FFFFFF;
+  border-radius: 10px;
 }
 .Read-content-container .Other-magazine-stories .more-stories-header {
   position: absolute;
@@ -2808,6 +2815,7 @@ body {
   height: 1143px;
   overflow: auto;
   scrollbar-width: thin;
+  scrollbar-color: #CCCCCC;
 }
 @media only screen and (max-width: 1023px) {
   .Show-full-story .full-story-container {
@@ -2819,12 +2827,15 @@ body {
 }
 .Show-full-story .full-story-container::-webkit-scrollbar {
   width: 6px;
+  border-radius: 10px;
 }
 .Show-full-story .full-story-container::-webkit-scrollbar-thumb {
-  background-color: #FFFFFF;
+  background-color: #CCCCCC;
+  border-radius: 10px;
 }
 .Show-full-story .full-story-container::-webkit-scrollbar-track {
   background-color: #FFFFFF;
+  border-radius: 10px;
 }
 .Show-full-story .full-story-container .story-text {
   font-size: 22px;
@@ -2876,6 +2887,7 @@ body {
   flex-direction: column;
   padding-left: 70px;
   scrollbar-width: thin;
+  scrollbar-color: #CCCCCC;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1350px) {
   .Show-full-story .Other-magazine-stories2 {
@@ -2893,12 +2905,15 @@ body {
 }
 .Show-full-story .Other-magazine-stories2::-webkit-scrollbar {
   width: 6px;
+  border-radius: 10px;
 }
 .Show-full-story .Other-magazine-stories2::-webkit-scrollbar-thumb {
   background-color: #FFFFFF;
+  border-radius: 10px;
 }
 .Show-full-story .Other-magazine-stories2::-webkit-scrollbar-track {
   background-color: #FFFFFF;
+  border-radius: 10px;
 }
 .Show-full-story .Other-magazine-stories2 .more-stories-header {
   position: absolute;
