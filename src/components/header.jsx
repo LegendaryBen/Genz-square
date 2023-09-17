@@ -4,22 +4,42 @@ import search from "../images/search.svg";
 import { Link } from 'react-router-dom'
 import { Search } from '../contexts/Searchbar';
 import { Ham } from '../contexts/Hambar';
+import Arrow from './Arrow';
+import books from '../images/user-books.svg'
+import user from '../images/user-icon.svg'
+import dot from '../images/red-dot.svg'
+import bell from '../images/bell.svg'
 
 const Header = () => {
     const{slideOut} = useContext(Ham);
     const {down} = useContext(Search);
     return (
         <div className='Header'>
-            <img src={ham} onClick={slideOut}/>
+            <img src={ham} onClick={slideOut} className='ham-fancy'/>
             <span>
                 GEN-Z SQUARE
             </span>
-            <div className='subscribe'>
+            {/* <div className='subscribe'>
                 <Link to="" className='sub-children sub-btn'>SUBSCRIBE</Link>
                 <Link to='' className='sub-children sign-in'>
                     SIGN IN 
                 </Link>
                 <img src={search} alt="" className='sub-children' onClick={down} />
+            </div> */}
+            <div className="subscribe2">
+                <Link className='sub-children'>
+                    <Arrow image={books} cls="no-dot"/>
+                </Link>
+                <div className='sub-children'>
+                    <Arrow image={bell} cls="no-dot"/>
+                    <Arrow image={dot} cls="dot"/>
+                </div>
+                <Link className='sub-children'>
+                    <Arrow image={user} cls="no-dot"/>
+                </Link>
+                <Link className='sub-children spec' onClick={down}>
+                    <Arrow image={search} cls="no-dot"/>
+                </Link>
             </div>
         </div>
     )

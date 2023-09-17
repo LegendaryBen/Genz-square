@@ -24,11 +24,24 @@ body{
     }
 
     @include maxScreen($mobile1){
-        @include padding(20px 20px);
+        @include padding(0px 20px);
     }
 
     @include maxScreen($mobile2){
         @include padding(20px 10px);
+    }
+
+    .ham-fancy{
+        height:33px;width:33px;
+
+        
+        @include maxScreen($mobile1){
+            height:25px;width:25px;
+        }
+
+        @include maxScreen($mobile2){
+            height:23px;width:23px;
+        }
     }
 
 
@@ -40,11 +53,11 @@ body{
         }
 
         @include maxScreen($mobile1){
-            font-size:17px;line-height:17px;transform:translateX(30px);
+            font-size:17px;line-height:17px;transform:translateX(20px);
         }
 
         @include maxScreen($mobile2){
-            transform:translateX(20px);
+            transform:translateX(15px);
         }
     }
     .subscribe{
@@ -87,6 +100,51 @@ body{
                 @include display(none);
             }
 
+        }
+    }
+
+    .subscribe2{
+        @include flex;@include align(center);@include archivo;
+        .sub-children{
+            margin-left:30px;
+
+            @include maxScreen($mobile1){
+                margin-left:15px;
+            }
+
+            @include maxScreen($mobile1){
+                margin-left:13px;
+            }
+
+
+        }
+
+        div{
+            position:relative;
+
+            .dot{
+                position: absolute;top:0;
+            }
+        }
+
+        .no-dot{
+            height:33px;width:33px;
+
+            @include maxScreen($mobile1){
+                height:25px;width:25px;
+            }
+
+            @include maxScreen($mobile1){
+                height:22px;width:22px;
+            }
+        }
+
+        .spec{
+            @include display(block);
+
+            @include maxScreen($tablet){
+                @include display(none);
+            }
         }
     }
 }
