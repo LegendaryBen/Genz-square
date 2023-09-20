@@ -458,8 +458,13 @@ body{
             font-size:25px;line-height:24px; width:300px;
         }
 
+        @include maxScreen($mobile2){
+            font-size:25px;line-height:24px; width:200px;
+        }
+
+
         .fancy{
-            height:39px;width:352px;
+            height:39px;width:122px;
 
             @include maxScreen($mobile1){
                 width:300px;
@@ -512,6 +517,10 @@ body{
 
             @include maxScreen($mobile1){
                 height:350px;width:305px;
+            }
+
+            @include maxScreen($mobile2){
+                height:350px;width:260px;
             }
 
             .img-cover{
