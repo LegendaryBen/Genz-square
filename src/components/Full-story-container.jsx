@@ -1,7 +1,7 @@
 import React from 'react'
 import Goto_magazine from './Goto-magazine'
 
-const Full_story_container = () => {
+const Full_story_container = ({text,to}) => {
     return (
         <div className='full-story-container'>
             <div className='story-text'>
@@ -85,7 +85,7 @@ const Full_story_container = () => {
                 Tempore voluptatibus eum iste ducimus error minima sapiente tenetur accusamus doloribus! Consequuntur iure molestias necessitatibus praesentium nam qui illo illum, vel, pariatur, consectetur corrupti officiis voluptates aspernatur impedit quia sapiente?
                 Cumque ipsa, explicabo, voluptatem tenetur corrupti optio iste sint et alias quasi aliquam? Ipsa, eaque modi recusandae distinctio iusto inventore, quis officia assumenda tempore est qui vel sed veniam voluptatem?
                 Dolor corrupti repellat non ipsam nihil repellendus voluptatibus similique accusamus ducimus deserunt cum voluptatum, saepe, assumenda error expedita fuga qui asperiores delectus unde aperiam. Odio eveniet nulla optio illo beatae?
-                <Goto_magazine/>
+                <Goto_magazine text={text} to={to}/>
             </div>
         </div>
     )

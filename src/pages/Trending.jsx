@@ -14,7 +14,7 @@ const Trending = () => {
             <Header/>
             <Category margin="90px"/>
             <Read_Magazine/>
-            <Show_full_story/>
+            <Show_full_story text='Go back home' to='/'/>
             <Footer/>
             <Search_Bar/>
             <Ham_menu/>

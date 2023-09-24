@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Submit = () => {
+const Submit = ({text}) => {
     return (
         <div className='submit'>
             <div className="button">
-                Sign Up
+                {text}
             </div>
         </div>
     )

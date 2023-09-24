@@ -5,11 +5,12 @@ import genz from '../images/gen-z.svg'
 import Googlebtn from '../components/Googlebtn'
 import User_inputs_style from '../components/User-inputs-style'
 import Inputs from '../components/Inputs'
+import Terms from '../components/Terms'
 import Submit from '../components/Submit'
 import Sign_in from '../components/Sign-in'
 
 
-const Login = () => {
+const SignUp = () => {
     return (
         <div className='Login'>
             <div className="userInputs">
@@ -24,17 +25,19 @@ const Login = () => {
                         Incorrect blah blah blah!... abeg how person go forget en login details
                     </div>
                     <div className="createAccount">
-                        Log in your account
+                        Create your account
                     </div>
                     <div className="getStarted">
-                        You’ve missed some interesting stories and topics!
+                        Let's get started with your 7days free trial
                     </div>
-                   <Googlebtn text='signin_with'/>
+                   <Googlebtn text='signup_with'/>
                    <User_inputs_style/>
+                   <Inputs label="Name" placeholder="Enter your name"/>
                    <Inputs label="Email" placeholder="Enter your email"/>
                    <Inputs label="Password" placeholder="Enter your password"/>
-                   <Submit text='Log In'/>
-                   <Sign_in text='Sign Up' suggest='Don’t have an account?' to='/sign-up'/>
+                   <Terms/>
+                   <Submit text='Sign Up'/>
+                   <Sign_in text='Log In' suggest='Already have an account?' to='/login' />
                 </div>
             </div>
             <div className="userStyle">
@@ -44,4 +47,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default SignUp

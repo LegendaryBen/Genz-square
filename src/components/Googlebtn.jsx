@@ -4,14 +4,13 @@ import { GoogleLogin } from '@react-oauth/google';
 
 
 
-
-const Googlebtn = () => {
+const Googlebtn = ({text}) => {
 
     return (
         <div className='google-container'>
             <div className='google'>
                 <GoogleOAuthProvider clientId="hfvydfty">
-                    <GoogleLogin text='signup_with'logo_alignment="center" 
+                    <GoogleLogin text={text}logo_alignment="center" 
                             onSuccess={credentialResponse => {
                                 console.log(credentialResponse);
                             }}

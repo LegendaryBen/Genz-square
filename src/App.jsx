@@ -6,6 +6,7 @@ import Searchbar from './contexts/Searchbar'
 import Hambar from './contexts/Hambar'
 const Magazine = lazy(()=> import("./pages/Magazine"));
 const Login = lazy(()=> import("./pages/Login"));
+const SignUp = lazy(()=> import("./pages/SignUp"));
 const Trending = lazy(()=> import("./pages/Trending"));
 
 
@@ -25,6 +26,11 @@ function App() {
             <Route path='/login' element={
               <Suspense fallback="loading...">
                 <Login/>
+              </Suspense>
+            }/>
+            <Route path='/sign-up' element={
+              <Suspense fallback="loading...">
+                <SignUp/>
               </Suspense>
             }/>
             <Route path='/trending' element={
