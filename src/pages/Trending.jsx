@@ -12,7 +12,7 @@ const Trending = () => {
     return (
         <>
             <Header/>
-            <Category margin="90px"/>
+            <Category margin="margin"/>
             <Read_Magazine/>
             <Show_full_story text='Go back home' to='/'/>
             <Footer/>

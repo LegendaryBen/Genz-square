@@ -12,7 +12,7 @@ const Magazine = () => {
     return (
         <>
             <Header/>
-            <Category margin="90px"/>
+            <Category margin="margin"/>
             <Read_Magazine/>
             <Read_content_container/>
             {/* <Show_full_story text='Go to magazine' to='/'/> */}

@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <>
             <Header/>
-            <Category margin="90px"/>
+            <Category margin="margin"/>
             <News_tip />
             <News_slides/>
             <Slides_controller/>

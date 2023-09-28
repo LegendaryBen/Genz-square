@@ -45,7 +45,7 @@ const Category = ({margin}) => {
 
 
     return (
-        <div className='categories' style={{marginTop:margin}}>
+        <div className={`${margin == ''? 'categories':'categories'+' '+margin}`}>
             <div className='cat-container'>
             {
                 opt.map((item)=>{
