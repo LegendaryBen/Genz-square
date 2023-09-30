@@ -27,13 +27,13 @@ const Header = () => {
                 <img src={search} alt="" className='sub-children' onClick={down} />
             </div> */}
             <div className="subscribe2">
-                <Link className='sub-children'>
+                <Link className='sub-children' to='/user'>
                     <Arrow image={books} cls="no-dot"/>
                 </Link>
-                <div className='sub-children'>
+                <Link className='sub-children' >
                     <Arrow image={bell} cls="no-dot"/>
                     <Arrow image={dot} cls="dot"/>
-                </div>
+                </Link>
                 <Link className='sub-children'>
                     <Arrow image={user} cls="no-dot"/>
                 </Link>

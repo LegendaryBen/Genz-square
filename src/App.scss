@@ -119,7 +119,7 @@ body{
 
         }
 
-        div{
+        a{
             position:relative;
 
             .dot{
@@ -472,7 +472,7 @@ body{
 
 
         .fancy{
-            height:39px;width:122px;
+            height:39px;width:352px;
 
             @include maxScreen($mobile1){
                 width:300px;
@@ -2246,6 +2246,103 @@ body{
         }
     }
 
+}
+
+
+.Seperator{
+    width:100%;height:70px;background-color:$white-btn;
+}
+
+.swap{
+    background-color:$white-btn;
+}
+
+.Latest{
+
+    width:100%;@include padding(0px 60px);margin-top:10px;
+}
+
+.subscribed-cards{
+    height:243px;width:716px;background-color:$white2;border: 1px solid $grey3;
+    @include padding(7px);@include flex;@include align(center);text-decoration:none;
+
+    .subscribed-cards-image{
+        width:30%;height:100%;
+
+        img{
+            height:100%;width:100%;object-fit:cover;
+        }
+    }
+
+    .subscribed-cards-info{
+        width:70%;padding-left:60px;height:100%;
+
+
+        .subscribed-cards-info1{
+
+            width:100%;margin-bottom:40px;@include flex;@include justify(space-between);
+            @include align(center);padding-right:20px;
+
+                .info1-title1{
+                    @include flex;@include align(center);color:$black;@include archivo;
+                    font-size: 16px;font-weight: 500;line-height: 17px;
+                }
+            
+        }
+
+
+        .subscribed-cards-info2{
+            margin-bottom:40px;
+
+            .subscribed-cards-info2-first{
+                color:$black;@include clash;font-size: 24px;font-weight: 600;line-height: 30px;
+                margin-bottom:10px;
+            }
+
+            .subscribed-cards-info2-second{
+                @include archivo;font-size: 18px;font-weight: 400;line-height: 20px;color:#505050;
+            }
+
+        }
+
+        .subscribed-cards-info3{
+            @include flex; @include align(center);margin-top:50px;
+
+            div{
+                margin-right:30px;
+            }
+
+            .subscribed-cards-info3-first{
+                @include flex;@include align(center);
+
+                img{
+                    margin-right:10px;
+                }
+
+                span{
+                    @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;color:#505050;
+                }
+            }
+
+        }
+
+
+    }
+
+    .unpaid{
+        height:38px;width:72px;background-color:#FFE5E5;@include flex;@include justify(center);
+        @include align(center);@include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
+        color:$red-btn;margin-left:10px;
+        
+    }
+
+    .owned{
+        height:38px;width:103px;background-color:#E7FDF0;@include flex;@include justify(center);
+        @include align(center);@include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
+        color:$green;margin-left:10px;
+    }
+
+   
 }
 
 

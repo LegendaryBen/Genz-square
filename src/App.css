@@ -162,10 +162,10 @@ body {
     margin-left: 13px;
   }
 }
-.Header .subscribe2 div {
+.Header .subscribe2 a {
   position: relative;
 }
-.Header .subscribe2 div .dot {
+.Header .subscribe2 a .dot {
   position: absolute;
   top: 0;
 }
@@ -660,7 +660,7 @@ body {
 }
 .New-magazine .magazine .fancy {
   height: 39px;
-  width: 122px;
+  width: 352px;
 }
 @media only screen and (max-width: 563px) {
   .New-magazine .magazine .fancy {
@@ -3122,4 +3122,130 @@ body {
   font-weight: 400;
   line-height: 13px;
   color: #707070;
+}
+
+.Seperator {
+  width: 100%;
+  height: 70px;
+  background-color: #FFFFFF;
+}
+
+.swap {
+  background-color: #FFFFFF;
+}
+
+.Latest {
+  width: 100%;
+  padding: 0px 60px;
+  margin-top: 10px;
+}
+
+.subscribed-cards {
+  height: 243px;
+  width: 716px;
+  background-color: #FAFAFA;
+  border: 1px solid #CCCCCC;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.subscribed-cards .subscribed-cards-image {
+  width: 30%;
+  height: 100%;
+}
+.subscribed-cards .subscribed-cards-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.subscribed-cards .subscribed-cards-info {
+  width: 70%;
+  padding-left: 60px;
+  height: 100%;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info1 {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info1 .info1-title1 {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info2 {
+  margin-bottom: 40px;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-first {
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-second {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #505050;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info3 {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info3 div {
+  margin-right: 30px;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info3 .subscribed-cards-info3-first {
+  display: flex;
+  align-items: center;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info3 .subscribed-cards-info3-first img {
+  margin-right: 10px;
+}
+.subscribed-cards .subscribed-cards-info .subscribed-cards-info3 .subscribed-cards-info3-first span {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #505050;
+}
+.subscribed-cards .unpaid {
+  height: 38px;
+  width: 72px;
+  background-color: #FFE5E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #d30000;
+  margin-left: 10px;
+}
+.subscribed-cards .owned {
+  height: 38px;
+  width: 103px;
+  background-color: #E7FDF0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #00C24E;
+  margin-left: 10px;
 }/*# sourceMappingURL=App.css.map */

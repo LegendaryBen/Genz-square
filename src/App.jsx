@@ -8,6 +8,7 @@ const Magazine = lazy(()=> import("./pages/Magazine"));
 const Login = lazy(()=> import("./pages/Login"));
 const SignUp = lazy(()=> import("./pages/SignUp"));
 const Trending = lazy(()=> import("./pages/Trending"));
+const User = lazy(()=> import("./pages/User"));
 
 
 function App() {
@@ -36,6 +37,11 @@ function App() {
             <Route path='/trending' element={
               <Suspense fallback="loading...">
                 <Trending/>
+              </Suspense>
+            }/>
+             <Route path='/user' element={
+              <Suspense fallback="loading...">
+                <User/>
               </Suspense>
             }/>
           </Routes>
