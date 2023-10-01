@@ -3142,13 +3142,18 @@ body {
 
 .subscribed-cards {
   height: 243px;
-  width: 716px;
+  width: 580px;
   background-color: #FAFAFA;
   border: 1px solid #CCCCCC;
   padding: 7px;
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: 300ms;
+  margin-right: 40px;
+}
+.subscribed-cards:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .subscribed-cards .subscribed-cards-image {
   width: 30%;
@@ -3161,7 +3166,7 @@ body {
 }
 .subscribed-cards .subscribed-cards-info {
   width: 70%;
-  padding-left: 60px;
+  padding-left: 40px;
   height: 100%;
 }
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info1 {
@@ -3204,12 +3209,10 @@ body {
   align-items: center;
   margin-top: 50px;
 }
-.subscribed-cards .subscribed-cards-info .subscribed-cards-info3 div {
-  margin-right: 30px;
-}
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info3 .subscribed-cards-info3-first {
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info3 .subscribed-cards-info3-first img {
   margin-right: 10px;
@@ -3248,4 +3251,33 @@ body {
   line-height: 17px;
   color: #00C24E;
   margin-left: 10px;
+}
+
+.User_subscribed_magazines {
+  width: 100%;
+  padding: 0px 60px;
+  font-family: "Clash Display", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  color: #505050;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.Owned-magazines {
+  width: 100%;
+  padding: 0px 10px 0px 60px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  scrollbar-color: #CCCCCC;
+  row-gap: 40px;
+  height: auto;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 2076px) {
+  .Owned-magazines {
+    width: 100%;
+  }
 }/*# sourceMappingURL=App.css.map */

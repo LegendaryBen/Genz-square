@@ -2263,8 +2263,13 @@ body{
 }
 
 .subscribed-cards{
-    height:243px;width:716px;background-color:$white2;border: 1px solid $grey3;
+    height:243px;width:580px;background-color:$white2;border: 1px solid $grey3;
     @include padding(7px);@include flex;@include align(center);text-decoration:none;
+    transition:300ms;margin-right:40px;
+
+    &:hover{
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
     .subscribed-cards-image{
         width:30%;height:100%;
@@ -2275,7 +2280,7 @@ body{
     }
 
     .subscribed-cards-info{
-        width:70%;padding-left:60px;height:100%;
+        width:70%;padding-left:40px;height:100%;
 
 
         .subscribed-cards-info1{
@@ -2308,12 +2313,10 @@ body{
         .subscribed-cards-info3{
             @include flex; @include align(center);margin-top:50px;
 
-            div{
-                margin-right:30px;
-            }
+           
 
             .subscribed-cards-info3-first{
-                @include flex;@include align(center);
+                @include flex;@include align(center); margin-right:20px;
 
                 img{
                     margin-right:10px;
@@ -2343,6 +2346,25 @@ body{
     }
 
    
+}
+
+
+.User_subscribed_magazines{
+    width:100%;@include padding(0px 60px);@include clash;font-size: 36px;font-weight: 600;
+    line-height: 44px;color:#505050;margin-top:100px;margin-bottom:40px;
+
+}
+
+
+.Owned-magazines{
+    width:100%;@include padding(0px 10px 0px 60px);height:600px;@include flex;flex-wrap: wrap;
+    scrollbar-color:$grey3;row-gap:40px;height: auto;
+    margin-bottom:100px;
+
+    @include maxScreen($special-desktop){
+        width:100%;
+    }
+    
 }
 
 

@@ -1,14 +1,19 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Arrow from './Arrow'
 import Paid from './Paid'
 import badge from '../images/tag.svg'
 import {Link} from 'react-router-dom'
 import dot from '../images/dot.svg'
 import time from '../images/time.svg'
+import {Ham} from '../contexts/Hambar'
 
-const Subscribed_cards = ({image}) => {
+const Subscribed_cards = ({image ,paid}) => {
+
+    const{slideIn} = useContext(Ham);
+
+
     return (
-        <Link className='subscribed-cards' to='/'>
+        <Link className='subscribed-cards' to='/' onClick={slideIn}>
             <div className='subscribed-cards-image'>
                 <Arrow image={image}/>
             </div>
@@ -17,7 +22,7 @@ const Subscribed_cards = ({image}) => {
                     <div className="info1-title">
                         <div className='info1-title1'>
                             <span>Tech</span>
-                            <Paid/>
+                            <Paid paid={paid}/>
                         </div>
                     </div>
                     <Arrow image={badge}/>   
