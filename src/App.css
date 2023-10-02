@@ -3129,15 +3129,51 @@ body {
   height: 70px;
   background-color: #FFFFFF;
 }
+@media only screen and (max-width: 603px) {
+  .Seperator {
+    height: 50px;
+  }
+}
 
 .swap {
   background-color: #FFFFFF;
+  padding-left: 60px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .swap {
+    padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .swap {
+    padding-left: 30px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .swap {
+    padding-left: 20px;
+  }
 }
 
 .Latest {
   width: 100%;
   padding: 0px 60px;
   margin-top: 10px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Latest {
+    padding: 0px 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Latest {
+    padding: 0px 30px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .Latest {
+    padding: 0px 20px;
+  }
 }
 
 .subscribed-cards {
@@ -3155,9 +3191,32 @@ body {
 .subscribed-cards:hover {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .subscribed-cards {
+    height: 243px;
+    width: 500px;
+    margin-right: 30px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .subscribed-cards {
+    margin-right: 0px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards {
+    height: 191px;
+  }
+}
 .subscribed-cards .subscribed-cards-image {
   width: 30%;
   height: 100%;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .subscribed-cards .subscribed-cards-image {
+    width: 25%;
+  }
 }
 .subscribed-cards .subscribed-cards-image img {
   height: 100%;
@@ -3169,6 +3228,22 @@ body {
   padding-left: 40px;
   height: 100%;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .subscribed-cards .subscribed-cards-info {
+    padding-left: 20px;
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info {
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .subscribed-cards .subscribed-cards-info {
+    padding-left: 8px;
+  }
+}
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info1 {
   width: 100%;
   margin-bottom: 40px;
@@ -3176,6 +3251,23 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-right: 20px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info1 {
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info1 {
+    padding-right: 0px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info1 {
+    height: 20px;
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
 }
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info1 .info1-title1 {
   display: flex;
@@ -3186,8 +3278,24 @@ body {
   font-weight: 500;
   line-height: 17px;
 }
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info1 .info1-title1 {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 {
   margin-bottom: 40px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 {
+    margin-bottom: 10px;
+  }
 }
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-first {
   color: black;
@@ -3197,6 +3305,20 @@ body {
   line-height: 30px;
   margin-bottom: 10px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-first {
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-first {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+}
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-second {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
@@ -3204,10 +3326,32 @@ body {
   line-height: 20px;
   color: #505050;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-second {
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info2 .subscribed-cards-info2-second {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info3 {
   display: flex;
   align-items: center;
   margin-top: 50px;
+}
+@media only screen and (max-width: 1023px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info3 {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info3 {
+    margin-top: 20px;
+  }
 }
 .subscribed-cards .subscribed-cards-info .subscribed-cards-info3 .subscribed-cards-info3-first {
   display: flex;
@@ -3224,6 +3368,12 @@ body {
   line-height: 17px;
   color: #505050;
 }
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .subscribed-cards-info .subscribed-cards-info3 .subscribed-cards-info3-first span {
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
 .subscribed-cards .unpaid {
   height: 38px;
   width: 72px;
@@ -3237,6 +3387,14 @@ body {
   line-height: 17px;
   color: #d30000;
   margin-left: 10px;
+}
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .unpaid {
+    font-size: 12px;
+    line-height: 13px;
+    width: 60px;
+    height: 30px;
+  }
 }
 .subscribed-cards .owned {
   height: 38px;
@@ -3252,6 +3410,14 @@ body {
   color: #00C24E;
   margin-left: 10px;
 }
+@media only screen and (max-width: 603px) {
+  .subscribed-cards .owned {
+    font-size: 12px;
+    line-height: 13px;
+    width: 90px;
+    height: 30px;
+  }
+}
 
 .User_subscribed_magazines {
   width: 100%;
@@ -3263,6 +3429,24 @@ body {
   color: #505050;
   margin-top: 100px;
   margin-bottom: 40px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .User_subscribed_magazines {
+    padding: 0px 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .User_subscribed_magazines {
+    padding: 0px 30px;
+    font-size: 30px;
+    color: black;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .User_subscribed_magazines {
+    font-size: 25px;
+    padding: 0px 20px;
+  }
 }
 
 .Owned-magazines {
@@ -3276,8 +3460,18 @@ body {
   height: auto;
   margin-bottom: 100px;
 }
-@media only screen and (max-width: 2076px) {
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
   .Owned-magazines {
-    width: 100%;
+    padding: 0px 10px 0px 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Owned-magazines {
+    padding: 0px 30px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Owned-magazines {
+    padding: 0px 20px;
   }
 }/*# sourceMappingURL=App.css.map */
