@@ -34,7 +34,7 @@ const Header = () => {
                     <Arrow image={bell} cls="no-dot"/>
                     <Arrow image={dot} cls="dot"/>
                 </Link>
-                <Link className='sub-children'>
+                <Link to='/profile' className='sub-children'>
                     <Arrow image={user} cls="no-dot"/>
                 </Link>
                 <Link className='sub-children spec' onClick={down}>

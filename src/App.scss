@@ -2525,3 +2525,52 @@ body{
 }
 
 
+.nav-container{
+    margin-top:90px;width:100%;@include flex;@include flexDirection(row);height:calc(100vh - 90px);
+
+
+    .navigations{
+        flex-basis:35%;background-color:yellow;height:100%;padding-left:75px;padding-top:100px;
+        background-color:$white-btn;position:relative;
+
+        div{
+            height:70%;width:70%;border:1px solid $grey;@include flex;@include flexDirection(column);
+            overflow:hidden;border-left-color:transparent;border-top-color:transparent;
+            border-right-color:transparent;position:relative;@include padding(20px);
+
+            a{
+                text-decoration:none;color:$grey;@include clash;font-size: 18px;font-weight: 600;line-height: 22px;
+                transition:300ms;@include flex; margin-bottom:30px;height:auto;width:auto;
+    
+                &:hover{
+                    color:$black;
+                }
+            }
+
+            img{
+                position: absolute;top:20px;right:20px;display:none;
+            }
+
+            .nav-special{
+                transform:translateY(-17px);
+            }
+
+            .hide-delete{
+                display:none;
+            }
+        }
+
+        .delete{
+            position: absolute;bottom:40px;@include clash;font-size: 14px;font-weight: 500;line-height: 17px;
+            color:$red-btn;text-decoration:none;
+        }
+
+       
+    }
+
+    .changing-sections{
+        flex-basis:65%;background-color:grey;height:100%;overflow:auto;padding-top:100px;
+    }
+}
+
+
