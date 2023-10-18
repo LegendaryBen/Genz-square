@@ -2653,7 +2653,7 @@ body{
 }
 
 .settings-footer{
-    @include flex;@include justify(space-between);@include align(center);@include padding(20px 30px);
+    @include flex;@include justify(space-between);@include align(center);@include padding(20px 70px);
 }
 
 .setting-copy{
