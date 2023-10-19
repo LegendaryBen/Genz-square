@@ -6,6 +6,8 @@ import Arrow from '../components/Arrow'
 import linked from '../images/linkedin.svg'
 import fb from '../images/fb.svg'
 import twitter from '../images/twitter.svg'
+import Search_Bar from '../components/Search-Bar'
+import Ham_menu from '../components/Ham-menu'
 
 
 const profile = () => {
@@ -28,6 +30,8 @@ const profile = () => {
                     <Arrow image={twitter}/>
                 </div>
             </div>
+            <Search_Bar/>
+            <Ham_menu/>
         </>
     )
 }

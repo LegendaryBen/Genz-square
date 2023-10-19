@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -3547,6 +3548,21 @@ body {
   height: 100%;
   overflow: auto;
   padding-top: 70px;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin;
+  padding-bottom: 40px;
+}
+.nav-container .changing-sections::-webkit-scrollbar, .nav-container .changing-sections::-webkit-scrollbar-thumb, .nav-container .changing-sections::-webkit-scrollbar-track {
+  width: 12px;
+}
+.nav-container .changing-sections::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.nav-container .changing-sections::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
 .Profile-headers {
@@ -3684,4 +3700,75 @@ body {
 }
 .setting-icons img {
   margin-left: 30px;
+}
+
+.alerts {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  color: black;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 5px;
+}
+
+.send-to {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.send-to .send {
+  color: grey;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 10px;
+}
+.send-to .check-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.send-to .check-container div {
+  margin-right: 10px;
+}
+.send-to .check-container .checkbox {
+  opacity: 1;
+  position: relative;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+}
+.send-to .check-container .checkbox::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.send-to .check-container .checkbox:checked::before {
+  content: "✔";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
 }/*# sourceMappingURL=App.css.map */
