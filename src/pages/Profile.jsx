@@ -8,6 +8,7 @@ import fb from '../images/fb.svg'
 import twitter from '../images/twitter.svg'
 import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
+import Delete from '../components/Delete'
 
 
 const profile = () => {
@@ -32,6 +33,7 @@ const profile = () => {
             </div>
             <Search_Bar/>
             <Ham_menu/>
+            <Delete/>
         </>
     )
 }
