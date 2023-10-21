@@ -9,7 +9,7 @@ const Login = lazy(()=> import("./pages/Login"));
 const SignUp = lazy(()=> import("./pages/SignUp"));
 const Trending = lazy(()=> import("./pages/Trending"));
 const User = lazy(()=> import("./pages/User"));
-import Profile from "./pages/profile"
+import Profile from "./pages/Profile"
 import Profile_password from './pages/Profile-password'
 import Profile_home from './pages/Profile-home'
 import Profile_email from './pages/Profile-email'
