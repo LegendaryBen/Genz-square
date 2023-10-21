@@ -3484,6 +3484,12 @@ body {
   flex-direction: row;
   height: calc(100vh - 120px);
 }
+@media only screen and (max-width: 1023px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+  }
+}
 .nav-container .navigations {
   flex-basis: 35%;
   height: 100%;
@@ -3491,6 +3497,23 @@ body {
   padding-top: 60px;
   background-color: #FFFFFF;
   position: relative;
+  padding-right: 30px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .nav-container .navigations {
+    padding-left: 30px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .navigations {
+    padding-left: 30px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .nav-container .navigations {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .nav-container .navigations div {
   height: 70%;
@@ -3504,6 +3527,18 @@ body {
   border-right-color: transparent;
   position: relative;
   padding: 20px;
+  border-radius: none;
+  transition: 300ms;
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .navigations div {
+    width: 100%;
+    height: auto;
+    border-left-color: grey;
+    border-top-color: grey;
+    border-right-color: grey;
+    border-radius: 10px;
+  }
 }
 .nav-container .navigations div a {
   text-decoration: none;
@@ -3521,17 +3556,33 @@ body {
 .nav-container .navigations div a:hover {
   color: black;
 }
+@media only screen and (max-width: 563px) {
+  .nav-container .navigations div a {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .nav-container .navigations div img {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 15px;
   display: none;
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .navigations div img {
+    display: block;
+  }
 }
 .nav-container .navigations div .nav-special {
   transform: translateY(-17px);
 }
 .nav-container .navigations div .hide-delete {
   display: none;
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .navigations div .hide-delete {
+    display: flex;
+  }
 }
 .nav-container .navigations .delete {
   position: absolute;
@@ -3542,6 +3593,12 @@ body {
   line-height: 17px;
   color: #d30000;
   text-decoration: none;
+  display: block;
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .navigations .delete {
+    display: none;
+  }
 }
 .nav-container .changing-sections {
   flex-basis: 65%;
@@ -3553,6 +3610,20 @@ body {
   scrollbar-color: #888 #f1f1f1;
   scrollbar-width: thin;
   padding-bottom: 40px;
+  padding-left: 0px;
+  padding-right: 30px;
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .changing-sections {
+    height: auto;
+    padding-left: 30px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .nav-container .changing-sections {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .nav-container .changing-sections::-webkit-scrollbar, .nav-container .changing-sections::-webkit-scrollbar-thumb, .nav-container .changing-sections::-webkit-scrollbar-track {
   width: 12px;
@@ -3574,12 +3645,24 @@ body {
   color: black;
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 563px) {
+  .Profile-headers {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 .Profile-headers .span {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 17px;
   color: grey;
+}
+@media only screen and (max-width: 563px) {
+  .Profile-headers .span {
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
 
 .show-images {
@@ -3593,6 +3676,13 @@ body {
   border-radius: 50%;
   margin-right: 40px;
 }
+@media only screen and (max-width: 563px) {
+  .show-images .user-img {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
 .show-images .upload-btn .upload-details {
   color: grey;
   font-family: "Archivo", sans-serif;
@@ -3601,6 +3691,12 @@ body {
   line-height: 17px;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 563px) {
+  .show-images .upload-btn .upload-details {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 .show-images .upload-btn .upload-details .upload-detail-header {
   color: black;
   font-family: "Archivo", sans-serif;
@@ -3608,17 +3704,32 @@ body {
   font-weight: 600;
   line-height: 22px;
 }
+@media only screen and (max-width: 563px) {
+  .show-images .upload-btn .upload-details .upload-detail-header {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
 .show-images .upload-btn .hide-file-btn {
   overflow: hidden;
   width: 150px;
   position: relative;
   height: 50px;
 }
+@media only screen and (max-width: 563px) {
+  .show-images .upload-btn .hide-file-btn {
+    width: 100px;
+    height: 30px;
+  }
+}
 .show-images .upload-btn .hide-file-btn img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
+}
+.show-images .upload-btn .hide-file-btn input {
+  opacity: 0;
 }
 
 .profile-inputs {
@@ -3629,6 +3740,12 @@ body {
   font-size: 18px;
   font-weight: 600;
   line-height: 20px;
+}
+@media only screen and (max-width: 563px) {
+  .profile-inputs label {
+    font-size: 14px;
+    line-height: 15px;
+  }
 }
 .profile-inputs label span {
   color: #d30000;
@@ -3651,6 +3768,13 @@ body {
   border: 1px solid #2F80ED;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
 }
+@media only screen and (max-width: 563px) {
+  .profile-inputs input {
+    width: 100%;
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 
 .save-changes {
   color: #707070;
@@ -3659,6 +3783,12 @@ body {
   font-weight: 400;
   line-height: 15px;
   margin-top: 10px;
+}
+@media only screen and (max-width: 563px) {
+  .save-changes {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .save-btn {
@@ -3677,12 +3807,36 @@ body {
   font-weight: 600;
   line-height: 20px;
 }
+@media only screen and (max-width: 563px) {
+  .save-btn {
+    width: 100%;
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
 
 .settings-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 70px;
+  flex-direction: row;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .settings-footer {
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .settings-footer {
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .settings-footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
 
 .setting-copy {
@@ -3693,6 +3847,12 @@ body {
   font-weight: 400;
   line-height: 17px;
 }
+@media only screen and (max-width: 563px) {
+  .setting-copy {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 
 .setting-icons {
   display: flex;
@@ -3700,6 +3860,19 @@ body {
 }
 .setting-icons img {
   margin-left: 30px;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 24px;
+  height: 24px;
+}
+@media only screen and (max-width: 563px) {
+  .setting-icons img {
+    margin-left: 0;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .alerts {
@@ -3716,6 +3889,13 @@ body {
   border-bottom: 1px solid #CCCCCC;
   padding-bottom: 5px;
 }
+@media only screen and (max-width: 563px) {
+  .alerts {
+    width: 100%;
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
 
 .send-to {
   margin-top: 30px;
@@ -3729,6 +3909,12 @@ body {
   line-height: 17px;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 563px) {
+  .send-to .send {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 .send-to .check-container {
   display: flex;
   align-items: center;
@@ -3737,6 +3923,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 17px;
+}
+@media only screen and (max-width: 563px) {
+  .send-to .check-container {
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
 .send-to .check-container div {
   margin-right: 10px;
@@ -3795,6 +3987,18 @@ body {
   padding: 20px 40px;
   border-radius: 20px;
 }
+@media only screen and (max-width: 1023px) {
+  .delete-pop .delete-div {
+    width: 500px;
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .delete-pop .delete-div {
+    width: 90%;
+    height: 350px;
+  }
+}
 .delete-pop .delete-div .delete-img {
   width: 100%;
   text-align: center;
@@ -3810,6 +4014,12 @@ body {
   font-weight: 500;
   line-height: 22px;
 }
+@media only screen and (max-width: 563px) {
+  .delete-pop .delete-div .delete-text {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 .delete-pop .delete-div .delete-info {
   width: 100%;
   text-align: center;
@@ -3820,14 +4030,26 @@ body {
   line-height: 17px;
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 563px) {
+  .delete-pop .delete-div .delete-info {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
 .delete-pop .delete-div .delete-btns {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 1023px) {
+  .delete-pop .delete-div .delete-btns {
+    flex-direction: column;
+  }
 }
 .delete-pop .delete-div .delete-btns div {
-  flex-basis: 45%;
+  width: 45%;
   text-align: center;
   padding: 21px;
   font-family: "Archivo", sans-serif;
@@ -3835,6 +4057,20 @@ body {
   font-weight: 600;
   line-height: 20px;
   border-radius: 10px;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .delete-pop .delete-div .delete-btns div {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .delete-pop .delete-div .delete-btns div {
+    font-size: 12px;
+    line-height: 13px;
+    padding: 15px;
+  }
 }
 .delete-pop .delete-div .delete-btns .delete-red {
   background-color: #d30000;

@@ -2528,15 +2528,45 @@ body{
 .nav-container{
     margin-top:90px;width:100%;@include flex;@include flexDirection(row);height:calc(100vh - 120px);
 
+    @include maxScreen($tablet){
+        @include flexDirection(column);height: auto;
+    }
+
 
     .navigations{
         flex-basis:35%;height:100%;padding-left:75px;padding-top:60px;
-        background-color:$white-btn;position:relative;
+        background-color:$white-btn;position:relative;padding-right:30px;
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+             padding-left:30px;
+
+        }
+
+
+        @include maxScreen($tablet){
+            padding-left:30px;
+        }
+
+        @include maxScreen($mobile1){
+            padding-left:20px;padding-right:20px;
+        }
+
+
 
         div{
             height:70%;width:70%;border:1px solid $grey;@include flex;@include flexDirection(column);
             overflow:hidden;border-left-color:transparent;border-top-color:transparent;
-            border-right-color:transparent;position:relative;@include padding(20px);
+            border-right-color:transparent;position:relative;@include padding(20px);border-radius:none;
+            transition:300ms;
+
+
+            @include maxScreen($tablet){
+                width:100%;height:auto;border-left-color:$grey;border-top-color:$grey;
+                border-right-color:$grey;border-radius:10px;
+
+            }
+
+
 
             a{
                 text-decoration:none;color:$grey;@include clash;font-size: 18px;font-weight: 600;line-height: 22px;
@@ -2545,10 +2575,23 @@ body{
                 &:hover{
                     color:$black;
                 }
+
+
+                
+                @include maxScreen($mobile1){
+                    font-size:12px;line-height:14px;
+                }
+
             }
 
             img{
-                position: absolute;top:20px;right:20px;display:none;
+                position: absolute;top:20px;right:15px;display:none;
+
+                        
+                @include maxScreen($tablet){
+                    display:block;
+                }
+
             }
 
             .nav-special{
@@ -2557,12 +2600,21 @@ body{
 
             .hide-delete{
                 display:none;
+
+                @include maxScreen($tablet){
+                    display:flex;
+                }
             }
         }
 
         .delete{
             position: absolute;bottom:40px;@include clash;font-size: 14px;font-weight: 500;line-height: 17px;
-            color:$red-btn;text-decoration:none;
+            color:$red-btn;text-decoration:none;display: block;
+
+            @include maxScreen($tablet){
+                display:none;
+            }
+
         }
 
        
@@ -2571,8 +2623,16 @@ body{
     .changing-sections{
         flex-basis:65%;height:100%;overflow:auto;padding-top:70px;-ms-overflow-style: none;
         scrollbar-width: thin;scrollbar-color: #888 #f1f1f1;scrollbar-width: thin;
-        padding-bottom:40px;
-        
+        padding-bottom:40px;padding-left:0px;padding-right:30px;
+
+
+        @include maxScreen($tablet){
+            height:auto;padding-left:30px;
+        }
+
+        @include maxScreen($mobile1){
+            padding-left:20px;padding-right:20px;
+        }
 
         &::-webkit-scrollbar,
         &::-webkit-scrollbar-thumb,
@@ -2599,8 +2659,16 @@ body{
     width:100%;@include clash;
     font-size: 24px;font-weight: 600;line-height: 30px;color:$black;margin-bottom:30px;
 
+    @include maxScreen($mobile1){
+        font-size:16px;line-height:19px;
+    }
+
     .span{
         @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;color:$grey;
+
+        @include maxScreen($mobile1){
+            font-size:12px;line-height:13px;
+        }
     }
     
 }
@@ -2610,6 +2678,11 @@ body{
 
     .user-img{
         width:50px;height:50px;object-fit:cover;border-radius:50%;margin-right:40px;
+
+
+        @include maxScreen($mobile1){
+            margin-right:20px;width:40px;height:40px;
+        }
     }
 
     .upload-btn{
@@ -2618,15 +2691,37 @@ body{
 
             color:$grey;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
             margin-bottom:10px;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
+
+
             .upload-detail-header{
                 color:$black;@include archivo;font-size: 20px;font-weight: 600;line-height: 22px;
+
+                
+                @include maxScreen($mobile1){
+                    font-size:14px;line-height:15px;
+                }
             }
         }
 
         .hide-file-btn{
             overflow:hidden;width:150px;position:relative;height:50px;
+
+             
+            @include maxScreen($mobile1){
+                width:100px;height:30px;
+            }
+
+            
             img{
                 width:100%;height:100%;object-fit:cover;position:absolute;
+            }
+
+            input{
+                opacity:0;
             }
         }
     }
@@ -2640,6 +2735,11 @@ body{
     label{
 
         @include archivo;font-size:18px;font-weight: 600;line-height: 20px;
+
+        @include maxScreen($mobile1){
+            font-size:14px;line-height:15px;
+        }
+
 
         span{
             color:$red-btn;
@@ -2657,12 +2757,22 @@ body{
             border: 1px solid #2F80ED;box-shadow: 0px 1px 6px 0px #00000026;
 
         }
+
+        @include maxScreen($mobile1){
+            width:100%;font-size:12px;line-height:13px;
+        }
         
     }
 }
 
 .save-changes{
-    color:$grey2;@include archivo;font-size:14px;font-weight: 400;line-height: 15px;  margin-top:10px;      
+    color:$grey2;@include archivo;font-size:14px;font-weight: 400;line-height: 15px;  margin-top:10px; 
+    
+    
+    @include maxScreen($mobile1){
+        font-size:10px;line-height:10px;
+    }
+
 }
 
 
@@ -2671,21 +2781,45 @@ body{
     background-color:$black;margin-top:20px;border:none;@include padding(15px 0px);border-radius:5px;
     @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
 
+    @include maxScreen($mobile1){
+        width:100%;font-size:14px;line-height:15px;
+    }
+
 }
 
 .settings-footer{
     @include flex;@include justify(space-between);@include align(center);@include padding(20px 70px);
+    @include flexDirection(row);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(20px 30px);
+    }
+
+    @include maxScreen($tablet){
+        @include padding(20px 30px);
+    }
+
+    @include maxScreen($mobile1){
+        @include flexDirection(column-reverse);@include align(flex-start);
+    }
 }
 
 .setting-copy{
     flex-basis:80%;color:$grey;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
+    @include maxScreen($mobile1){
+        font-size:12px;line-height:13px;
+    }
 }
 
 .setting-icons{
     @include flex;@include align(center);
 
     img{
-        margin-left:30px;
+        margin-left:30px;margin-right:0; margin-bottom:0;width:24px;height:24px;
+
+        @include maxScreen($mobile1){
+            margin-left:0;margin-right:30px;margin-bottom:20px;width:13px;height:13px;
+        }
     }
 }
 
@@ -2694,6 +2828,10 @@ body{
     width:500px;@include flex;@include justify(space-between);@include align(center);margin-top:70px;
     color:$black;@include archivo;font-size: 20px;font-weight: 500;line-height: 22px;
     border-bottom:1px solid $grey3;padding-bottom:5px;
+
+    @include maxScreen($mobile1){
+        width:100%;font-size:14px;line-height:15px;
+    }
 }
 
 
@@ -2702,11 +2840,19 @@ body{
 
     .send{
         color:$grey;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;margin-bottom:10px;
+
+        @include maxScreen($mobile1){
+            font-size:12px;line-height:13px;
+        }
     }
 
     .check-container{
-        @include flex;@include align(center);margin-top:20px;//styleName: N.Regular 16;
-        @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;        
+        @include flex;@include align(center);margin-top:20px;
+        @include archivo;font-size: 16px;font-weight: 400;line-height: 17px; 
+        
+        @include maxScreen($mobile1){
+            font-size:12px;line-height:13px;
+        }
 
         div{
             margin-right:10px;
@@ -2743,6 +2889,16 @@ body{
     .delete-div{
         width:700px;height:300px;background-color:$white-btn;@include padding(20px 40px);border-radius:20px;
 
+        @include maxScreen($tablet){
+            width:500px;height:450px;
+        }
+
+        
+        @include maxScreen($mobile1){
+            width:90%;height:350px;
+        }
+
+
 
         .delete-img{
             width:100%;text-align:center;margin-bottom:20px;
@@ -2751,19 +2907,45 @@ body{
         .delete-text{
             width:100%;text-align:center;margin-bottom:20px;color:$black;@include archivo;
             font-size: 20px;font-weight: 500;line-height: 22px;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
+    
         }
 
         .delete-info{
             width:100%;text-align:center;color:$grey;@include archivo;font-size: 16px;font-weight: 400;
             line-height: 17px;margin-bottom:30px;
+
+            @include maxScreen($mobile1){
+                font-size:10px;line-height:10px;
+            }
+    
         }
 
         .delete-btns{
             width:100%;@include flex;@include justify(space-between);@include align(center);
+            @include flexDirection(row);
+
+            @include maxScreen($tablet){
+
+                @include flexDirection(column);
+            }
 
             div{
-                flex-basis:45%;text-align:center;@include padding(21px);@include archivo;
+                width:45%;text-align:center;@include padding(21px);@include archivo;
                 font-size: 18px;font-weight: 600;line-height: 20px;border-radius:10px;
+                margin-bottom:0px;
+
+                @include maxScreen($tablet){
+                    margin-top:20px;width:100%;
+                }
+
+                @include maxScreen($mobile1){
+                    font-size:12px;line-height:13px;@include padding(15px);
+                }
+        
             }
 
             .delete-red{
