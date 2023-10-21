@@ -9,7 +9,7 @@ const Login = lazy(()=> import("./pages/Login"));
 const SignUp = lazy(()=> import("./pages/SignUp"));
 const Trending = lazy(()=> import("./pages/Trending"));
 const User = lazy(()=> import("./pages/User"));
-const Profile = lazy(()=> import("./pages/profile"));
+import Profile from "./pages/profile"
 import Profile_password from './pages/Profile-password'
 import Profile_home from './pages/Profile-home'
 import Profile_email from './pages/Profile-email'
@@ -50,19 +50,11 @@ function App() {
                 <User/>
               </Suspense>
             }/>
-            <Route path='/profile' element={
-              <Suspense fallback="loading...">
-                <Profile/>
-              </Suspense>
-            }>
+            <Route path='/profile' element={<Profile/>}>
                 <Route index element={<Profile_home/>}/>
-
                 <Route path='image' element={<Profile_password/>}/>
-
                 <Route path='email' element={<Profile_email/>}/>
-
                 <Route path='subscriptions' element={<Profile_subscriptions/>}/>
-
             </Route>
           </Routes>
         </Hambar>
