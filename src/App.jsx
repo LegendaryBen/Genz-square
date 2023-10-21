@@ -9,11 +9,11 @@ const Login = lazy(()=> import("./pages/Login"));
 const SignUp = lazy(()=> import("./pages/SignUp"));
 const Trending = lazy(()=> import("./pages/Trending"));
 const User = lazy(()=> import("./pages/User"));
-import Profile_home from './pages/Profile-home'
 const Profile = lazy(()=> import("./pages/profile"));
-const Profile_password = lazy(()=> import("./pages/Profile-password"));
-const Profile_email = lazy(()=> import("./pages/Profile-email"));
-const Profile_subscriptions = lazy(()=> import("./pages/Profile-subscriptions"));
+import Profile_password from './pages/Profile-password'
+import Profile_home from './pages/Profile-home'
+import Profile_email from './pages/Profile-email'
+import Profile_subscriptions from './pages/Profile-subscriptions'
 
 
 
@@ -57,23 +57,11 @@ function App() {
             }>
                 <Route index element={<Profile_home/>}/>
 
-                <Route path='image' element={
-                  <Suspense fallback="loading...">
-                    <Profile_password/>
-                  </Suspense>
-                }/>
+                <Route path='image' element={<Profile_password/>}/>
 
-                <Route path='email' element={
-                  <Suspense fallback="loading...">
-                    <Profile_email/>
-                  </Suspense>
-                }/>
+                <Route path='email' element={<Profile_email/>}/>
 
-                <Route path='subscriptions' element={
-                  <Suspense fallback="loading...">
-                    <Profile_subscriptions/>
-                  </Suspense>
-                }/>
+                <Route path='subscriptions' element={<Profile_subscriptions/>}/>
 
             </Route>
           </Routes>
