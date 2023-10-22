@@ -4166,9 +4166,19 @@ body {
   align-items: center;
   overflow: auto;
 }
+@media only screen and (max-width: 1023px) {
+  .payment-details-container {
+    height: 600px;
+  }
+}
 .payment-details-container .payment-box {
   width: 500px;
   height: 500px;
+}
+@media only screen and (max-width: 563px) {
+  .payment-details-container .payment-box {
+    width: 90%;
+  }
 }
 .payment-details-container .payment-box-header {
   width: 100%;
@@ -4180,6 +4190,12 @@ body {
   font-weight: 600;
   line-height: 30px;
 }
+@media only screen and (max-width: 563px) {
+  .payment-details-container .payment-box-header {
+    font-size: 18px;
+    line-height: 19px;
+  }
+}
 .payment-details-container .payment-box-info {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
@@ -4189,6 +4205,12 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 563px) {
+  .payment-details-container .payment-box-info {
+    font-size: 13px;
+    line-height: 14px;
+  }
 }
 .payment-details-container .payments-inputs {
   width: 100%;
@@ -4203,6 +4225,12 @@ body {
   font-weight: 600;
   line-height: 20px;
 }
+@media only screen and (max-width: 563px) {
+  .payment-details-container .payments-inputs label {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
 .payment-details-container .payments-inputs input {
   width: 100%;
   outline: none;
@@ -4215,6 +4243,12 @@ body {
   line-height: 17px;
   font-family: "Archivo", sans-serif;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
+}
+@media only screen and (max-width: 563px) {
+  .payment-details-container .payments-inputs input {
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
 .payment-details-container .payments-inputs input:focus {
   border: 1px solid #2F80ED;
@@ -4232,4 +4266,10 @@ body {
   line-height: 20px;
   font-family: "Archivo", sans-serif;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+}
+@media only screen and (max-width: 563px) {
+  .payment-details-container .payment-sumbit {
+    font-size: 14px;
+    line-height: 15px;
+  }
 }/*# sourceMappingURL=App.css.map */

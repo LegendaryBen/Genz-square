@@ -3014,18 +3014,37 @@ body{
     width:100%;height:calc(100vh - 90px);margin-top:90px;@include flex;
     @include justify(center);@include align(center);overflow:auto;
 
+
+    @include maxScreen($tablet){
+        height:600px;
+    }
+
+
     .payment-box{
         width:500px;height:500px;
+
+        @include maxScreen($mobile1){
+            width:90%;
+        }
     }
 
     .payment-box-header{
         width:100%;text-align:center;margin-bottom:20px;color:$black;@include clash;font-size: 24px;
         font-weight: 600;line-height: 30px;
+
+        @include maxScreen($mobile1){
+            font-size:18px;line-height:19px;
+        }
     }
 
     .payment-box-info{
         @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;color:$grey;width:100%;
         text-align:center;margin-bottom:30px;
+
+        
+        @include maxScreen($mobile1){
+            font-size:13px;line-height:14px;
+        }
     }
 
     .payments-inputs{
@@ -3039,12 +3058,20 @@ body{
 
         label{
             @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+
+            @include maxScreen($mobile1){
+                font-size:14px;line-height:15px;
+            }
         }
 
         input{
             width:100%;outline:none;border:1px solid $grey;border-radius:5px;@include padding(10px 10px);
             margin-top:10px;font-size: 16px;font-weight: 400;line-height: 17px;@include archivo;
             box-shadow: 0px 1px 6px 0px #00000026;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
       
 
             &:focus{
@@ -3057,5 +3084,9 @@ body{
         width:100%;background-color:$black;color:$white-btn;@include padding(13px);border-radius:7px;
         text-align: center;font-size: 18px;font-weight: 600;line-height: 20px;@include archivo;
         box-shadow: 0px 2px 6px 0px #00000040;   
+
+        @include maxScreen($mobile1){
+            font-size:14px;line-height:15px;
+        }
     }
 }
