@@ -5,7 +5,7 @@ import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
 
 
-const payment_details = (props) => {
+const Payment_details = (props) => {
     return (
         <>
             <Header/>
@@ -31,4 +31,4 @@ const payment_details = (props) => {
     )
 }
 
-export default payment_details
+export default Payment_details

@@ -6,7 +6,7 @@ import Pay_btn from '../components/Pay-btn'
 import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
 
-const payment_success = () => {
+const Payment_success = () => {
     return (
         <>
             <Header/>
@@ -30,4 +30,4 @@ const payment_success = () => {
     )
 }
 
-export default payment_success
+export default Payment_success
