@@ -4155,4 +4155,81 @@ body {
     line-height: 16px;
     padding: 10px;
   }
+}
+
+.payment-details-container {
+  width: 100%;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.payment-details-container .payment-box {
+  width: 500px;
+  height: 500px;
+}
+.payment-details-container .payment-box-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.payment-details-container .payment-box-info {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  color: grey;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.payment-details-container .payments-inputs {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.payment-details-container .payments-inputs span {
+  color: #d30000;
+}
+.payment-details-container .payments-inputs label {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.payment-details-container .payments-inputs input {
+  width: 100%;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  font-family: "Archivo", sans-serif;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.payment-details-container .payments-inputs input:focus {
+  border: 1px solid #2F80ED;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.payment-details-container .payment-sumbit {
+  width: 100%;
+  background-color: black;
+  color: #FFFFFF;
+  padding: 13px;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: "Archivo", sans-serif;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
 }/*# sourceMappingURL=App.css.map */

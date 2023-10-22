@@ -16,6 +16,7 @@ const Profile_email = lazy(()=>import('./pages/Profile-email'))
 const Profile_subscriptions = lazy(()=>import('./pages/Profile-subscriptions'))
 const Success = lazy(()=>import('./pages/payment-success'));
 const Error = lazy(()=>import('./pages/payment-error'));
+const Payment_details = lazy(()=>import('./pages/payment-details'));
 
 
 
@@ -85,6 +86,11 @@ function App() {
             <Route path='/error' element={
               <Suspense fallback="loading...">
                 <Error/>
+              </Suspense>
+            }/>
+            <Route path='/details' element={
+              <Suspense fallback="loading...">
+                <Payment_details/>
               </Suspense>
             }/>
           </Routes>
