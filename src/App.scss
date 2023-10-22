@@ -2959,3 +2959,52 @@ body{
 
     }
 }
+
+.notice-div{
+    width:100%;height:calc(100vh - 90px);margin-top:90px;overflow:auto;
+    @include flex;@include justify(center);@include align(center);
+
+    @include maxScreen($tablet){
+        height:600px;
+    }
+
+    .paybox{
+        width:550px;height:400px;
+
+        @include maxScreen($mobile1){
+            width:90%;
+        }
+
+        .pay-img{
+            width:100%;text-align: center;margin-bottom:20px;
+        }
+
+        .pay-header{
+            text-align:center;color:$black;@include archivo;font-size: 20px;font-weight: 500;line-height: 22px;
+            margin-bottom:30px;
+
+            @include maxScreen($mobile1){
+                font-size:15px;line-height:16px;
+            }
+        }
+
+        .pay-info{
+            width:100%;text-align:center;color:$grey;@include archivo;font-size: 16px;font-weight: 400;
+            line-height: 17px;margin-bottom:30px;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
+        }
+
+        .pay-btn{
+            width:100%;@include padding(16px);text-align: center;border-radius:10px;
+            @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+
+            @include maxScreen($mobile1){
+                font-size:15px;line-height:16px;@include padding(10px);
+            }
+        }
+
+    }
+}

@@ -4078,4 +4078,81 @@ body {
 }
 .delete-pop .delete-div .delete-btns .delete-white {
   border: 1px solid #BDBDBD;
+}
+
+.notice-div {
+  width: 100%;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1023px) {
+  .notice-div {
+    height: 600px;
+  }
+}
+.notice-div .paybox {
+  width: 550px;
+  height: 400px;
+}
+@media only screen and (max-width: 563px) {
+  .notice-div .paybox {
+    width: 90%;
+  }
+}
+.notice-div .paybox .pay-img {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.notice-div .paybox .pay-header {
+  text-align: center;
+  color: black;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 563px) {
+  .notice-div .paybox .pay-header {
+    font-size: 15px;
+    line-height: 16px;
+  }
+}
+.notice-div .paybox .pay-info {
+  width: 100%;
+  text-align: center;
+  color: grey;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 563px) {
+  .notice-div .paybox .pay-info {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
+.notice-div .paybox .pay-btn {
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+@media only screen and (max-width: 563px) {
+  .notice-div .paybox .pay-btn {
+    font-size: 15px;
+    line-height: 16px;
+    padding: 10px;
+  }
 }/*# sourceMappingURL=App.css.map */

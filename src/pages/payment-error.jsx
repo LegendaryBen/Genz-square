@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/header'
 import Arrow from '../components/Arrow'
-import good from '../images/good.svg'
+import bad from '../images/bad.svg'
 import Pay_btn from '../components/Pay-btn'
 import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
@@ -13,16 +13,15 @@ const payment_success = () => {
             <div className="notice-div">
                 <div className="paybox">
                     <div className="pay-img">
-                        <Arrow image={good}/>
+                        <Arrow image={bad}/>
                     </div>
                     <div className="pay-header">
-                        Payment Successful
+                        Payment Failed
                     </div>
                     <div className="pay-info">
-                        Your payment was successful, you will receive your magazine in your library
-                        shortly
+                        An error occured during payment processing, please go back and try again
                     </div>
-                    <Pay_btn col="#0BA348" text="Home" cls="pay-btn" text_col="#FFFFFF"/>
+                    <Pay_btn col="transparent" text="Home" cls="pay-btn" text_col="black" bor="1px solid grey"/>
                 </div>
             </div>
             <Search_Bar/>
