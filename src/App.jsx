@@ -14,8 +14,8 @@ import Profile_home from './pages/Profile-home'
 const Profile_password = lazy(()=>import('./pages/Profile-password'))
 const Profile_email = lazy(()=>import('./pages/Profile-email'))
 const Profile_subscriptions = lazy(()=>import('./pages/Profile-subscriptions'))
-const Success = lazy(()=>import('./pages/Payment-success'));
-const Error = lazy(()=>import('./pages/Payment-error'));
+const Success = lazy(()=>import('./pages/Success'));
+const Error = lazy(()=>import('./pages/Error'));
 const Payment_details = lazy(()=>import('./pages/Details'));
 
 
