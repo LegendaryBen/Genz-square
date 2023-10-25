@@ -2622,7 +2622,7 @@ body{
 
     .changing-sections{
         flex-basis:65%;height:100%;overflow:auto;padding-top:70px;-ms-overflow-style: none;
-        scrollbar-width: thin;scrollbar-color: #888 #f1f1f1;scrollbar-width: thin;
+        scrollbar-width: thin;scrollbar-color: #888;
         padding-bottom:40px;padding-left:0px;padding-right:30px;
 
 
@@ -2637,7 +2637,7 @@ body{
         &::-webkit-scrollbar,
         &::-webkit-scrollbar-thumb,
         &::-webkit-scrollbar-track {
-            width: 12px;
+            width:7px;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -3088,5 +3088,86 @@ body{
         @include maxScreen($mobile1){
             font-size:14px;line-height:15px;
         }
+    }
+}
+
+
+.Profile-subscription{
+    width:100%;height:100%;scrollbar-width: thin;scrollbar-color: #888;overflow:auto;
+
+    @include maxScreen($tablet){
+        height:500px;
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-track {
+        width:7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+
+    .sub-search{
+        width:100%;border: 1px solid $grey3;@include padding(10px);width:300px;@include flex;
+        @include align(center);height:50px;border-radius:10px;margin-bottom:60px;
+
+        @include maxScreen($mobile1){
+            width:250px;height:30px;@include padding(5px);
+        }
+
+        input{
+            flex:1;margin-left:10px;height:100%;background-color:transparent;border:none;
+            outline:none;color:$grey;@include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
+        }
+    }
+
+
+    .Subscription-cards{
+        width:100%;border-bottom: 1px solid $grey3;height:70px;margin-bottom:30px;
+        text-decoration:none;@include flex;@include flexDirection(column);
+
+
+        .card-title{
+            color:$black;@include archivo;font-size: 20px;font-weight: 500;line-height: 22px;
+            margin-bottom:25px;
+
+            @include maxScreen($mobile1){
+                font-size:16px;line-height:17px;
+            }
+        }
+
+        .card-dates{
+
+            @include flex;@include align(center);
+
+            .end{
+                margin-left:40px;
+
+                @include maxScreen($mobile1){
+                    margin-left:20px;
+                }
+            }
+
+            .start-date{
+                @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;color:$grey2;
+
+                @include maxScreen($mobile1){
+                    font-size:12px;line-height:13px;
+                }
+            }
+        }
+
     }
 }

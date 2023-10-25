@@ -13,6 +13,7 @@ const Navogations = () => {
                     <NavLink to='image' className='nav-special'>Password</NavLink>
                     <NavLink to='email'className='nav-special' >Email Notifications</NavLink>
                     <NavLink to='subscriptions' className='nav-special'>Subscriptions</NavLink>
+                    <NavLink  className='nav-special'>Log out</NavLink>
                     <NavLink  className='nav-special hide-delete'>Delete Account</NavLink>
                 </div>
                 <NavLink className='delete'>
