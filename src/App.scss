@@ -3171,3 +3171,71 @@ body{
 
     }
 }
+
+
+.notification-container{
+    width:100%;height:auto;margin-top:90px;@include padding(75px);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(30px);
+    }
+
+    @include maxScreen($tablet){
+        @include padding(30px);
+    }
+
+    @include maxScreen($mobile-special2){
+        @include padding(20px);
+    }
+
+
+    .delete-all{
+        width:100%;@include flex;@include justify(space-between);@include align(center);
+        margin-bottom:40px;
+
+        div{
+            @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;@include padding(10px 16px);
+            border: 1px solid $grey;border-radius:5px;color:$black;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
+        }
+    }
+
+
+    .notifications-hint{
+        width:100%;height:80px;border-bottom: 1px solid $grey3;margin-bottom:40px;position:relative;
+        text-decoration:none;@include flex ;@include flexDirection(column);
+
+        @include maxScreen($special-tablet){
+            height:100px;
+        }
+
+        .notification-snippet-header{
+            @include archivo;font-size: 20px;font-weight: 500;line-height: 22px;
+            margin-bottom:25px;color:$black;
+
+            @include maxScreen($mobile1){
+                font-size:16px;line-height:17px;
+            }
+        }
+
+        .notification-snippet-body{
+            @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;color:$grey;
+
+            @include maxScreen($mobile1){
+                font-size:12px;line-height:13px;
+            }
+        }
+
+        img{
+            position: absolute;right:10px;top:50%;
+        }
+    }
+
+    .green-hint{
+        background-color:rgba(128, 243, 128, 0.3);@include padding(10px);
+    }
+
+}

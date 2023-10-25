@@ -4379,4 +4379,100 @@ body {
     font-size: 12px;
     line-height: 13px;
   }
+}
+
+.notification-container {
+  width: 100%;
+  height: auto;
+  margin-top: 90px;
+  padding: 75px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .notification-container {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .notification-container {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .notification-container {
+    padding: 20px;
+  }
+}
+.notification-container .delete-all {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.notification-container .delete-all div {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  padding: 10px 16px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: black;
+}
+@media only screen and (max-width: 563px) {
+  .notification-container .delete-all div {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
+.notification-container .notifications-hint {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #CCCCCC;
+  margin-bottom: 40px;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 922px) {
+  .notification-container .notifications-hint {
+    height: 100px;
+  }
+}
+.notification-container .notifications-hint .notification-snippet-header {
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 25px;
+  color: black;
+}
+@media only screen and (max-width: 563px) {
+  .notification-container .notifications-hint .notification-snippet-header {
+    font-size: 16px;
+    line-height: 17px;
+  }
+}
+.notification-container .notifications-hint .notification-snippet-body {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  color: grey;
+}
+@media only screen and (max-width: 563px) {
+  .notification-container .notifications-hint .notification-snippet-body {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
+.notification-container .notifications-hint img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+.notification-container .green-hint {
+  background-color: rgba(128, 243, 128, 0.3);
+  padding: 10px;
 }/*# sourceMappingURL=App.css.map */

@@ -17,6 +17,7 @@ const Profile_subscriptions = lazy(()=>import('./pages/Profile-subscriptions'))
 const Success = lazy(()=>import('./pages/Success'));
 const Error = lazy(()=>import('./pages/Error'));
 const Payment_details = lazy(()=>import('./pages/Details'));
+const Notifications = lazy(()=> import("./pages/Notifications"));
 
 
 
@@ -91,6 +92,11 @@ function App() {
             <Route path='/details' element={
               <Suspense fallback="loading...">
                 <Payment_details/>
+              </Suspense>
+            }/>
+            <Route path='/notifications' element={
+              <Suspense fallback="loading...">
+                <Notifications/>
               </Suspense>
             }/>
           </Routes>
