@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useContext,useEffect} from 'react'
 import Arrow from '../components/Arrow'
 import fancy from '../images/logfancy.jpg'
 import genz from '../images/gen-z.svg'
@@ -7,10 +7,74 @@ import User_inputs_style from '../components/User-inputs-style'
 import Inputs from '../components/Inputs'
 import Submit from '../components/Submit'
 import Sign_in from '../components/Sign-in'
+import {Navigate,useNavigate} from 'react-router-dom'
+import axios from 'axios';
+import Loader from '../components/Loader'
+import  {User} from '../contexts/Auth'
+import useLogin from '../custom hooks/useLogin'
+
+
 
 
 const Login = () => {
-    return (
+
+    const{login,setLogin} = useContext(User);
+
+    const navigate = useNavigate();
+    
+    useLogin(setLogin);
+
+
+    const[loading,setLoading] = useState(false);
+    const[warning,setWarning] = useState(false);
+    const[message,setMessage] = useState("")
+    const[color,setColor] = useState("");
+
+
+   
+    // form
+    const[email,setEmail] = useState('');
+    const[password,setPassword] = useState('');
+
+
+    const submitForm = ()=>{
+        
+        if(email == "" || password == ""){
+
+            setColor("red")
+            setMessage("Check your inputs properly, and accept the terms and condition");
+            setWarning(true);
+
+        }else{
+            setLoading(true)
+
+            axios.post('https://gen-zsquare.com/api/token/',{
+                email,password
+            }).then(res=>{
+
+                localStorage.setItem("gen-z",res.data.refresh)
+                setLoading(false)
+                setLogin(true)
+                navigate('/')
+
+            }).catch(err=>{
+
+                setColor("red")
+                setMessage(err.response.data.detail);
+                setWarning(true);
+                setLoading(false)
+
+            })
+
+        }
+
+
+    }
+
+
+
+
+    return login == true? <Navigate to="/"/>: (
         <div className='Login'>
             <div className="userInputs">
                 <div className="loginfancy">
@@ -20,9 +84,7 @@ const Login = () => {
                     </span>
                 </div>
                 <div className="userDetails">
-                    <div className="Warning">
-                        Incorrect blah blah blah!... abeg how person go forget en login details
-                    </div>
+                    {warning && <div className="Warning" style={{color:color}}>{message}</div>}
                     <div className="createAccount">
                         Log in your account
                     </div>
@@ -31,15 +93,16 @@ const Login = () => {
                     </div>
                    <Googlebtn text='signin_with'/>
                    <User_inputs_style/>
-                   <Inputs label="Email" placeholder="Enter your email"/>
-                   <Inputs label="Password" placeholder="Enter your password"/>
-                   <Submit text='Log In'/>
+                   <Inputs label="Email" placeholder="Enter your email"  val={email} change={setEmail}/>
+                   <Inputs label="Password" placeholder="Enter your password" val={password} change={setPassword}/>
+                   <Submit text='Log In' change={submitForm}/>
                    <Sign_in text='Sign Up' suggest='Don’t have an account?' to='/sign-up'/>
                 </div>
             </div>
             <div className="userStyle">
                 <Arrow image={fancy}/>
             </div>
+            {loading && <Loader/>}
         </div>
     )
 }

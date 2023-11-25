@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useContext} from 'react'
 import Arrow from '../components/Arrow'
 import fancy from '../images/logfancy.jpg'
 import genz from '../images/gen-z.svg'
@@ -8,10 +8,69 @@ import Inputs from '../components/Inputs'
 import Terms from '../components/Terms'
 import Submit from '../components/Submit'
 import Sign_in from '../components/Sign-in'
+import Loader from '../components/Loader'
+import  {User} from '../contexts/Auth'
+import {Navigate} from 'react-router-dom'
+import axios from 'axios';
+import useLogin from '../custom hooks/useLogin'
 
 
 const SignUp = () => {
-    return (
+
+    const{login,setLogin} = useContext(User);
+
+    useLogin(setLogin);
+
+    const[loading,setLoading] = useState(false);
+    const[warning,setWarning] = useState(false);
+    const[message,setMessage] = useState("")
+    const[color,setColor] = useState('');
+   
+    // form
+    const[name,setName] = useState('');
+    const[email,setEmail] = useState('');
+    const[password,setPassword] = useState('');
+    const[term,setTerm] = useState(false);
+
+    const submitForm = ()=>{
+        
+        if(name==''||email==''||password==''|| term == false){
+            setColor("red")
+            setMessage("Check your inputs properly, and accept the terms and condition");
+            setWarning(true);
+        }else{
+            setLoading(true)
+
+            axios.post("https://gen-zsquare.com/api/user",{
+                name,
+                email,
+                password,
+                term
+            }).then(response=>{
+                setColor("green")
+                setMessage(response.data.message);
+                setWarning(true);
+                setLoading(false)
+                setName('')
+                setEmail('')
+                setPassword('')
+                setTerm(false)
+
+            }).catch(error=>{
+                setColor("red")
+                setMessage(error.response.data.message);
+                setWarning(true);
+                setLoading(false)
+            })
+        }
+
+
+    }
+
+
+
+
+    return login == true ? <Navigate to="/"/>: (
         <div className='Login'>
             <div className="userInputs">
                 <div className="loginfancy">
@@ -21,9 +80,7 @@ const SignUp = () => {
                     </span>
                 </div>
                 <div className="userDetails">
-                    <div className="Warning">
-                        Incorrect blah blah blah!... abeg how person go forget en login details
-                    </div>
+                    {warning && <div className="Warning" style={{color:color}}>{message}</div>}
                     <div className="createAccount">
                         Create your account
                     </div>
@@ -32,17 +89,18 @@ const SignUp = () => {
                     </div>
                    <Googlebtn text='signup_with'/>
                    <User_inputs_style/>
-                   <Inputs label="Name" placeholder="Enter your name"/>
-                   <Inputs label="Email" placeholder="Enter your email"/>
-                   <Inputs label="Password" placeholder="Enter your password"/>
-                   <Terms/>
-                   <Submit text='Sign Up'/>
+                   <Inputs label="Name" placeholder="Enter your name" val={name} change={setName}/>
+                   <Inputs label="Email" placeholder="Enter your email" val={email} change={setEmail}/>
+                   <Inputs label="Password" placeholder="Enter your password" val={password} change={setPassword}/>
+                   <Terms val={term} change={setTerm}/>
+                   <Submit text='Sign Up' change={submitForm}/>
                    <Sign_in text='Log In' suggest='Already have an account?' to='/login' />
                 </div>
             </div>
             <div className="userStyle">
                 <Arrow image={fancy}/>
             </div>
+            {loading && <Loader/>}
         </div>
     )
 }

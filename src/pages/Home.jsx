@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Header from '../components/header'
 import Category from '../components/categories'
 import News_tip from '../components/News-tip'
@@ -14,8 +14,16 @@ import Magazine_snippets_container from '../components/Magazine-snippets-contain
 import Footer from '../components/Footer'
 import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
+import useLogin from '../custom hooks/useLogin'
+import  {User} from '../contexts/Auth'
+
 
 const Home = () => {
+
+    const{login,setLogin} = useContext(User);
+
+    useLogin(setLogin);
+
     return (
         <>
             <Header/>

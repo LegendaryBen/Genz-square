@@ -3,6 +3,7 @@ import { lazy,Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Searchbar from './contexts/Searchbar'
+import Auth from './contexts/Auth'
 import Hambar from './contexts/Hambar'
 const Magazine = lazy(()=> import("./pages/Magazine"));
 const Login = lazy(()=> import("./pages/Login"));
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Auth>
       <Searchbar>
         <Hambar>
           <Routes>
@@ -102,6 +104,7 @@ function App() {
           </Routes>
         </Hambar>
       </Searchbar>
+      </Auth>
     </BrowserRouter>
   )
 }
