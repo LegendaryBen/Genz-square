@@ -3269,6 +3269,33 @@ body{
 }
 
 
+.fetch-error{
+    @include flex; @include justify(center); @include align(center);
+    width:100%;height:500px;background-color:$grey;margin-top:40px;margin-bottom:40px;
+    @include archivo;font-weight:bold;font-size:50px;@include padding(30px);line-height:20px;
+
+    @include maxScreen($tablet){
+        font-size:30px;line-height:15px;
+    }
+
+    @include maxScreen($mobile1){
+        font-size:20px;line-height:10px;height:400px;
+    }
+
+    img{
+        width:300px;height:300px;margin-right:20px;
+
+        @include maxScreen($tablet){
+            width:200px;height:200px;margin-right:18px;
+        }
+
+        @include maxScreen($mobile1){
+            width:100px;height:100px;margin-right:15px;
+        }
+    }
+}
+
+
 @keyframes load {
     0%{
         transform:scale(0%);

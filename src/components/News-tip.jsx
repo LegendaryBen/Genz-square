@@ -3,6 +3,7 @@ import mack from "../images/mack.jpg"
 import Message from './Message'
 import { Link } from 'react-router-dom'
 import Fetch_loader from './Fetch_loader'
+import Fectch_error from './Fectch_error'
 import { useSelector } from 'react-redux'
 
 
@@ -21,15 +22,9 @@ const News_tip = () => {
     }else if(error == true){
 
         return (
-            <div className='News-container'>
-                <Link to="" className='News-tip'>
-                    <div className='box box-special'>
-                        <img src={mack} alt="" />
-                    </div>
-                    <Message/>
-                </Link>
-            </div>
+            <Fectch_error/>
         )
+        
     }else{
 
         return (
