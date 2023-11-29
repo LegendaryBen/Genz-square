@@ -9,7 +9,7 @@ const Magazine = lazy(()=> import("./pages/Magazine"));
 const Login = lazy(()=> import("./pages/Login"));
 const SignUp = lazy(()=> import("./pages/SignUp"));
 const Trending = lazy(()=> import("./pages/Trending"));
-const User = lazy(()=> import("./pages/User"));
+const Users = lazy(()=> import("./pages/Users"));
 const Profile = lazy(()=>import("./pages/Profile"))
 import Profile_home from './pages/Profile-home'
 const Profile_password = lazy(()=>import('./pages/Profile-password'))
@@ -56,7 +56,7 @@ function App() {
             }/>
              <Route path='/user' element={
               <Suspense fallback="loading...">
-                <User/>
+                <Users/>
               </Suspense>
             }/>
             <Route path='/profile' element={

@@ -18,6 +18,7 @@ import Ham_menu from '../components/Ham-menu'
 import useLogin from '../custom hooks/useLogin'
 import  {User} from '../contexts/Auth'
 import { useDispatch,useSelector } from 'react-redux'
+import useResetSlide from '../custom hooks/useResetSlide'
 
 
 
@@ -27,9 +28,10 @@ const Home = () => {
     const{login,setLogin} = useContext(User);
 
     let newsData = useSelector(state=>state.landingpage.data);
-    
 
     useLogin(setLogin);
+
+    useResetSlide();
 
     const dispatch = useDispatch();
 

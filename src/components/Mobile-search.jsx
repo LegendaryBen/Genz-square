@@ -1,9 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {Link} from 'react-router-dom'
 import Arrow from './Arrow'
 import search from '../images/small-search.svg'
+import { User } from '../contexts/Auth'
 
 const Mobile_search = () => {
+
+    const{login,setLogin} = useContext(User);
+
+
     return (
         <div className='Mobile-search-box'>
             <div className="search-box">
@@ -14,7 +19,7 @@ const Mobile_search = () => {
                     <input type="text" placeholder='search anything...' />
                 </div>
             </div>
-            <Link to='/'>SIGN IN</Link>
+            { !login && <Link to='/login'>SIGN IN</Link>}
         </div>
     )
 }

@@ -21,8 +21,14 @@ const useLogin = (log) => {
                 log(true)
 
             }).catch(err=>{
-                localStorage.removeItem("gen-z");
-                log(false)
+
+                if(err.message == 'Network Error'){
+                    return
+                }else{
+                    localStorage.removeItem("gen-z");
+                    log(false)
+                }
+                
             })
 
         }

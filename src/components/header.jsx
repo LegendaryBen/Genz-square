@@ -9,7 +9,7 @@ import books from '../images/user-books.svg'
 import user from '../images/user-icon.svg'
 import dot from '../images/red-dot.svg'
 import bell from '../images/bell.svg'
-import { User } from '../contexts/Auth';
+import { User  } from '../contexts/Auth';
 
 const Header = () => {
     const{slideOut} = useContext(Ham);
@@ -26,8 +26,8 @@ const Header = () => {
             {
                 !login ? 
                 <div className='subscribe'>
-                    <Link to="" className='sub-children sub-btn'>SUBSCRIBE</Link>
-                    <Link to='' className='sub-children sign-in'>
+                    <Link to="/sign-up" className='sub-children sub-btn'>SUBSCRIBE</Link>
+                    <Link to='/login' className='sub-children sign-in'>
                         SIGN IN 
                     </Link>
                     <img src={search} alt="" className='sub-children' onClick={down} />
@@ -36,7 +36,7 @@ const Header = () => {
                     <Link className='sub-children' to='/user'>
                         <Arrow image={books} cls="no-dot"/>
                     </Link>
-                    <Link className='sub-children' >
+                    <Link className='sub-children' to='/notifications'>
                         <Arrow image={bell} cls="no-dot"/>
                         <Arrow image={dot} cls="dot"/>
                     </Link>

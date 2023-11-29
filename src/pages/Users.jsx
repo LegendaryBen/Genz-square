@@ -1,4 +1,4 @@
-import React from 'react'
+import {useContext} from 'react'
 import Header from '../components/header'
 import Category from '../components/categories'
 import New_magazine from '../components/New-magazine'
@@ -9,12 +9,22 @@ import Owned_magazines from '../components/Owned-magazines'
 import Footer from '../components/Footer'
 import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
+import useResetSlide from '../custom hooks/useResetSlide'
+import useLogin from '../custom hooks/useLogin'
+import { User } from '../contexts/Auth'
+import { Navigate } from 'react-router-dom'
 
 
 
+const Users = () => {
 
-const User = () => {
-    return (
+    const{login,setLogin} = useContext(User);
+
+    useResetSlide()
+
+    useLogin(setLogin)
+
+    return login == true ? (
         <>
             <Header/>
             <Category margin="margin"/>
@@ -27,7 +37,7 @@ const User = () => {
             <Search_Bar/>
             <Ham_menu/>
         </>
-    )
+    ):<Navigate to="/"/>
 }
 
-export default User
+export default Users

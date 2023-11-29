@@ -4,7 +4,7 @@ const User = createContext();
 
 const Auth = ({children}) => {
 
-    const [login,setLogin] = useState(false);
+    const [login,setLogin] = useState(true);
 
 
     return (

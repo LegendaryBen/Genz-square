@@ -1,14 +1,12 @@
-import React from 'react'
 import Header from '../components/header'
 import Payment_input from '../components/payment-input'
-import Search_Bar from '../components/Search-Bar'
-import Ham_menu from '../components/Ham-menu'
 
 
 const Payment_details = (props) => {
+
+
     return (
         <>
-            <Header/>
             <div className="payment-details-container">
                 <div className="payment-box">
                     <div className="payment-box-header">
@@ -25,8 +23,6 @@ const Payment_details = (props) => {
                     </div>
                 </div>
             </div>
-            <Search_Bar/>
-            <Ham_menu/>
         </>
     )
 }

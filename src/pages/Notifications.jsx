@@ -1,15 +1,23 @@
-import React from 'react'
 import Header from '../components/header'
 import green from '../images/green-dot.svg'
 import Arrow from '../components/Arrow'
-import { Link } from 'react-router-dom'
+import { Link,Navigate } from 'react-router-dom'
 import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
+import { User } from '../contexts/Auth'
+import useLogin from '../custom hooks/useLogin'
+import { useContext } from 'react'
 
 
 
 const Notifications = (props) => {
-    return (
+
+    const{login,setLogin} = useContext(User);
+
+    useLogin(setLogin);
+
+
+    return login == true ?(
         <>
             <Header/>
             <Ham_menu/>
@@ -46,7 +54,7 @@ const Notifications = (props) => {
                 
             </div>
         </>
-    )
+    ): <Navigate to='/'/>
 }
 
 export default Notifications
