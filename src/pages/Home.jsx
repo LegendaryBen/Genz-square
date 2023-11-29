@@ -1,4 +1,5 @@
-import React,{useContext} from 'react'
+import React,{useContext,useEffect} from 'react'
+import { fetchHomestory } from '../Redux/features/landingpageSlice/landingpageSlice'
 import Header from '../components/header'
 import Category from '../components/categories'
 import News_tip from '../components/News-tip'
@@ -16,6 +17,9 @@ import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
 import useLogin from '../custom hooks/useLogin'
 import  {User} from '../contexts/Auth'
+import { useDispatch } from 'react-redux'
+
+
 
 
 const Home = () => {
@@ -23,6 +27,17 @@ const Home = () => {
     const{login,setLogin} = useContext(User);
 
     useLogin(setLogin);
+
+    const dispatch = useDispatch();
+
+
+    useEffect(()=>{
+
+        dispatch(fetchHomestory());
+
+    },[])
+
+
 
     return (
         <>

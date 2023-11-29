@@ -1,5 +1,5 @@
 import './App.css'
-import { lazy,Suspense } from 'react'
+import { lazy,Suspense} from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Searchbar from './contexts/Searchbar'
@@ -19,6 +19,8 @@ const Success = lazy(()=>import('./pages/Success'));
 const Error = lazy(()=>import('./pages/Error'));
 const Payment_details = lazy(()=>import('./pages/Details'));
 const Notifications = lazy(()=> import("./pages/Notifications"));
+import store from './Redux/app/store'
+import { Provider } from 'react-redux'
 
 
 
@@ -26,6 +28,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Provider store={store}>
       <Auth>
       <Searchbar>
         <Hambar>
@@ -105,6 +108,7 @@ function App() {
         </Hambar>
       </Searchbar>
       </Auth>
+      </Provider>
     </BrowserRouter>
   )
 }
