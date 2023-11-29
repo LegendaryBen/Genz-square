@@ -4,7 +4,16 @@ import axios from "axios";
 
 let initialState = {
     loading:false,
-    data:[],
+    data:{
+        id:'',
+        image: '',
+        title: '',
+        intro: '',
+        body: '',
+        date_added: '',
+        author:'',
+        category: ''
+      },
     error:false
 }
 

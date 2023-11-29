@@ -282,33 +282,37 @@ body {
   flex-direction: row;
   text-decoration: none;
   padding: 0px 60px;
+  margin-bottom: 50px;
 }
 @media only screen and (max-width: 1023px) {
   .News-tip {
-    height: 740px;
+    height: auto;
     flex-direction: column;
     padding: 0px 30px;
+    align-items: flex-start;
   }
 }
 @media only screen and (max-width: 563px) {
   .News-tip {
-    height: 600px;
+    height: auto;
     flex-basis: 100%;
   }
 }
 .News-tip .box {
   flex-basis: 46%;
   height: 100%;
+  width: 46%;
 }
 @media only screen and (max-width: 1023px) {
   .News-tip .box {
     height: 350px;
     flex-basis: 100%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 563px) {
   .News-tip .box {
-    height: 250px;
+    height: 350px;
     flex-basis: 100%;
   }
 }
@@ -396,6 +400,7 @@ body {
 }
 .News-tip .box-special {
   height: 380px;
+  width: 100%;
 }
 .News-tip .box-special img {
   width: 100%;

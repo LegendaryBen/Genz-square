@@ -1,24 +1,31 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
-const Message = () => {
+
+
+const Message = ({data}) => {
+
+    let months =['Jan','Feb','Mar','April','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    
+    let date = new Date(data.date_added.split('.')[0])
+
+    let finaldate = `${months[date.getMonth()]}  ${date.getDate()},  ${date.getFullYear()}`;
+
     return (
         <div className='box box-message'>
             <div className='box-text'>
-                <span>Tech</span>
+                <span>{data.category}</span>
             </div>
             <div className='box-header'>
-                Meta to launch its Twitter clone Thursday as Elon Musk’s
-                platform drives away users with new limits and tech issues
+                {data.title.length > 120 ? data.title.slice(0,120)+'...' : data.title}
             </div>
             <div className='box-hint'>
-                Twitter imposed view limits on users over the weekend, in what owner Elon Musk claimed was a
-                "temporary" measure to combat "data scraping."
+                {data.intro.length > 130 ? data.intro.slice(0,130)+'...' : data.intro}
             </div>
             <div className='news-writer'>
-                By Favsolomon
+                {data.author}
             </div>
             <div className='news-date'>
-                July 4, 2023
+                {finaldate}
             </div>
         </div>
     )

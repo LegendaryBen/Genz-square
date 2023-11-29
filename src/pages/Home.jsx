@@ -17,7 +17,7 @@ import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
 import useLogin from '../custom hooks/useLogin'
 import  {User} from '../contexts/Auth'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 
 
 
@@ -25,6 +25,9 @@ import { useDispatch } from 'react-redux'
 const Home = () => {
 
     const{login,setLogin} = useContext(User);
+
+    let newsData = useSelector(state=>state.landingpage.data);
+    
 
     useLogin(setLogin);
 
@@ -43,14 +46,14 @@ const Home = () => {
         <>
             <Header/>
             <Category margin="margin"/>
-            <News_tip />
+            <News_tip data={newsData}/>
             <News_slides/>
             <Slides_controller/>
             <New_magazine/>
             <Magazine_cover/>
             <Stories/>
             <Stories_button_container/>
-            <News_tip />
+            <News_tip data={newsData} />
             <New_magazine2/>
             <News_tip2/>
             <Magazine_snippets_container/>

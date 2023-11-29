@@ -8,11 +8,11 @@ import { useSelector } from 'react-redux'
 
 
 
-const News_tip = () => {
+const News_tip = ({data}) => {
 
     let error = useSelector(state=>state.landingpage.error);
-    let data = useSelector(state=>state.landingpage.data);
     let loading = useSelector(state=>state.landingpage.loading);
+    let image = data.image;
 
 
     if(loading == true){
@@ -24,16 +24,16 @@ const News_tip = () => {
         return (
             <Fectch_error/>
         )
-        
+
     }else{
 
         return (
             <div className='News-container'>
                 <Link to="" className='News-tip'>
                     <div className='box box-special'>
-                        <img src={mack} alt="" />
+                         <img src={mack} alt="" />
                     </div>
-                    <Message/>
+                    <Message data={data}/>
                 </Link>
             </div>
         )
