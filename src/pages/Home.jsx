@@ -1,4 +1,4 @@
-import React,{useContext,useEffect} from 'react'
+import React,{useContext,useEffect,useLayoutEffect} from 'react'
 import { fetchHomestory } from '../Redux/features/landingpageSlice/landingpageSlice'
 import Header from '../components/header'
 import Category from '../components/categories'
@@ -20,6 +20,8 @@ import  {User} from '../contexts/Auth'
 import { useDispatch,useSelector } from 'react-redux'
 import useResetSlide from '../custom hooks/useResetSlide'
 import { fetchSlides } from '../Redux/features/slider/sliderSlice'
+import { fetchStory } from '../Redux/features/topicStory/topicStorySlice'
+import { update } from '../Redux/features/topicStory/topicStorySlice'
 
 
 
@@ -43,13 +45,14 @@ const Home = () => {
     const dispatch = useDispatch();
 
 
-    useEffect(()=>{
+    useLayoutEffect(()=>{
 
         dispatch(fetchHomestory());
         dispatch(fetchSlides());
+        dispatch(fetchStory());
+        // dispatch(update(3));
 
     },[])
-
 
 
     return (

@@ -29,23 +29,29 @@ const fetchSlides = createAsyncThunk('sliderSlice/fetchSlides',()=>{
             state.loading = false;
             state.error = false;
 
-            action.payload = action.payload.map((item)=>{
+            if(action.payload.length !== 0){
 
-                let months =['Jan','Feb','Mar','April','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                action.payload = action.payload.map((item)=>{
 
-                let date = new Date(item.date_added?.split('.')[0])
-        
-                let finaldate = `${months[date.getMonth()]}  ${date.getDate()},  ${date.getFullYear()}`;
+                    let months =['Jan','Feb','Mar','April','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    
+                    let date = new Date(item.date_added?.split('.')[0])
+            
+                    let finaldate = `${months[date.getMonth()]}  ${date.getDate()},  ${date.getFullYear()}`;
+    
+                    item.date_added = finaldate;
+    
+                    return item;
+            
+                });
+    
+                state.data = action.payload;
 
-                item.date_added = finaldate;
+            }else{
 
-                return item;
-        
-            });
+                state.data = action.payload;
 
-            state.data = action.payload;
-
-
+            }
 
         })
 

@@ -3,6 +3,7 @@ import Slides from './Slide'
 import { useSelector } from 'react-redux'
 import Fectch_error from './Fectch_error'
 import Fetch_loader from './Fetch_loader'
+import Fetch_empty from './Fetch_empty'
 
 const News_slides = () => {
 
@@ -19,6 +20,10 @@ const News_slides = () => {
 
         return <Fectch_error/>
 
+    }else if( loading == false && error == false && data.length == 0){
+
+        return <Fetch_empty/>
+
     }else{
 
         return (
@@ -30,6 +35,7 @@ const News_slides = () => {
         )
 
     }
+    
 
 }
 

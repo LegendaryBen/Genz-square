@@ -4,6 +4,7 @@ import Message from './Message'
 import { Link } from 'react-router-dom'
 import Fetch_loader from './Fetch_loader'
 import Fectch_error from './Fectch_error'
+import Fetch_empty from './Fetch_empty'
 import { useSelector } from 'react-redux'
 
 
@@ -20,6 +21,12 @@ const News_tip = ({data,error,loading,image}) => {
             <Fectch_error/>
         )
 
+    }else if(loading == false && error == false && data.length == 0){
+
+        return (
+            <Fetch_empty/>
+        )
+
     }else{
 
         return (
@@ -34,6 +41,9 @@ const News_tip = ({data,error,loading,image}) => {
         )
 
     }
+    
+    
+   
 
 
 

@@ -4,16 +4,7 @@ import axios from "axios";
 
 let initialState = {
     loading:false,
-    data:{
-        id:'',
-        image: '',
-        title: '',
-        intro: '',
-        body: '',
-        date_added: '',
-        author:'',
-        category: ''
-      },
+    data:[],
     error:false
 }
 
@@ -36,8 +27,14 @@ const landingpageSlice = createSlice({
             state.loading = false;
             state.error = false;
             let size = action.payload.length;
-            let number = Math.floor(Math.random()*size);
-            state.data = action.payload[number];
+
+            if(size !== 0){
+                let number = Math.floor(Math.random()*size);
+                state.data = action.payload[number];
+            }else{
+                state.data = [];
+            }
+
         })
 
         builder.addCase(fetchHomestory.rejected,(state)=>{
