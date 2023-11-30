@@ -8,12 +8,7 @@ import { useSelector } from 'react-redux'
 
 
 
-const News_tip = ({data}) => {
-
-    let error = useSelector(state=>state.landingpage.error);
-    let loading = useSelector(state=>state.landingpage.loading);
-    let image = data.image;
-
+const News_tip = ({data,error,loading,image}) => {
 
     if(loading == true){
         return (

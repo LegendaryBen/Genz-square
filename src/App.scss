@@ -811,14 +811,14 @@ body{
     @include flexDirection(row);text-decoration:none;
 
     @include maxScreen($tablet){
-        @include flexDirection(column);height:780px;@include padding(0px 30px);
+        @include flexDirection(column);height:auto;@include padding(0px 30px);@include align(flex-start);
     }
 
     .box-special1{
-        height:380px;flex-basis:46%;
+        height:380px;flex-basis:46%;width:100%;
 
         @include maxScreen($tablet){
-            flex-basis:100%;
+            flex-basis:100%;width:100%;
         }
 
         img{

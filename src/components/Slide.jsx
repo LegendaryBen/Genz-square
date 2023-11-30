@@ -2,28 +2,28 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import sound from "../images/sound.jpg"
 
-const Slide = () => {
+const Slide = ({data}) => {
+
+
     return (
         <div className='Slides'>
             <Link to='/'>
                 <img src={sound} alt="sound"  className='slide-section'/>
                 <div className='slide-section space'>
                     <div className='text'>
-                        <span>Tech</span>
+                        <span>{data.category}</span>
                     </div>
                     <div className='text-head'>
-                        Meta to launch its Twitter clone Thursday as Elon Musk’s
-                        platform drives away users with new limits and tech issues
+                        {data.title.length > 137 ? data.title.slice(0,130)+'...':data.title }
                     </div>
                     <div className='text-hint'>
-                        Twitter imposed view limits on users over the weekend, in what owner Elon Musk claimed was a
-                        "temporary" measure to combat "data scraping."
+                        {data.intro.length > 167 ? data.intro.slice(0,155)+"...":data.intro}
                     </div>
                     <div className='text-writer'>
-                        By Favsolomon
+                        {data.author}
                     </div>
                     <div className='text-date'>
-                        July 4, 2023
+                        {data.date_added}
                     </div>
                 </div>
             </Link>

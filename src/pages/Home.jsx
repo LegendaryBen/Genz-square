@@ -19,6 +19,9 @@ import useLogin from '../custom hooks/useLogin'
 import  {User} from '../contexts/Auth'
 import { useDispatch,useSelector } from 'react-redux'
 import useResetSlide from '../custom hooks/useResetSlide'
+import { fetchSlides } from '../Redux/features/slider/sliderSlice'
+
+
 
 
 
@@ -26,6 +29,10 @@ import useResetSlide from '../custom hooks/useResetSlide'
 const Home = () => {
 
     const{login,setLogin} = useContext(User);
+
+    let error = useSelector(state=>state.landingpage.error);
+
+    let loading = useSelector(state=>state.landingpage.loading);
 
     let newsData = useSelector(state=>state.landingpage.data);
 
@@ -39,6 +46,7 @@ const Home = () => {
     useEffect(()=>{
 
         dispatch(fetchHomestory());
+        dispatch(fetchSlides());
 
     },[])
 
@@ -48,14 +56,14 @@ const Home = () => {
         <>
             <Header/>
             <Category margin="margin"/>
-            <News_tip data={newsData}/>
+            <News_tip data={newsData} error={error} loading={loading} image={newsData.image}/>
             <News_slides/>
             <Slides_controller/>
             <New_magazine/>
             <Magazine_cover/>
             <Stories/>
             <Stories_button_container/>
-            <News_tip data={newsData} />
+            <News_tip data={newsData}  error={error} loading={loading} image={newsData.image}/>
             <New_magazine2/>
             <News_tip2/>
             <Magazine_snippets_container/>

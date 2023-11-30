@@ -1159,17 +1159,20 @@ body {
 @media only screen and (max-width: 1023px) {
   .News-tip2 {
     flex-direction: column;
-    height: 780px;
+    height: auto;
     padding: 0px 30px;
+    align-items: flex-start;
   }
 }
 .News-tip2 .box-special1 {
   height: 380px;
   flex-basis: 46%;
+  width: 100%;
 }
 @media only screen and (max-width: 1023px) {
   .News-tip2 .box-special1 {
     flex-basis: 100%;
+    width: 100%;
   }
 }
 .News-tip2 .box-special1 img {
