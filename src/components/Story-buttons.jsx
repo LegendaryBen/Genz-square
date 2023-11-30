@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Story_buttons = ({text}) => {
+const Story_buttons = ({text,change,story}) => {
     return (
         <>
-            <Link className='Story-buttons'>
+            <Link className='Story-buttons' onClick={()=>{change(story)}}>
                 {text}
             </Link>
         </>

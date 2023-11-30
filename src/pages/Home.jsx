@@ -21,7 +21,6 @@ import { useDispatch,useSelector } from 'react-redux'
 import useResetSlide from '../custom hooks/useResetSlide'
 import { fetchSlides } from '../Redux/features/slider/sliderSlice'
 import { fetchStory } from '../Redux/features/topicStory/topicStorySlice'
-import { update } from '../Redux/features/topicStory/topicStorySlice'
 
 
 
@@ -38,6 +37,12 @@ const Home = () => {
 
     let newsData = useSelector(state=>state.landingpage.data);
 
+    let error2 = useSelector(state=>state.topicstory.error);
+
+    let loading2 = useSelector(state=>state.topicstory.loading);
+
+    let newsData2 = useSelector(state=>state.topicstory.data);
+
     useLogin(setLogin);
 
     useResetSlide();
@@ -50,7 +55,6 @@ const Home = () => {
         dispatch(fetchHomestory());
         dispatch(fetchSlides());
         dispatch(fetchStory());
-        // dispatch(update(3));
 
     },[])
 
@@ -66,7 +70,7 @@ const Home = () => {
             <Magazine_cover/>
             <Stories/>
             <Stories_button_container/>
-            <News_tip data={newsData}  error={error} loading={loading} image={newsData.image}/>
+            <News_tip data={newsData2}  error={error2} loading={loading2} image={newsData2.image}/>
             <New_magazine2/>
             <News_tip2/>
             <Magazine_snippets_container/>

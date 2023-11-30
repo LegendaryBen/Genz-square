@@ -5,16 +5,7 @@ import axios from "axios";
 
 let initialState = {
     loading:false,
-    data:{
-        id:'',
-        image: '',
-        title: '',
-        intro: '',
-        body: '',
-        date_added: '',
-        author:'',
-        category: ''
-      },
+    data:[],
     all:[],
     error:false
 }
@@ -30,19 +21,7 @@ const topicStorySlice =  createSlice({
     initialState,
     reducers:{
         update:(state,action)=>{
-
-            let data = [...state.all];
-
-            data = data.filter((item)=>{
-                return item.category == action.payload;
-            })
-
-            console.log(data)
-
-            let num = Math.floor(Math.random()*data.length);
-
-            state.data = data[num];
-
+            state.data = action.payload;
         }
     },
     extraReducers:(builder)=>{
@@ -57,24 +36,29 @@ const topicStorySlice =  createSlice({
             state.loading = false;
             state.error = false;
 
-            action.payload = action.payload.map((item)=>{
+            if(action.payload.length !== 0){
 
-                let months =['Jan','Feb','Mar','April','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                action.payload = action.payload.map((item)=>{
 
-                let date = new Date(item.date_added?.split('.')[0])
-        
-                let finaldate = `${months[date.getMonth()]}  ${date.getDate()},  ${date.getFullYear()}`;
+                    let months =['Jan','Feb','Mar','April','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    
+                    let date = new Date(item.date_added?.split('.')[0])
+            
+                    let finaldate = `${months[date.getMonth()]}  ${date.getDate()},  ${date.getFullYear()}`;
+    
+                    item.date_added = finaldate;
+    
+                    return item;
+            
+                });
+    
+                state.all = action.payload;
+    
+                state.data = action.payload[0];
+    
 
-                item.date_added = finaldate;
-
-                return item;
-        
-            });
-
-            state.all = action.payload;
-
-            state.data = action.payload[0];
-
+            }
+          
         })
 
 

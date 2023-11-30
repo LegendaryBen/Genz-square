@@ -1,7 +1,42 @@
 import React from 'react'
 import Story_buttons from './Story-buttons'
+import { useSelector,useDispatch } from 'react-redux'
+import { update } from '../Redux/features/topicStory/topicStorySlice'
+
+
+
+
 
 const Stories_button_container = () => {
+
+   let all = useSelector(state=>state.topicstory.all);
+
+   let dispatch = useDispatch();
+
+   function changeStory(cate){
+
+      let clone = [...all].filter((item)=>{
+         if(item.category == cate){
+            return item
+         }
+      })
+
+      if(clone.length == 0){
+
+         dispatch(update([]));
+
+      }else{
+
+         let size = clone.length;
+         let num = Math.floor(Math.random()*size);
+         dispatch(update(clone[num]));
+
+      }
+
+   }
+
+
+
     const opt = [
         {
            id:0,
@@ -42,7 +77,7 @@ const Stories_button_container = () => {
         <div className='Stories-button-container'>
              {
                 opt.map((item)=>{
-                    return <Story_buttons key={item.id} text={item.cat}/>
+                    return <Story_buttons key={item.id} text={item.cat} change={changeStory} story={item.id}/>
                 })
             }
         </div>
