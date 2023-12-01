@@ -8,7 +8,7 @@ const useLogin = (log) => {
 
     useLayoutEffect(()=>{
 
-        const genz = localStorage.getItem('gen-z') || '';
+        const genz = localStorage.getItem("gen-z")||"";
 
         if(genz == ""){
 
@@ -22,7 +22,9 @@ const useLogin = (log) => {
 
             }).catch(err=>{
 
-                if(err.message == 'Network Error'){
+                console.log(err)
+
+                if(err.message !== 'Request failed with status code 401'  ||err.message !== 'Request failed with status code 403' ){
                     return
                 }else{
                     localStorage.removeItem("gen-z");
