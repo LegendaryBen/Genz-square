@@ -21,6 +21,7 @@ import { useDispatch,useSelector } from 'react-redux'
 import useResetSlide from '../custom hooks/useResetSlide'
 import { fetchSlides } from '../Redux/features/slider/sliderSlice'
 import { fetchStory } from '../Redux/features/topicStory/topicStorySlice'
+import { fetchMagazine } from '../Redux/features/fromMagazine/fromMagazineSlice'
 
 
 
@@ -55,6 +56,7 @@ const Home = () => {
         dispatch(fetchHomestory());
         dispatch(fetchSlides());
         dispatch(fetchStory());
+        dispatch(fetchMagazine());
 
     },[])
 

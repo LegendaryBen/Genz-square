@@ -2,26 +2,28 @@ import React from 'react'
 import tiny from '../images/tiny.svg'
 import { Link } from 'react-router-dom'
 
-const Message2 = (props) => {
+
+
+const Message2 = ({data}) => {
+
+
     return (
         <div className='box-special2'>
             <div className='box-text2'>
-                <span>Tech</span>
+                <span>{data[0].category}</span>
             </div>
             <div className='box-header2'>
-                Unboxing the delightful UX of Apple’s boxes
+                {data[0].title.length > 57 ? data[0].title.slice(0,50)+"..." : data[0].title }
             </div>
             <div className='box-hint2'>
-                Have you ever unboxed an Apple product? If so, chances are you remember the experience.
-                The sensation of lifting the perfectly fitted lid, the first glimpse of the 
-                gleaming device nestled within, even the faint new-product smell that accompanies it.
+                {data[0].intro.length > 296 ? data[0].intro.slice(0,200)+"..." : data[0].intro }
             </div>
             <div className="tiny">
                 <img src={tiny} alt="" />
                 <span>GEN-Z SQUARE Magazine</span>
             </div>
             <div className='box-special1-date'>
-                August, 2023 
+                {data[0].date_added}
             </div>
             <Link to="/magazine" className="readmore">
                 Read More
