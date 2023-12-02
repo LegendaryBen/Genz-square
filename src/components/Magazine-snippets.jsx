@@ -4,7 +4,8 @@ import map from '../images/map.jpg'
 import tiny from '../images/tiny.svg'
 import { Link } from 'react-router-dom'
 
-const Magazine_snippets = () => {
+const Magazine_snippets = ({data}) => {
+
     return (
         <Link to='/magazine'className='Magazine-snippets'>
             <div className='Magazine-snippets-img'>
@@ -15,8 +16,7 @@ const Magazine_snippets = () => {
                     Magazine
                 </div>
                 <div className="snippet-msg">
-                    Why is inflation still so bad? Extreme-low unemployment
-                    rates in these states are a major factor
+                    {data.title.length > 118 ? data.title.slice(0,114)+"...":data.title}
                 </div>
                 <div className="snippet-id">
                     <Arrow image={tiny}/>
@@ -25,7 +25,7 @@ const Magazine_snippets = () => {
                     </span>
                 </div>
                 <div className="snippet-date">
-                    July 4, 2023
+                    {data.date_added}
                 </div>
             </div>
         </Link>
