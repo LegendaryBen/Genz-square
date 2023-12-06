@@ -12,7 +12,7 @@ const store = configureStore({
         slider:sliderSlice,
         topicstory:topicStorySlice,
         fromMagazine:fromMagazineSlice,
-        trending:trendingSlice
+        trending:trendingSlice,
     }
 })
 

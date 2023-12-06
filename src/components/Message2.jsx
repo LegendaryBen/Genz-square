@@ -25,7 +25,7 @@ const Message2 = ({data}) => {
             <div className='box-special1-date'>
                 {data[0].date_added}
             </div>
-            <Link to="/magazine" className="readmore">
+            <Link to={`/magazine/${data[0].id}`} className="readmore">
                 Read More
             </Link>
         </div>

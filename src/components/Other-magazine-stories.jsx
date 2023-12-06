@@ -1,7 +1,7 @@
 import React from 'react'
 import More_stories_card from './More-stories-card'
 
-const Other_magazine_stories = ({cls,data,skip}) => {
+const Other_magazine_stories = ({cls,data,skip,type}) => {
 
 
     let skipdata;
@@ -45,7 +45,7 @@ const Other_magazine_stories = ({cls,data,skip}) => {
                     More stories
             </div>
             {
-                main.map((item,i)=><More_stories_card data={item} key={i}/>)
+                main.map((item,i)=><More_stories_card data={item} key={i} type={type}/>)
             }
             
         </div>

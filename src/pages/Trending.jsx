@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams,Navigate } from 'react-router-dom'
 import Header from '../components/header'
 import Category from '../components/categories'
 import Read_Magazine from '../components/Read-Magazine'
@@ -7,7 +7,6 @@ import Show_full_story from '../components/Show-full-story'
 import Footer from '../components/Footer'
 import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
-import { Navigate } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import { fetchTrending } from '../Redux/features/trending/trendingSlice'
 import Fetch_empty from '../components/Fetch_empty'
@@ -35,7 +34,7 @@ const Trending = () => {
     })
 
     let skip = usedata[0]?.id;
-
+    let type = "trending"
     const regex = /[0-9]+/;
 
     const[errors,setErrors] = useState("-150%");
@@ -125,7 +124,7 @@ const Trending = () => {
                 <Header/>
                 <Category margin="margin"/>
                 <Read_Magazine data={usedata[0]}/>
-                <Show_full_story text='Go back home' to='/' skip={skip} data={data} current={usedata[0]}/>
+                <Show_full_story text='Go back home' to='/' skip={skip} data={data} current={usedata[0]} type={type}/>
                 <Footer click={news} change={setLetter} value={letter}/>
                 <Search_Bar/>
                 <Ham_menu/>

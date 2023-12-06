@@ -34,7 +34,7 @@ function App() {
         <Hambar>
           <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/magazine' element={
+            <Route path='/magazine/:id' element={
               <Suspense fallback="loading...">
                 <Magazine/>
               </Suspense>

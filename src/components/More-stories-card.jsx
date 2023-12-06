@@ -4,9 +4,9 @@ import map from '../images/map.jpg'
 import genz from '../images/gen-z.svg'
 import { Link } from 'react-router-dom'
 
-const More_stories_card = ({data}) => {
+const More_stories_card = ({data,type}) => {
     return (
-        <Link className='more-stories-card' to={`/trending/${data.id}`}>
+        <Link className='more-stories-card' to={`/${type}/${data.id}`}>
             <Arrow image={data.image} />
             <div className="more-stories-content">
                 <div className="content-header">
