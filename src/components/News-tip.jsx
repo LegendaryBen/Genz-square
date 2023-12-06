@@ -33,7 +33,7 @@ const News_tip = ({data,error,loading,image}) => {
             <div className='News-container'>
                 <Link to="" className='News-tip'>
                     <div className='box box-special'>
-                         <img src={mack} alt="" />
+                         <img src={image} alt="" />
                     </div>
                     <Message data={data}/>
                 </Link>

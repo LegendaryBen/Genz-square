@@ -1,4 +1,4 @@
-import React,{useContext,useEffect,useLayoutEffect} from 'react'
+import React,{useContext,useEffect,useLayoutEffect,useState} from 'react'
 import { fetchHomestory } from '../Redux/features/landingpageSlice/landingpageSlice'
 import Header from '../components/header'
 import Category from '../components/categories'
@@ -22,6 +22,9 @@ import useResetSlide from '../custom hooks/useResetSlide'
 import { fetchSlides } from '../Redux/features/slider/sliderSlice'
 import { fetchStory } from '../Redux/features/topicStory/topicStorySlice'
 import { fetchMagazine } from '../Redux/features/fromMagazine/fromMagazineSlice'
+import Error from '../components/Error'
+import Loader from '../components/Loader'
+import axios from 'axios'
 
 
 
@@ -49,6 +52,51 @@ const Home = () => {
     useResetSlide();
 
     const dispatch = useDispatch();
+    const[errors,setErrors] = useState("-150%");
+    const[errorstate,setErrorstate] = useState("#00C24E");
+    const[letter,setLetter]= useState('');
+    const[load,setLoad]=useState(false);
+    const[message,setMessage]=useState('');
+
+
+    function news(e){
+        e.preventDefault();
+        if(letter == ''){
+
+            setMessage("Input field must not be empty!");
+            setErrors("0%");
+            setErrorstate("#d30000");
+            setTimeout(()=>{
+                setErrors("-150%");
+            },4000)
+
+        }else{
+            setLoad(true);
+            axios.post("https://gen-zsquare.com/api/newsLetter",{email:letter}).
+            then(res=>{
+
+                setLoad(false);
+                setErrorstate("#00C24E");
+                setMessage(res.data.message);
+                setErrors("0%");
+                setLetter('')
+                setTimeout(()=>{
+                    setErrors("-150%");
+                },4000)
+
+            }).catch(res=>{
+
+                setErrorstate("#d30000");
+                setMessage(res.response.data.email.join(''));
+                setErrors("0%");
+                setLoad(false);
+                setTimeout(()=>{
+                    setErrors("-150%");
+                },4000)
+
+            })
+        }
+    }
 
 
     useLayoutEffect(()=>{
@@ -76,9 +124,11 @@ const Home = () => {
             <New_magazine2/>
             <News_tip2/>
             <Magazine_snippets_container/>
-            <Footer/>
+            <Footer click={news} change={setLetter} value={letter}/>
             <Search_Bar/>
             <Ham_menu/>
+            <Error color={errorstate} top={errors} message={message} click={setErrors}/>
+            {load&&<Loader/>}
         </>
     )
 }

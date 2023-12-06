@@ -12,7 +12,7 @@ let initialState = {
 
 
 const fetchStory = createAsyncThunk('topicStorySlice/fetchStory',()=>{
-    return axios.get("https://gen-zsquare.com/api/news").then(response=>response.data);
+    return axios.get("https://gen-zsquare.com/api/stories").then(response=>response.data);
 })
 
 
@@ -53,8 +53,8 @@ const topicStorySlice =  createSlice({
                 });
     
                 state.all = action.payload;
-    
-                state.data = action.payload[0];
+                let num = Math.floor(Math.random()*action.payload.length)
+                state.data = action.payload[num];
     
 
             }

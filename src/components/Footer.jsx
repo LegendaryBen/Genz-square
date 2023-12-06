@@ -6,7 +6,7 @@ import linked from '../images/linkedin.svg'
 import fb from '../images/fb.svg'
 import twitter from '../images/twitter.svg'
 
-const Footer = () => {
+const Footer = ({value,change,click}) => {
     return (
         <div className='Footer'>
             <div className='News-letter'>
@@ -20,7 +20,7 @@ const Footer = () => {
                         inspiring stories, best advice and exclusive<br/>
                         reporting from GEN-Z SQUARE
                     </div>
-                   <Form/>
+                   <Form value={value} change={change} click={click}/>
                 </div>
                 <div className="News-letter-two">
                     <Details name='Product' details1='Gen-Z Square Magazine' details2='Webinars' details3='Podcast'/>

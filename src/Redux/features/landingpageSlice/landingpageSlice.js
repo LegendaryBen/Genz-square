@@ -9,7 +9,7 @@ let initialState = {
 }
 
 const fetchHomestory = createAsyncThunk('landingpageSlice/fetchHomestory',()=>{
-    return axios.get("https://gen-zsquare.com/api/news").then(response=>response.data);
+    return axios.get("https://gen-zsquare.com/api/stories").then(response=>response.data);
 }) 
 
 

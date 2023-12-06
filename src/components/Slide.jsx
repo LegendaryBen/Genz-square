@@ -8,7 +8,7 @@ const Slide = ({data}) => {
     return (
         <div className='Slides'>
             <Link to='/'>
-                <img src={sound} alt="sound"  className='slide-section'/>
+                <img src={data.image} alt="sound"  className='slide-section'/>
                 <div className='slide-section space'>
                     <div className='text'>
                         <span>{data.category}</span>
