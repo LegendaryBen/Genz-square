@@ -2084,7 +2084,7 @@ body{
 
 
     .full-story-container{
-        position: relative;flex-basis:72%;margin-bottom:0px;height:1143px;overflow: auto;
+        position: relative;flex-basis:72%;margin-bottom:0px;height:auto;
         scrollbar-width:thin;scrollbar-color:$grey3;
 
         @include maxScreen($tablet){
@@ -2139,7 +2139,7 @@ body{
 
      
     .Other-magazine-stories2{
-        flex-basis:28%;height:1100px;overflow:auto;position:relative;
+        flex-basis:28%;height:auto;overflow:auto;position:relative;
         padding-top:70px;@include flex;@include align(center);@include flexDirection(column);
         padding-left:70px;scrollbar-width:thin;scrollbar-color:$grey3;
 

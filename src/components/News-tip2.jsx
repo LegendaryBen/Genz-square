@@ -40,7 +40,7 @@ const News_tip2 = () => {
             <div className='News-container'>
                 <div to="/" className='News-tip2'>
                     <div className='box-special1'>
-                        <img src={data.image}  />
+                        <img src={data[0].image} />
                     </div>
                     <Message2 data={data}/>
                 </div>

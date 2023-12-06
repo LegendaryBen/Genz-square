@@ -7,24 +7,23 @@ import twitter from "../images/twitter.svg"
 import whatsapp from "../images/whatsapp.svg"
 import { Link } from 'react-router-dom'
 
-const Read_Magazine = () => {
+const Read_Magazine = ({data}) => {
     return (
         <div className='Read-magazine'>
             <div className="Read-cat">
-                Tech
+                {data.category}
             </div>
             <div className="Read-title">
-                Meta to launch its Twitter clone Thursday as Elon Musk’s platform drives away users with 
-                new limits and tech issues
+                {data.title}
             </div>
             <div className="Read-author">
-                By Favsolomon
+                {data.author}
             </div>
             <div className="Read-date">
-                July 4, 2023
+                {data.date_added}
             </div>
             <div className="Read-img">
-                <Arrow image={img}/>
+                <Arrow image={data.image}/>
             </div>
             <div className="Read-socials">
                 <div className="Image-by">

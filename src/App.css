@@ -2919,8 +2919,7 @@ body {
   position: relative;
   flex-basis: 72%;
   margin-bottom: 0px;
-  height: 1143px;
-  overflow: auto;
+  height: auto;
   scrollbar-width: thin;
   scrollbar-color: #CCCCCC;
 }
@@ -2985,7 +2984,7 @@ body {
 }
 .Show-full-story .Other-magazine-stories2 {
   flex-basis: 28%;
-  height: 1100px;
+  height: auto;
   overflow: auto;
   position: relative;
   padding-top: 70px;

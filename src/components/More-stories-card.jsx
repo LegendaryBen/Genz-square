@@ -4,26 +4,25 @@ import map from '../images/map.jpg'
 import genz from '../images/gen-z.svg'
 import { Link } from 'react-router-dom'
 
-const More_stories_card = () => {
+const More_stories_card = ({data}) => {
     return (
-        <Link className='more-stories-card'>
-            <Arrow image={map} />
+        <Link className='more-stories-card' to={`/trending/${data.id}`}>
+            <Arrow image={data.image} />
             <div className="more-stories-content">
                 <div className="content-header">
-                    Magazine
+                    {data.category}
                 </div>
                 <div className="content-body">
-                    Why is inflation still so bad? Extreme-low unemployment
-                    rates in these states are a major factor
+                    {data.title.length > 118 ? data.title.slice(0,112)+"...":data.title}
                 </div>
                 <div className="company-name">
                     <Arrow image={genz}/>
                     <div>
-                        GEN-Z SQUARE Magazine
+                        GEN-Z SQUARE 
                     </div>
                 </div>
                 <div className="content-date">
-                    July 4, 2023
+                    {data.date_added}
                 </div>
             </div>
         </Link>

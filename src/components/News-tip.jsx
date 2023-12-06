@@ -31,7 +31,7 @@ const News_tip = ({data,error,loading,image}) => {
 
         return (
             <div className='News-container'>
-                <Link to="" className='News-tip'>
+                <Link to={`/trending/${data.id}`} className='News-tip'>
                     <div className='box box-special'>
                          <img src={image} alt="" />
                     </div>

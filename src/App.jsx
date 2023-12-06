@@ -49,7 +49,7 @@ function App() {
                 <SignUp/>
               </Suspense>
             }/>
-            <Route path='/trending' element={
+            <Route path='/trending/:id' element={
               <Suspense fallback="loading...">
                 <Trending/>
               </Suspense>

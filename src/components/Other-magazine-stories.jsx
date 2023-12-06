@@ -1,15 +1,53 @@
 import React from 'react'
 import More_stories_card from './More-stories-card'
 
-const Other_magazine_stories = ({cls}) => {
+const Other_magazine_stories = ({cls,data,skip}) => {
+
+
+    let skipdata;
+    let main = [];
+    
+    if(skip == undefined){
+
+        skipdata = [];
+
+    }else{
+
+        skipdata = data.filter((item)=>{
+            if(item.id !== skip ){
+                return item;
+            }
+        })
+
+        let count = 0;
+
+
+        while(count < 5 && skipdata.length !== 0){
+
+            let num = Math.floor(Math.random()*skipdata.length)
+
+            main.push(skipdata[num]);
+
+            skipdata.splice(num,1);
+            
+            count++;
+
+        }
+
+
+
+    }
+
+
     return (
         <div className={`${cls ? cls : "Other-magazine-stories"}`}>
             <div className="more-stories-header">
                     More stories
             </div>
-            <More_stories_card/>
-            <More_stories_card/>
-            <More_stories_card/>
+            {
+                main.map((item,i)=><More_stories_card data={item} key={i}/>)
+            }
+            
         </div>
     )
 }

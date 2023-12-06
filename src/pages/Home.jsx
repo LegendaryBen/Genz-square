@@ -85,14 +85,27 @@ const Home = () => {
                 },4000)
 
             }).catch(res=>{
+                if(res.message == "Network Error"){
 
-                setErrorstate("#d30000");
-                setMessage(res.response.data.email.join(''));
-                setErrors("0%");
-                setLoad(false);
-                setTimeout(()=>{
-                    setErrors("-150%");
-                },4000)
+                    setErrorstate("#d30000");
+                    setMessage(res.response.data.email.join(''));
+                    setErrors("0%");
+                    setLoad(false);
+                    setTimeout(()=>{
+                        setErrors("-150%");
+                    },4000)
+
+                }else{
+
+                    setErrorstate("#d30000");
+                    setMessage(res.response.data.email.join(''));
+                    setErrors("0%");
+                    setLoad(false);
+                    setTimeout(()=>{
+                        setErrors("-150%");
+                    },4000)
+
+                }
 
             })
         }
