@@ -20,7 +20,6 @@ import { jwtDecode } from "jwt-decode";
 const Login = () => {
 
     const{login,setLogin,setDetails,details} = useContext(User);
-    console.log(details);
 
     const navigate = useNavigate();
     

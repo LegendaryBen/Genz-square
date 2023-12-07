@@ -1,10 +1,20 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
 import { NavLink } from 'react-router-dom'
 import arc from '../images/arc.svg'
+import  {User} from '../contexts/Auth'
+
+
 
 const Navogations = () => {
 
     const[drop,setDrop] = useState(false);
+    const{login,setLogin,setDetails,details} = useContext(User);
+
+    const logOut = ()=>{
+        localStorage.removeItem('gen-z');
+        setLogin(false)
+        setDetails({})
+    }
 
     return (
         <>
@@ -15,7 +25,7 @@ const Navogations = () => {
                     <NavLink to='image' className='nav-special'>Password</NavLink>
                     <NavLink to='email'className='nav-special' >Email Notifications</NavLink>
                     <NavLink to='subscriptions' className='nav-special'>Subscriptions</NavLink>
-                    <NavLink  className='nav-special'>Log out</NavLink>
+                    <NavLink  className='nav-special' onClick={logOut}>Log out</NavLink>
                     <NavLink  className='nav-special hide-delete'>Delete Account</NavLink>
                 </div>
                 <NavLink className='delete'>
