@@ -12,13 +12,15 @@ import axios from 'axios';
 import Loader from '../components/Loader'
 import  {User} from '../contexts/Auth'
 import useLogin from '../custom hooks/useLogin'
+import { jwtDecode } from "jwt-decode";
 
 
 
 
 const Login = () => {
 
-    const{login,setLogin} = useContext(User);
+    const{login,setLogin,setDetails,details} = useContext(User);
+    console.log(details);
 
     const navigate = useNavigate();
     
@@ -52,10 +54,22 @@ const Login = () => {
                 email,password
             }).then(res=>{
 
-                localStorage.setItem("gen-z",res.data.refresh)
-                setLoading(false)
-                setLogin(true)
-                navigate('/')
+                let data = jwtDecode(res.data.refresh).is_user
+
+                if(data == true){
+
+                    localStorage.setItem("gen-z",res.data.refresh)
+                    setLoading(false)
+                    setLogin(true)
+                    setDetails(jwtDecode(res.data.refresh));
+                    navigate('/')
+                }else{
+                    setColor("red")
+                    setMessage("You are not a registered user");
+                    setWarning(true);
+                    setLoading(false);
+                }
+               
 
             }).catch(err=>{
 

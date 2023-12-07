@@ -57,10 +57,19 @@ const SignUp = () => {
                 setTerm(false)
 
             }).catch(error=>{
-                setColor("red")
-                setMessage(error.response.data.message);
-                setWarning(true);
-                setLoading(false)
+                console.log(error)
+
+                if(error.message == 'Network Error'){
+                    setColor("red")
+                    setMessage(error.message);
+                    setWarning(true);
+                    setLoading(false)
+                }else{
+                    setColor("red")
+                    setMessage(error.response.data.email.join(''));
+                    setWarning(true);
+                    setLoading(false)
+                }
             })
         }
 
