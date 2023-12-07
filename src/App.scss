@@ -2563,7 +2563,7 @@ body{
             height:70%;width:70%;border:1px solid $grey;@include flex;@include flexDirection(column);
             overflow:hidden;border-left-color:transparent;border-top-color:transparent;
             border-right-color:transparent;position:relative;@include padding(20px);border-radius:none;
-            transition:300ms;
+            transition:0.5s;
 
 
             @include maxScreen($tablet){

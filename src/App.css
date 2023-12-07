@@ -3545,7 +3545,7 @@ body {
   position: relative;
   padding: 20px;
   border-radius: none;
-  transition: 300ms;
+  transition: 0.5s;
 }
 @media only screen and (max-width: 1023px) {
   .nav-container .navigations div {
