@@ -17,6 +17,8 @@ const Profile_email = lazy(()=>import('./pages/Profile-email'))
 const Profile_subscriptions = lazy(()=>import('./pages/Profile-subscriptions'))
 const Success = lazy(()=>import('./pages/Success'));
 const Error = lazy(()=>import('./pages/Error'));
+const Search = lazy(()=>import('./pages/Search'));
+const Plans = lazy(()=>import('./pages/Plans'));
 const Payment_details = lazy(()=>import('./pages/Details'));
 const Notifications = lazy(()=> import("./pages/Notifications"));
 import store from './Redux/app/store'
@@ -47,6 +49,16 @@ function App() {
             <Route path='/sign-up' element={
               <Suspense fallback="loading...">
                 <SignUp/>
+              </Suspense>
+            }/>
+            <Route path='/search/:id' element={
+              <Suspense fallback="loading...">
+                <Search/>
+              </Suspense>
+            }/>
+             <Route path='/plans' element={
+              <Suspense fallback="loading...">
+                <Plans/>
               </Suspense>
             }/>
             <Route path='/trending/:id' element={

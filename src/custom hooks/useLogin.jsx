@@ -1,34 +1,36 @@
 import {useLayoutEffect} from 'react'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const useLogin = (log) => {
 
+
+    const navigate = useNavigate();
+
     useLayoutEffect(()=>{
 
-        const genz = localStorage.getItem("gen-z")||"";
+        const genz = JSON.parse(localStorage.getItem("gen-z"))?.refresh||"";
 
         if(genz == ""){
-
-            log(false)
+            
+            return
 
         }else{
 
             axios.post("https://gen-zsquare.com/api/token/refresh/",{refresh:genz}).then(res=>{
 
-                log(true)
+                localStorage.setItem("gen-z",JSON.stringify(res.data));
 
             }).catch(err=>{
 
-                console.log(err)
-
-                if(err.message !== 'Request failed with status code 401'  ||err.message !== 'Request failed with status code 403' ){
+                if(err.message == "Network Error" ){
                     return
                 }else{
                     localStorage.removeItem("gen-z");
-                    log(false)
+                    window.location.reload()
                 }
                 
             })

@@ -9,7 +9,8 @@ const Cancle = () => {
 
     const{slideIn} = useContext(Ham);
 
-    const{login,setLogin} = useContext(User);
+    const{setLogin} = useContext(User);
+    let login = localStorage.getItem("gen-z") || '';
 
     return (
         <div className="cancle">
@@ -17,7 +18,7 @@ const Cancle = () => {
             <div className="mobile-genz">
                 GEN-Z SQUARE
             </div>
-            {!login && <Link to="/sign-up">
+            {login == '' && <Link to="/sign-up">
                 SUBSCRIBE
             </Link>}
         </div>

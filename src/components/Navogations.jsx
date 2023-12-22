@@ -12,8 +12,7 @@ const Navogations = () => {
 
     const logOut = ()=>{
         localStorage.removeItem('gen-z');
-        setLogin(false)
-        setDetails({})
+        window.location.reload();
     }
 
     return (

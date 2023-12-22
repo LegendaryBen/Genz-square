@@ -12,12 +12,14 @@ import { useContext } from 'react'
 
 const Notifications = (props) => {
 
-    const{login,setLogin} = useContext(User);
+    const{setLogin} = useContext(User);
+    let login = localStorage.getItem("gen-z") || '';
+
 
     useLogin(setLogin);
 
 
-    return login == true ?(
+    return login !== '' ?(
         <>
             <Header/>
             <Ham_menu/>

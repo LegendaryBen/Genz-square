@@ -19,7 +19,8 @@ import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
 
-    const{login,setLogin,setDetails,details} = useContext(User);
+    const{setLogin,setDetails,details} = useContext(User);
+    let login = localStorage.getItem("gen-z") || '';
 
     const navigate = useNavigate();
     
@@ -56,12 +57,9 @@ const Login = () => {
                 let data = jwtDecode(res.data.refresh).is_user
 
                 if(data == true){
-
-                    localStorage.setItem("gen-z",res.data.refresh)
+                    localStorage.setItem("gen-z",JSON.stringify(res.data));
                     setLoading(false)
-                    setLogin(true)
-                    setDetails(jwtDecode(res.data.refresh));
-                    navigate('/')
+                    window.location.reload();
                 }else{
                     setColor("red")
                     setMessage("You are not a registered user");
@@ -87,7 +85,7 @@ const Login = () => {
 
 
 
-    return login == true? <Navigate to="/"/>: (
+    return login !== '' ? <Navigate to="/"/>: (
         <div className='Login'>
             <div className="userInputs">
                 <div className="loginfancy">

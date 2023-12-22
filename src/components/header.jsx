@@ -14,7 +14,7 @@ import { User  } from '../contexts/Auth';
 const Header = () => {
     const{slideOut} = useContext(Ham);
     const {down} = useContext(Search);
-    const{login} = useContext(User);
+    let login = localStorage.getItem("gen-z") || '';
 
 
     return (
@@ -24,7 +24,7 @@ const Header = () => {
                 GEN-Z SQUARE
             </span>
             {
-                !login ? 
+                login == '' ? 
                 <div className='subscribe'>
                     <Link to="/sign-up" className='sub-children sub-btn'>SUBSCRIBE</Link>
                     <Link to='/login' className='sub-children sign-in'>

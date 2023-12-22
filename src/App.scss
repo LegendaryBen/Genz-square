@@ -1424,169 +1424,7 @@ body{
         margin-top:50px;
     }
 
-    .Hidden-content{
-        background-color:white;flex-basis:72%;height:1100px;position:relative;overflow:hidden;
-        margin-bottom:0px;
-
-        @include minMaxScreen($laptop-min,$laptop-max){
-            flex-basis:80%;
-        }
-
-        @include maxScreen($tablet){
-            margin-bottom:50px;flex-basis: auto;height:2180px;
-        }
-
-        .content{
-            @include padding(0px 40px 0px 0px);@include archivo;font-size: 24px;font-weight: 400;line-height:36px;
-            color:$black;
-
-            @include maxScreen($mobile1){
-                font-size:20px;line-height:30px; @include padding(0px 0px 0px 0px);
-            }
-        }
-
-        .overlay-content{
-            position:absolute;width:100%;height:20%;top:0;left:0;
-            background-image:linear-gradient(to bottom, transparent 4%, white 96%); 
-        }
-
-        .overlay-prices{
-            position:absolute;width:100%;height:80%;bottom:0;left:0;background-color:$grey4;
-            @include padding(30px 70px);
-
-            @include minMaxScreen($laptop-min,$laptop-max){
-                @include padding(30px 20px);
-            }
-
-            
-            @include maxScreen($tablet){
-                @include padding(30px 20px);
-            }
-
-
-            .subscriber{
-                @include flex;width:100%;@include justify(flex-end);@include align(center);
-                @include archivo;font-size: 20px;font-weight: 400;line-height: 22px;
-                margin-bottom:40px;
-
-                a{
-                    margin-left:5px;color:$blue;
-                }
-
-                @include maxScreen($mobile1){
-                    font-size:15px;line-height:15px; 
-                }
-
-            }
-
-            .percent-off{
-                @include clash;font-size: 24px;font-weight: 600;line-height: 30px;color:$black;
-                margin-bottom:30px;
-
-                span{
-                    color:$green;
-                }
-
-                @include maxScreen($mobile1){
-                    font-size:19px;line-height:24px;  
-                }
-            }
-
-            .benefits{
-                padding-left:15px;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
-                margin-bottom:60px;
-
-                @include maxScreen($mobile1){
-                    font-size:14px;line-height:14px;  
-                }
-
-                li{
-                    margin-bottom:20px;
-                }
-            }
-
-            .hidden-prices{
-                width:100%;@include flex;@include flexDirection(row);
-                @include align(center);@include justify(space-between);
-
-                @include maxScreen($tablet){
-                    @include flexDirection(column);@include align(flex-start);
-                }
-
-
-                .various-prices{
-                    height:400px;width:31%;background-color:$white-btn;
-                    @include padding(20px);text-align: center;border: 1px solid #707070;margin-bottom:0px;
-
-                    @include maxScreen($tablet){
-                        margin-bottom:30px;width:100%;
-                    }
-
-                    @include maxScreen($mobile1){
-                        @include padding(40px 20px 40px 20px);
-                    }
-
-
-                    
-                    .plans{
-                        @include clash;font-size: 24px;font-weight: 600;line-height: 30px;
-                        margin-bottom:10px;
-
-                        @include maxScreen($mobile1){
-                            font-size:18px;line-height:19px;  
-                        }
     
-                    }
-
-                    .trial-price{
-                        @include clash;font-size: 24px;font-weight: 600;line-height: 30px;
-                        margin-bottom:5px;
-
-                        @include maxScreen($mobile1){
-                            font-size:18px;line-height:19px;   
-                        }
-                    }
-
-                    .first-year{
-                        @include archivo;font-size:17px;font-weight: 600;line-height: 22px;margin-bottom:10px;
-
-                        @include maxScreen($mobile1){
-                            font-size:14px;line-height:15px;   
-                        }
-
-                        @include maxScreen($mobile1){
-                            font-size:14px;line-height:15px;   
-                        }
-
-                    }
-
-                    .other-years{
-                        @include archivo;font-size:15px;font-weight: 400;line-height: 22px;color:$grey;
-                        margin-bottom:20px;
-                    }
-
-                    .start-trial{
-                        width:100%;@include flex;@include align(center);@include justify(center);
-                        margin-bottom:20px;
-                        
-                        a{
-                            background-color:$green;width:174px;@include padding(10px 0px);
-                            color:$white-btn;@include archivo;font-size:15px;font-weight: 600; 
-                            line-height: 20px;text-decoration:none;
-
-                            @include maxScreen($mobile1){
-                                font-size:14px;line-height:15px;   
-                            }
-                        }
-                    }
-
-                }
-            }
-
-
-        }
-    }
-
     .Other-magazine-stories{
         flex-basis:28%;height:1100px;overflow:auto;position:relative;
         padding-top:70px;@include flex;@include align(center);@include flexDirection(column);
@@ -1702,6 +1540,190 @@ body{
     }
 
 }
+
+
+
+
+.Hidden-content{
+    background-color:white;flex-basis:72%;height:1100px;position:relative;overflow:hidden;
+    margin-bottom:0px;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        flex-basis:80%;
+    }
+
+    @include maxScreen($tablet){
+        margin-bottom:50px;flex-basis: auto;height:2180px;
+    }
+
+    .content{
+        @include padding(0px 40px 0px 0px);@include archivo;font-size: 24px;font-weight: 400;line-height:36px;
+        color:$black;
+
+        @include maxScreen($mobile1){
+            font-size:20px;line-height:30px; @include padding(0px 0px 0px 0px);
+        }
+    }
+
+    .overlay-content{
+        position:absolute;width:100%;height:20%;top:0;left:0;
+        background-image:linear-gradient(to bottom, transparent 4%, white 96%); 
+    }
+
+    .overlay-prices{
+        position:absolute;width:100%;height:80%;bottom:0;left:0;background-color:$grey4;
+        @include padding(30px 70px);
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            @include padding(30px 20px);
+        }
+
+        
+        @include maxScreen($tablet){
+            @include padding(30px 20px);
+        }
+
+
+        .subscriber{
+            @include flex;width:100%;@include justify(flex-end);@include align(center);
+            @include archivo;font-size: 20px;font-weight: 400;line-height: 22px;
+            margin-bottom:40px;
+
+            a{
+                margin-left:5px;color:$blue;
+            }
+
+            @include maxScreen($mobile1){
+                font-size:15px;line-height:15px; 
+            }
+
+        }
+
+        .percent-off{
+            @include clash;font-size: 24px;font-weight: 600;line-height: 30px;color:$black;
+            margin-bottom:30px;
+
+            span{
+                color:$green;
+            }
+
+            @include maxScreen($mobile1){
+                font-size:19px;line-height:24px;  
+            }
+        }
+
+        .benefits{
+            padding-left:15px;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
+            margin-bottom:60px;
+
+            @include maxScreen($mobile1){
+                font-size:14px;line-height:14px;  
+            }
+
+            li{
+                margin-bottom:20px;
+            }
+        }
+
+        .hidden-prices{
+            width:100%;@include flex;@include flexDirection(row);
+            @include align(center);@include justify(space-between);
+
+            @include maxScreen($tablet){
+                @include flexDirection(column);@include align(flex-start);
+            }
+
+
+            .various-prices{
+                height:400px;width:31%;background-color:$white-btn;
+                @include padding(20px);text-align: center;border: 1px solid #707070;margin-bottom:0px;
+
+                @include maxScreen($tablet){
+                    margin-bottom:30px;width:100%;
+                }
+
+                @include maxScreen($mobile1){
+                    @include padding(40px 20px 40px 20px);
+                }
+
+
+                
+                .plans{
+                    @include clash;font-size: 24px;font-weight: 600;line-height: 30px;
+                    margin-bottom:10px;
+
+                    @include maxScreen($mobile1){
+                        font-size:18px;line-height:19px;  
+                    }
+
+                }
+
+                .trial-price{
+                    @include clash;font-size: 24px;font-weight: 600;line-height: 30px;
+                    margin-bottom:5px;
+
+                    @include maxScreen($mobile1){
+                        font-size:18px;line-height:19px;   
+                    }
+                }
+
+                .first-year{
+                    @include archivo;font-size:17px;font-weight: 600;line-height: 22px;margin-bottom:10px;
+
+                    @include maxScreen($mobile1){
+                        font-size:14px;line-height:15px;   
+                    }
+
+                    @include maxScreen($mobile1){
+                        font-size:14px;line-height:15px;   
+                    }
+
+                }
+
+                .other-years{
+                    @include archivo;font-size:15px;font-weight: 400;line-height: 22px;color:$grey;
+                    margin-bottom:20px;
+                }
+
+                .start-trial{
+                    width:100%;@include flex;@include align(center);@include justify(center);
+                    margin-bottom:20px;
+                    
+                    a{
+                        background-color:$green;width:174px;@include padding(10px 0px);
+                        color:$white-btn;@include archivo;font-size:15px;font-weight: 600; 
+                        line-height: 20px;text-decoration:none;
+
+                        @include maxScreen($mobile1){
+                            font-size:14px;line-height:15px;   
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    .fill-it{
+        height:100%;
+    }
+}
+
+.hide-it{
+    height:900px;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        flex-basis:80%;
+    }
+
+    @include maxScreen($tablet){
+        flex-basis: auto;height:1800px;
+    }
+
+}
+
 
 
 //styles for the login screen
@@ -3339,6 +3361,134 @@ body{
         }
     }
 
+}
+
+.searches{
+
+    width:100%;@include padding(0px 70px);margin-top:70px;
+    margin-bottom:50px;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(0px 40px);
+    }
+
+    @include maxScreen($tablet){
+        @include padding(0px 30px);
+    }
+
+    .search-cards{
+        width:100%;height:150px;background-color:$grey4;margin-bottom:20px;
+        @include padding(10px 20px);@include flex;flex-direction:column;
+        text-decoration:none;
+
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            height:180px;
+        }
+
+        .search-card-topic{
+            color:$red-btn;@include archivo;font-size: 16px;font-style: normal;font-weight: 500;
+            line-height: normal;margin-bottom:10px;width:100%;
+
+            @include maxScreen($tablet){
+                font-size:12px;
+            }
+
+            @include maxScreen($mobile1){
+                font-size:10px;margin-bottom:7px;
+            }
+    
+        }
+
+
+        .search-card-hint{
+            color:$black;@include clash;font-size: 20px;font-style: normal;font-weight: 600;
+            line-height: normal;margin-bottom:10px;width:100%;
+
+            @include maxScreen($tablet){
+                font-size:15px;
+            }
+
+            @include maxScreen($mobile1){
+                font-size:12px;margin-bottom:7px;
+            }
+        }
+
+
+        .search-card-company{
+
+            @include flex;@include align(center);margin-bottom:10px;
+
+            img {
+                width:25px;height:25px;object-fit:contain;margin-right:10px;
+
+                @include maxScreen($tablet){
+                    width:17px;height:17px;
+                }
+            }
+
+            span{
+                color:$black;@include clash;font-size: 16px;font-style: normal;font-weight: 600;
+                line-height: normal;width:100%;
+
+                @include maxScreen($tablet){
+                    font-size:12px;
+                }
+
+                @include maxScreen($mobile1){
+                    font-size:10px;margin-bottom:7px;
+                }
+            }
+        }
+
+
+        .search-card-date{
+            color:$grey2;@include archivo;font-size: 12px;font-style: normal;font-weight: 400;
+            line-height: normal; 
+
+            @include maxScreen($tablet){
+                font-size:8px;
+            }
+        }
+
+
+    }
+}
+
+.pagination{
+    width:100%;@include padding(10px 70px);@include flex;@include align(center);
+    @include justify(center);flex-direction:row;margin-bottom:30px;
+
+
+    @include maxScreen($tablet){
+        flex-direction:column;
+    }
+
+    
+    .previous{
+        @include padding(10px 20px);color:$black;@include archivo;font-size: 14px;
+        font-style: normal;font-weight: 600;line-height: normal;
+        border: 1px solid $green;margin-right:10px;margin-bottom:10px;
+
+        @include maxScreen($tablet){
+            font-size:9px;@include padding(5px 10px);margin-right:7px;
+        }
+
+
+    }
+
+    .numbers{
+        @include flex;@include align(center);width:400px;margin-right:10px;
+        flex-wrap:wrap;margin-bottom:10px;
+
+        @include maxScreen($tablet){
+            width:90%;margin-bottom:7px;
+        }
+    }
+    
+    .colored{
+        background-color:$green;color:$white-btn;
+    }
 }
 
 

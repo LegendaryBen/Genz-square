@@ -4,8 +4,10 @@ const User = createContext();
 
 const Auth = ({children}) => {
 
-    const [login,setLogin] = useState(true);
-    const [details,setDetails] = useState({});
+    const [login,setLogin] = useState(false);
+    const [details,setDetails] = useState({
+        image:null
+    });
 
 
     return (

@@ -1,20 +1,29 @@
-import React from 'react'
+import {useRef} from 'react'
 import Arrow from './Arrow'
-import chim from '../images/chim.jpg';
 import btn from '../images/upload-btn.jpg'
+import user from '../images/user-icon.svg'
 
-const Profile_img = () => {
+
+
+const Profile_img = ({image,change}) => {
+
+    const pointer = useRef(null);
+
+
+
     return (
             <div className="show-images">
-                <Arrow image={chim} cls='user-img'/>
+                <Arrow image={image==null?user:image} cls='user-img'/>
                 <div className='upload-btn'>
                     <div className='upload-details'>
                         <span className='upload-detail-header'>Profile Picture</span><br/><br/>
                         <span>We support PNGs, JPEGs and GIFs under 10MB</span>
                     </div>
                     <div className='hide-file-btn'>
-                        <Arrow image={btn}/>
-                        <input type="file" name="" id="" />
+                        <img src={btn} alt="" onClick={()=>{
+                            pointer.current.click()
+                        }}/>
+                        <input type="file" name="" id=""  ref={pointer} style={{display:"none"}} onChange={change}/>
                     </div>
                    
                 </div>

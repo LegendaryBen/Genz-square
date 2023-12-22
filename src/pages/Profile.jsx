@@ -16,13 +16,14 @@ import { User } from '../contexts/Auth'
 
 const profile = () => {
 
-    const{login,setLogin} = useContext(User);
+    const{setLogin} = useContext(User);
+    let login = localStorage.getItem("gen-z") || '';
 
     useLogin(setLogin)
 
     useResetSlide()
 
-    return login == true ? (
+    return login !== '' ? (
         <>
             <Header/>
             <div className='nav-container'>

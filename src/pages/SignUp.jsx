@@ -17,7 +17,8 @@ import useLogin from '../custom hooks/useLogin'
 
 const SignUp = () => {
 
-    const{login,setLogin} = useContext(User);
+    const{setLogin} = useContext(User);
+    let login = localStorage.getItem("gen-z") || '';
 
     useLogin(setLogin);
 
@@ -57,7 +58,6 @@ const SignUp = () => {
                 setTerm(false)
 
             }).catch(error=>{
-                console.log(error)
 
                 if(error.message == 'Network Error'){
                     setColor("red")
@@ -79,7 +79,7 @@ const SignUp = () => {
 
 
 
-    return login == true ? <Navigate to="/"/>: (
+    return login !== '' ? <Navigate to="/"/>: (
         <div className='Login'>
             <div className="userInputs">
                 <div className="loginfancy">

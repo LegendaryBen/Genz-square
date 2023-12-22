@@ -2017,233 +2017,6 @@ body {
     margin-top: 50px;
   }
 }
-.Read-content-container .Hidden-content {
-  background-color: white;
-  flex-basis: 72%;
-  height: 1100px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 0px;
-}
-@media only screen and (min-width: 1024px) and (max-width: 1350px) {
-  .Read-content-container .Hidden-content {
-    flex-basis: 80%;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  .Read-content-container .Hidden-content {
-    margin-bottom: 50px;
-    flex-basis: auto;
-    height: 2180px;
-  }
-}
-.Read-content-container .Hidden-content .content {
-  padding: 0px 40px 0px 0px;
-  font-family: "Archivo", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 36px;
-  color: black;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .content {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 0px 0px 0px 0px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-content {
-  position: absolute;
-  width: 100%;
-  height: 20%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(to bottom, transparent 4%, white 96%);
-}
-.Read-content-container .Hidden-content .overlay-prices {
-  position: absolute;
-  width: 100%;
-  height: 80%;
-  bottom: 0;
-  left: 0;
-  background-color: #EAECEA;
-  padding: 30px 70px;
-}
-@media only screen and (min-width: 1024px) and (max-width: 1350px) {
-  .Read-content-container .Hidden-content .overlay-prices {
-    padding: 30px 20px;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  .Read-content-container .Hidden-content .overlay-prices {
-    padding: 30px 20px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .subscriber {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: center;
-  font-family: "Archivo", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22px;
-  margin-bottom: 40px;
-}
-.Read-content-container .Hidden-content .overlay-prices .subscriber a {
-  margin-left: 5px;
-  color: #184BFF;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .subscriber {
-    font-size: 15px;
-    line-height: 15px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .percent-off {
-  font-family: "Clash Display", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 30px;
-  color: black;
-  margin-bottom: 30px;
-}
-.Read-content-container .Hidden-content .overlay-prices .percent-off span {
-  color: #00C24E;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .percent-off {
-    font-size: 19px;
-    line-height: 24px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .benefits {
-  padding-left: 15px;
-  font-family: "Archivo", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 17px;
-  margin-bottom: 60px;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .benefits {
-    font-size: 14px;
-    line-height: 14px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .benefits li {
-  margin-bottom: 20px;
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 1023px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices {
-  height: 400px;
-  width: 31%;
-  background-color: #FFFFFF;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #707070;
-  margin-bottom: 0px;
-}
-@media only screen and (max-width: 1023px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices {
-    margin-bottom: 30px;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices {
-    padding: 40px 20px 40px 20px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .plans {
-  font-family: "Clash Display", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 30px;
-  margin-bottom: 10px;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .plans {
-    font-size: 18px;
-    line-height: 19px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .trial-price {
-  font-family: "Clash Display", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 30px;
-  margin-bottom: 5px;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .trial-price {
-    font-size: 18px;
-    line-height: 19px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .first-year {
-  font-family: "Archivo", sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 22px;
-  margin-bottom: 10px;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .first-year {
-    font-size: 14px;
-    line-height: 15px;
-  }
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .first-year {
-    font-size: 14px;
-    line-height: 15px;
-  }
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .other-years {
-  font-family: "Archivo", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 22px;
-  color: grey;
-  margin-bottom: 20px;
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial a {
-  background-color: #00C24E;
-  width: 174px;
-  padding: 10px 0px;
-  color: #FFFFFF;
-  font-family: "Archivo", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
-  text-decoration: none;
-}
-@media only screen and (max-width: 563px) {
-  .Read-content-container .Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial a {
-    font-size: 14px;
-    line-height: 15px;
-  }
-}
 .Read-content-container .Other-magazine-stories {
   flex-basis: 28%;
   height: 1100px;
@@ -2402,6 +2175,252 @@ body {
   font-weight: 400;
   line-height: 13px;
   color: #707070;
+}
+
+.Hidden-content {
+  background-color: white;
+  flex-basis: 72%;
+  height: 1100px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Hidden-content {
+    flex-basis: 80%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Hidden-content {
+    margin-bottom: 50px;
+    flex-basis: auto;
+    height: 2180px;
+  }
+}
+.Hidden-content .content {
+  padding: 0px 40px 0px 0px;
+  font-family: "Archivo", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: black;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .content {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0px 0px 0px 0px;
+  }
+}
+.Hidden-content .overlay-content {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, transparent 4%, white 96%);
+}
+.Hidden-content .overlay-prices {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  left: 0;
+  background-color: #EAECEA;
+  padding: 30px 70px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .Hidden-content .overlay-prices {
+    padding: 30px 20px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .Hidden-content .overlay-prices {
+    padding: 30px 20px;
+  }
+}
+.Hidden-content .overlay-prices .subscriber {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 40px;
+}
+.Hidden-content .overlay-prices .subscriber a {
+  margin-left: 5px;
+  color: #184BFF;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .subscriber {
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+.Hidden-content .overlay-prices .percent-off {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: black;
+  margin-bottom: 30px;
+}
+.Hidden-content .overlay-prices .percent-off span {
+  color: #00C24E;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .percent-off {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+.Hidden-content .overlay-prices .benefits {
+  padding-left: 15px;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .benefits {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.Hidden-content .overlay-prices .benefits li {
+  margin-bottom: 20px;
+}
+.Hidden-content .overlay-prices .hidden-prices {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1023px) {
+  .Hidden-content .overlay-prices .hidden-prices {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.Hidden-content .overlay-prices .hidden-prices .various-prices {
+  height: 400px;
+  width: 31%;
+  background-color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #707070;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .Hidden-content .overlay-prices .hidden-prices .various-prices {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .hidden-prices .various-prices {
+    padding: 40px 20px 40px 20px;
+  }
+}
+.Hidden-content .overlay-prices .hidden-prices .various-prices .plans {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .hidden-prices .various-prices .plans {
+    font-size: 18px;
+    line-height: 19px;
+  }
+}
+.Hidden-content .overlay-prices .hidden-prices .various-prices .trial-price {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .hidden-prices .various-prices .trial-price {
+    font-size: 18px;
+    line-height: 19px;
+  }
+}
+.Hidden-content .overlay-prices .hidden-prices .various-prices .first-year {
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .hidden-prices .various-prices .first-year {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .hidden-prices .various-prices .first-year {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+.Hidden-content .overlay-prices .hidden-prices .various-prices .other-years {
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  color: grey;
+  margin-bottom: 20px;
+}
+.Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial a {
+  background-color: #00C24E;
+  width: 174px;
+  padding: 10px 0px;
+  color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+}
+@media only screen and (max-width: 563px) {
+  .Hidden-content .overlay-prices .hidden-prices .various-prices .start-trial a {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+.Hidden-content .fill-it {
+  height: 100%;
+}
+
+.hide-it {
+  height: 900px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .hide-it {
+    flex-basis: 80%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .hide-it {
+    flex-basis: auto;
+    height: 1800px;
+  }
 }
 
 .Login {
@@ -4652,6 +4671,182 @@ body {
   .error-notice span {
     font-size: 30px;
   }
+}
+
+.searches {
+  width: 100%;
+  padding: 0px 70px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .searches {
+    padding: 0px 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .searches {
+    padding: 0px 30px;
+  }
+}
+.searches .search-cards {
+  width: 100%;
+  height: 150px;
+  background-color: #EAECEA;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1350px) {
+  .searches .search-cards {
+    height: 180px;
+  }
+}
+.searches .search-cards .search-card-topic {
+  color: #d30000;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 10px;
+  width: 100%;
+}
+@media only screen and (max-width: 1023px) {
+  .searches .search-cards .search-card-topic {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .searches .search-cards .search-card-topic {
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
+}
+.searches .search-cards .search-card-hint {
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+  width: 100%;
+}
+@media only screen and (max-width: 1023px) {
+  .searches .search-cards .search-card-hint {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .searches .search-cards .search-card-hint {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+}
+.searches .search-cards .search-card-company {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.searches .search-cards .search-card-company img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 1023px) {
+  .searches .search-cards .search-card-company img {
+    width: 17px;
+    height: 17px;
+  }
+}
+.searches .search-cards .search-card-company span {
+  color: black;
+  font-family: "Clash Display", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 100%;
+}
+@media only screen and (max-width: 1023px) {
+  .searches .search-cards .search-card-company span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .searches .search-cards .search-card-company span {
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
+}
+.searches .search-cards .search-card-date {
+  color: #707070;
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media only screen and (max-width: 1023px) {
+  .searches .search-cards .search-card-date {
+    font-size: 8px;
+  }
+}
+
+.pagination {
+  width: 100%;
+  padding: 10px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1023px) {
+  .pagination {
+    flex-direction: column;
+  }
+}
+.pagination .previous {
+  padding: 10px 20px;
+  color: black;
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: 1px solid #00C24E;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 1023px) {
+  .pagination .previous {
+    font-size: 9px;
+    padding: 5px 10px;
+    margin-right: 7px;
+  }
+}
+.pagination .numbers {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin-right: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 1023px) {
+  .pagination .numbers {
+    width: 90%;
+    margin-bottom: 7px;
+  }
+}
+.pagination .colored {
+  background-color: #00C24E;
+  color: #FFFFFF;
 }
 
 @keyframes load {
