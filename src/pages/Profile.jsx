@@ -1,4 +1,4 @@
-import {useContext} from 'react'
+import {useContext,useState} from 'react'
 import { Outlet,Navigate } from 'react-router-dom'
 import Header from '../components/header'
 import Navogations from '../components/Navogations'
@@ -12,12 +12,19 @@ import Delete from '../components/Delete'
 import useResetSlide from '../custom hooks/useResetSlide'
 import useLogin from '../custom hooks/useLogin'
 import { User } from '../contexts/Auth'
+import Error from '../components/Error'
 
 
 const profile = () => {
 
     const{setLogin} = useContext(User);
     let login = localStorage.getItem("gen-z") || '';
+    const[clean,setClean] = useState(false);
+
+    const[message,setMessage]=useState('');
+    const[errors,setErrors] = useState("-150%");
+    const[errorstate,setErrorstate] = useState("#00C24E");
+
 
     useLogin(setLogin)
 
@@ -27,7 +34,7 @@ const profile = () => {
         <>
             <Header/>
             <div className='nav-container'>
-                <Navogations/>
+                <Navogations clean={setClean}/>
                 <div className='changing-sections'>
                     <Outlet/>
                 </div>
@@ -44,7 +51,8 @@ const profile = () => {
             </div>
             <Search_Bar/>
             <Ham_menu/>
-            <Delete/>
+            <Error color={errorstate} top={errors} message={message} click={setErrors}/>
+            {clean && <Delete clean={setClean} errors={setErrors} errorstate={setErrorstate} message={setMessage}/>}
         </>
     ):<Navigate to="/"/>
 }

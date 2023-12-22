@@ -5,7 +5,7 @@ import  {User} from '../contexts/Auth'
 
 
 
-const Navogations = () => {
+const Navogations = ({clean}) => {
 
     const[drop,setDrop] = useState(false);
     const{login,setLogin,setDetails,details} = useContext(User);
@@ -25,9 +25,9 @@ const Navogations = () => {
                     <NavLink to='email'className='nav-special' >Email Notifications</NavLink>
                     <NavLink to='subscriptions' className='nav-special'>Subscriptions</NavLink>
                     <NavLink  className='nav-special' onClick={logOut}>Log out</NavLink>
-                    <NavLink  className='nav-special hide-delete'>Delete Account</NavLink>
+                    <NavLink  className='nav-special hide-delete' onClick={()=>clean(true)} >Delete Account</NavLink>
                 </div>
-                <NavLink className='delete'>
+                <NavLink className='delete' onClick={()=>{clean(true)}}>
                     Delete account
                 </NavLink>
             </div>

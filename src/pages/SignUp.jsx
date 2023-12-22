@@ -49,7 +49,7 @@ const SignUp = () => {
                 term
             }).then(response=>{
                 setColor("green")
-                setMessage(response.data.message);
+                setMessage("Account was created successfully. Check your email to verify your account!");
                 setWarning(true);
                 setLoading(false)
                 setName('')

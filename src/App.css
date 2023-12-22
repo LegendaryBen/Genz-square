@@ -4013,7 +4013,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: auto;
-  display: none;
+  display: flex;
 }
 .delete-pop .delete-div {
   width: 700px;
