@@ -26,7 +26,8 @@ import Fectch_error from '../components/Fectch_error'
 
 const Magazine = () => {
 
-    const{login,setLogin} = useContext(User);
+    const{setLogin} = useContext(User);
+    let login = localStorage.getItem('gen-z') || '';
 
     const{id} = useParams();
     const dispatch = useDispatch();
@@ -137,8 +138,8 @@ const Magazine = () => {
                 <Header/>
                 <Category margin="margin"/>
                 <Read_Magazine data={usedata[0]}/>
-                {!login && <Read_content_container data={usedata[0]} data2={data} skip={skip} type={type}/>}
-                {login && <Show_full_story text='Subscribe' to='/' skip={skip} data={data} current={usedata[0]} type={type}/>}
+                {login == '' && <Read_content_container data={usedata[0]} data2={data} skip={skip} type={type}/>}
+                {login !== '' && <Show_full_story text='Subscribe' to='/' skip={skip} data={data} current={usedata[0]} type={type}/>}
                 <Footer click={news} change={setLetter} value={letter}/>
                 <Search_Bar/>
                 <Ham_menu/>

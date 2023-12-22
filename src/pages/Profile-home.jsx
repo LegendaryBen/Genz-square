@@ -1,4 +1,4 @@
-import {useState,useContext} from 'react'
+import {useState,useContext,useLayoutEffect} from 'react'
 import Profile_headers from '../components/Profile-headers'
 import Profile_img from '../components/Profile-img'
 import Profile_inputs from '../components/Profile-inputs'
@@ -20,7 +20,7 @@ const Profile_password = () => {
     const[color,setColor] = useState("red");
     const[message,setMessage]= useState('');
     const[top,setTop] = useState("-150%");
-    // const[image,setImage]= useState(null);
+    const[image,setImage]= useState(null);
     const[upload,setUpload] = useState(null);
     const[loading,setLoading] = useState(false);
 
@@ -55,7 +55,7 @@ const Profile_password = () => {
             setLogin(false);
         }else{
             
-            let id = jwtDecode(token.refresh).user_id
+            let id = jwtDecode(token.refresh).id
             
             if(upload == null){
                 setColor("red");
@@ -86,13 +86,38 @@ const Profile_password = () => {
                       })
                         .then(response => response.json())
                         .then(data => {
-                          console.log('Profile picture updated successfully:', data);
+                          setImage(data.profile_pic)
                           setLoading(false);
+                          setTop("0%");
+                          setMessage("Profile picture was updated successfully!")
+                          setColor("#00C24E");
+
+                          setTimeout(() => {
+                            
+                            setTop("-150%");
+                            setMessage("")
+                            setColor("red");
+  
+
+                          }, 2000);
                           
                         })
                         .catch(error => {
-                          console.error('Error updating profile picture:', error);
                           setLoading(false);
+
+                            setTop("0%");
+                            setMessage("Network error!")
+                            setColor("red");
+
+                            setTimeout(() => {
+                                
+                                setTop("-150%");
+                                setMessage("")
+                                setColor("red");
+
+                            }, 4000);
+                        
+
                         });
 
             }
@@ -102,12 +127,51 @@ const Profile_password = () => {
     }
 
 
+    useLayoutEffect(()=>{
+
+        let token = JSON.parse(localStorage.getItem("gen-z"))||'';
+
+        if(token == ''){
+            window.location.reload();
+        }else{
+
+            let id = jwtDecode(token.refresh).id
+
+            axios.get(`https://gen-zsquare.com/api/userprofile/update/${id}`).then((res)=>{
+
+                if(res.data.profile_pic !== undefined){
+                    setImage(res.data.profile_pic);
+                }
+
+            }).catch((err)=>{
+
+                setTop("0%");
+                setMessage("Network error!")
+                setColor("red");
+
+                setTimeout(() => {
+                                
+                    setTop("-150%");
+                    setMessage("")
+                    setColor("red");
+
+                }, 4000);
+
+
+
+            })
+
+        }
+
+    },[])
+
+
 
 
     return (
         <>
             <Profile_headers span1='Profile' span2='Manage profile settings for your account'/>
-            <Profile_img image={details.image} change={selectImage}/>
+            <Profile_img image={image} change={selectImage}/>
             <Save_changes/>
             <Submit_btn text="Save Changes" click={updateImage}/>
             {loading && <Loader/>}

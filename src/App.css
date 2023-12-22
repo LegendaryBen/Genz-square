@@ -68,6 +68,10 @@ body {
   line-height: 29px;
   transform: translateX(50px);
 }
+.Header span a {
+  text-decoration: none;
+  color: black;
+}
 @media only screen and (max-width: 1023px) {
   .Header span {
     font-size: 21px;
@@ -162,6 +166,10 @@ body {
   .Header .subscribe2 .sub-children {
     margin-left: 13px;
   }
+}
+.Header .subscribe2 img {
+  border-radius: 50%;
+  object-fit: cover;
 }
 .Header .subscribe2 a {
   position: relative;
