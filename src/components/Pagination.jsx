@@ -1,57 +1,45 @@
 import React from 'react'
 
-const Pagination = (props) => {
+const Pagination = ({total,perpage, update, trace}) => {
+
+    const pages = [];
+
+    let end =  Math.ceil(total.length/perpage);
+
+    for(let i = 1;i <= end ;i++){
+        pages.push(i);
+    }
+
+
+    const prev = ()=>{
+        if(trace > 1){
+            update(trace - 1);
+        }
+    }
+
+    const next = ()=>{
+        if(trace < end ){
+            update(trace + 1);
+        }
+    }
+
+
     return (
         <div className='pagination'>
-            <div className="previous">
+            <div className="previous" onClick={prev}>
                 prevoius
             </div>
             <div className="numbers">
-                <div className="previous colored">
-                    1
-                </div>
-                <div className="previous colored">
-                    2
-                </div>
-                <div className="previous colored">
-                    3
-                </div>
-                <div className="previous colored">
-                    4
-                </div>
-                <div className="previous colored">
-                    5
-                </div>
-                <div className="previous colored">
-                    6
-                </div>
-                <div className="previous colored">
-                    7
-                </div>
-                <div className="previous colored">
-                    8
-                </div>
-                <div className="previous colored">
-                    9
-                </div>
-                <div className="previous colored">
-                    10
-                </div>
-                <div className="previous colored">
-                    7
-                </div>
-                <div className="previous colored">
-                    8
-                </div>
-                <div className="previous colored">
-                    9
-                </div>
-                <div className="previous colored">
-                    10
-                </div>
                 
+                {
+                    pages.map((item,i)=>{
+                        return (
+                            <div className="previous colored" key={i} onClick={()=>{update(item)}}>{item}</div>
+                        )
+                    })
+                }
             </div>
-            <div className="previous">
+            <div className="previous" onClick={next}>
                 next
             </div>
         </div>

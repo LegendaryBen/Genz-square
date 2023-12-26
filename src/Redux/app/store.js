@@ -4,6 +4,7 @@ import sliderSlice from "../features/slider/sliderSlice";
 import topicStorySlice from "../features/topicStory/topicStorySlice";
 import fromMagazineSlice from "../features/fromMagazine/fromMagazineSlice";
 import trendingSlice from "../features/trending/trendingSlice";
+import searchSlice from "../features/search/searchSlice";
 
 
 const store = configureStore({
@@ -13,6 +14,7 @@ const store = configureStore({
         topicstory:topicStorySlice,
         fromMagazine:fromMagazineSlice,
         trending:trendingSlice,
+        search:searchSlice
     }
 })
 

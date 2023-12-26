@@ -3487,7 +3487,7 @@ body{
 
     .numbers{
         @include flex;@include align(center);width:400px;margin-right:10px;
-        flex-wrap:wrap;margin-bottom:10px;
+        flex-wrap:wrap;margin-bottom:10px;justify-content: center;
 
         @include maxScreen($tablet){
             width:90%;margin-bottom:7px;

@@ -2,22 +2,21 @@ import React from 'react'
 import gen from '../images/gen-z.svg'
 import { Link } from 'react-router-dom'
 
-const Search_cards = (props) => {
+const Search_cards = ({info}) => {
     return (
-        <Link className='search-cards'>
+        <Link className='search-cards' to={`/trending/${info.id}`}>
             <div className="search-card-topic">
-                Magazine
+                {info.category}
             </div>
             <div className="search-card-hint">
-                Why is inflation still so bad? Extreme-low unemployment rates in these states are
-                 a major factor
+              {info.title > 96 ? info.title.slice(0,93)+"...":info.title}
             </div>
             <div className="search-card-company">
                 <img src={gen} alt="" />
                 <span>GEN-Z SQUARE Magazine</span>
             </div>
             <div className="search-card-date">
-                July 4, 2023
+                {info.date_added}
             </div>
         </Link>
     )
