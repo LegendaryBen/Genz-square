@@ -137,7 +137,9 @@ const Profile_password = () => {
 
             let id = jwtDecode(token.refresh).id
 
-            axios.get(`https://gen-zsquare.com/api/userprofile/update/${id}`).then((res)=>{
+            axios.get(`https://gen-zsquare.com/api/userprofile/update/${id}`,{'headers': {
+                'Authorization': `Bearer ${token.access}`,
+              }}).then((res)=>{
 
                 if(res.data.profile_pic !== undefined){
                     setImage(res.data.profile_pic);
