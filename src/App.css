@@ -1282,6 +1282,7 @@ body {
   font-weight: 600;
   line-height: 20px;
   color: black;
+  word-break: break-all;
 }
 .News-tip2 .box-special2 .tiny img {
   margin-right: 10px;
@@ -1296,6 +1297,7 @@ body {
   font-weight: 400;
   line-height: 17px;
   color: grey;
+  word-break: break-all;
 }
 .News-tip2 .box-special2 .readmore {
   text-decoration: none;
@@ -1311,6 +1313,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 22px;
+  word-break: break-all;
 }
 @media only screen and (max-width: 1023px) {
   .News-tip2 .box-special2 .readmore {
@@ -1400,6 +1403,7 @@ body {
   font-weight: 500;
   line-height: 17px;
   margin-bottom: 10px;
+  word-break: break-all;
 }
 .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-msg {
   color: black;
@@ -1408,6 +1412,7 @@ body {
   font-weight: 600;
   line-height: 23px;
   margin-bottom: 10px;
+  word-break: break-all;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1350px) {
   .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-msg {
@@ -1432,6 +1437,7 @@ body {
   font-weight: 600;
   line-height: 20px;
   color: black;
+  word-break: break-all;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1350px) {
   .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-id span {
@@ -1444,6 +1450,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 13px;
+  word-break: break-all;
 }
 
 .Footer {

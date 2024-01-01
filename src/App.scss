@@ -892,19 +892,20 @@ body{
         }
         .tiny{
             @include flex;@include align(center);@include clash;font-size: 16px;font-weight: 600;line-height: 20px;
-            color:$black;
+            color:$black;word-break: break-all;
             img{
                 margin-right:10px;height:24px;width:24px;object-fit:cover;
             }
         }
         .box-special1-date{
             margin-top:10px;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
-            color:$grey;
+            color:$grey;word-break: break-all;
         }
         .readmore{
             text-decoration:none;background-color:$green;color:$white-btn;width: 228px;height:54px;
             @include flex;@include justify(center);@include align(center);margin-top:15px;
             @include archivo;font-size: 20px;font-weight: 600;line-height: 22px;
+            word-break: break-all;
 
             @include maxScreen($tablet){
                 width:200px;font-size:18px;
@@ -966,12 +967,12 @@ body{
 
                 .snippets-topic{
                     color:$red-btn;@include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
-                    margin-bottom:10px;
+                    margin-bottom:10px;word-break: break-all;
 
                 }
                 .snippet-msg{
                     color:$black;@include clash;font-size:20px;font-weight: 600;line-height: 23px;
-                    margin-bottom:10px;
+                    margin-bottom:10px;word-break: break-all;
 
                     @include minMaxScreen($laptop-min,$laptop-max){
                         font-size:16px;line-height:18px;
@@ -988,6 +989,7 @@ body{
 
                     span{
                         @include clash;font-size:16px;font-weight: 600;line-height: 20px;color:$black;
+                        word-break: break-all;
 
                         @include minMaxScreen($laptop-min,$laptop-max){
                             font-size:13px;
@@ -999,6 +1001,7 @@ body{
 
                 .snippet-date{
                     color:$grey2;@include archivo;font-size: 12px;font-weight: 400;line-height: 13px;
+                    word-break: break-all;
                 }
             }
         }
