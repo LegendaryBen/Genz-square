@@ -17,7 +17,7 @@ const Read_Magazine = ({data}) => {
                 {data.title}
             </div>
             <div className="Read-author">
-                {data.author}
+                {data.storyBy}
             </div>
             <div className="Read-date">
                 {data.date_added}
@@ -27,7 +27,7 @@ const Read_Magazine = ({data}) => {
             </div>
             <div className="Read-socials">
                 <div className="Image-by">
-                    Image by GETTY IMAGES
+                    Image by {data.imageSource.length > 13 ? data.imageSource.slice(0,11)+"...":data.imageSource}
                 </div>
                 <div className="Read-socials-icons">
                     <Link>

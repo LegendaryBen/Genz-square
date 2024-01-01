@@ -6,7 +6,12 @@ import { Link } from 'react-router-dom'
 
 const More_stories_card = ({data,type}) => {
     return (
-        <Link className='more-stories-card' to={`/${type}/${data.id}`}>
+        <Link className='more-stories-card' to={`/${type}/${data.id}`} onClick={()=>{
+            window.scrollTo({
+                top:0,
+                behavior: 'smooth'
+            });
+        }}>
             <Arrow image={data.image} />
             <div className="more-stories-content">
                 <div className="content-header">

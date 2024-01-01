@@ -20,7 +20,7 @@ const Slide = ({data}) => {
                         {data.intro.length > 167 ? data.intro.slice(0,155)+"...":data.intro}
                     </div>
                     <div className='text-writer'>
-                        {data.author}
+                        {data.storyBy}
                     </div>
                     <div className='text-date'>
                         {data.date_added}

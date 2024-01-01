@@ -77,7 +77,7 @@ const Stories_button_container = () => {
         <div className='Stories-button-container'>
              {
                 opt.map((item)=>{
-                    return <Story_buttons key={item.id} text={item.cat} change={changeStory} story={item.id}/>
+                    return <Story_buttons key={item.id} text={item.cat} change={changeStory} story={item.cat}/>
                 })
             }
         </div>

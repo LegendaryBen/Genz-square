@@ -22,7 +22,7 @@ const Other_magazine_stories = ({cls,data,skip,type}) => {
         let count = 0;
 
 
-        while(count < 5 && skipdata.length !== 0){
+        while(count < 3 && skipdata.length !== 0){
 
             let num = Math.floor(Math.random()*skipdata.length)
 

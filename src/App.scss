@@ -288,13 +288,13 @@ body{
         }
     }
     .box-special{
-        height:380px;width:100%;
+        height:380px;width:100%;flex-basis:50%;
         img{
             width:100%;height:100%;object-fit:cover;
         }
 
         @include maxScreen($tablet){
-            height:350px;
+            height:350px;flex-basis: auto;
         }
 
         @include maxScreen($mobile1){
@@ -826,7 +826,11 @@ body{
         height:380px;flex-basis:46%;width:100%;
 
         @include maxScreen($tablet){
-            flex-basis:100%;width:100%;
+            flex-basis:100%;width:100%;flex-basis:auto;
+        }
+
+        @include maxScreen($mobile1){
+            height:250px;
         }
 
         img{
@@ -838,7 +842,11 @@ body{
         flex-basis:54%;height:100%;padding-left:30px;
 
         @include maxScreen($tablet){
-            flex-basis:100%;padding-left:0px;
+            flex-basis:auto;padding-left:0px;
+        }
+
+        @include maxScreen($tablet){
+            flex-basis:auto;padding-left:0px;
         }
 
         .box-text2{
@@ -1485,7 +1493,12 @@ body{
             width:100%;min-height:480px;margin-bottom:30px;background-color:$white2;text-decoration:none;
 
             img{
-                width:100%;height:40%;object-fit:cover;
+                width:100%;height:250px;object-fit:cover;
+
+                @include maxScreen($tablet){
+                    height:250px;
+                }
+
             }
 
             .more-stories-content{
@@ -2220,7 +2233,11 @@ body{
             width:100%;min-height:480px;margin-bottom:30px;background-color:$white2;text-decoration:none;
 
             img{
-                width:100%;height:40%;object-fit:cover;
+                width:100%;height:250px;object-fit:cover;
+
+                @include maxScreen($tablet){
+                    height:250px;
+                }
             }
 
             .more-stories-content{

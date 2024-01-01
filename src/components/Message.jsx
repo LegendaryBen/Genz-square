@@ -22,7 +22,7 @@ const Message = ({data}) => {
                 {data.intro.length > 130 ? data.intro.slice(0,130)+'...' : data.intro}
             </div>
             <div className='news-writer'>
-                {data.author}
+                {data.storyBy}
             </div>
             <div className='news-date'>
                 {finaldate}
