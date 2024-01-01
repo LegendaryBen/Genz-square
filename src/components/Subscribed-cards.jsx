@@ -7,13 +7,13 @@ import dot from '../images/dot.svg'
 import time from '../images/time.svg'
 import {Ham} from '../contexts/Hambar'
 
-const Subscribed_cards = ({image ,paid}) => {
+const Subscribed_cards = ({image ,paid,show}) => {
 
     const{slideIn} = useContext(Ham);
 
 
     return (
-        <Link className='subscribed-cards' to='/' onClick={slideIn}>
+        <Link className='subscribed-cards'  onClick={show}>
             <div className='subscribed-cards-image'>
                 <Arrow image={image}/>
             </div>

@@ -1,4 +1,4 @@
-import {useContext,useState} from 'react'
+import {useContext,useState,useLayoutEffect} from 'react'
 import Header from '../components/header'
 import Category from '../components/categories'
 import New_magazine from '../components/New-magazine'
@@ -16,6 +16,8 @@ import { Navigate } from 'react-router-dom'
 import Error from '../components/Error'
 import Loader from '../components/Loader'
 import axios from 'axios'
+import Viewer from '../components/Viewer'
+
 
 
 
@@ -31,6 +33,8 @@ const Users = () => {
     const[letter,setLetter]= useState('');
     const[load,setLoad]=useState(false);
     const[message,setMessage]=useState('');
+    const[view,setView]=useState(false);
+
 
 
     function news(e){
@@ -86,7 +90,9 @@ const Users = () => {
     }
 
 
-
+    const show = ()=>{
+        setView(true)
+    }
 
 
     useResetSlide()
@@ -101,11 +107,12 @@ const Users = () => {
             <New_magazine back="swap"/>
             <Latest/>
             <User_subscribed_magazines/>
-            <Owned_magazines/>
+            <Owned_magazines show={show}/>
             <Footer click={news} change={setLetter} value={letter}/>
             <Search_Bar/>
             <Ham_menu/>
             <Error color={errorstate} top={errors} message={message} click={setErrors}/>
+            {view && <Viewer hide={setView}/>}
             {load&&<Loader/>}
         </>
     ):<Navigate to="/"/>
