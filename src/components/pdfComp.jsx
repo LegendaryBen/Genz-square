@@ -38,7 +38,7 @@ function PdfComp() {
             {
                 Array.apply(null,Array(numPages)).map((x,i)=>i+1).map((page,i)=>{
                     return(
-                        <Page pageNumber={page} renderTextLayer={false} renderAnnotationLayer={false} key={i} width={size}/>
+                        <Page pageNumber={page} renderTextLayer={false} renderAnnotationLayer={false} key={i} width={size} renderMode='svg'/>
                     )
                 })
             }
