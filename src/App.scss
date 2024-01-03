@@ -3275,6 +3275,7 @@ body{
     .notifications-hint{
         width:100%;height:80px;border-bottom: 1px solid $grey3;margin-bottom:40px;position:relative;
         text-decoration:none;@include flex ;@include flexDirection(column);
+        word-break: break-all;
 
         @include maxScreen($special-tablet){
             height:100px;
@@ -3282,7 +3283,7 @@ body{
 
         .notification-snippet-header{
             @include archivo;font-size: 20px;font-weight: 500;line-height: 22px;
-            margin-bottom:25px;color:$black;
+            margin-bottom:25px;color:$black;word-break:break-all;
 
             @include maxScreen($mobile1){
                 font-size:16px;line-height:17px;
@@ -3291,6 +3292,7 @@ body{
 
         .notification-snippet-body{
             @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;color:$grey;
+            word-break:break-all;
 
             @include maxScreen($mobile1){
                 font-size:12px;line-height:13px;
@@ -3598,6 +3600,79 @@ body{
 
 canvas.react-pdf__Page__canvas{
     margin-bottom:50px;
+}
+
+
+.read-notification{
+    position:fixed;width:100%;height:100vh;overflow:auto;top:0;
+    background-color:white;z-index:100;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 8px;
+    }
+    
+    
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 8px;
+    }
+    
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+
+    .read-close{
+        width:100%;height:50px;@include padding(50px);
+        @include flex;@include justify(flex-start);@include align(center);
+
+        @include maxScreen($mobile1){
+            @include padding(50px 30px 50px 30px);
+        }
+
+        span{
+            font-size:50px;
+
+            @include maxScreen($mobile1){
+                font-size:40px;
+            }
+        }
+    }
+
+
+
+    .read-topic{
+        width:100%;word-break:break-all;@include padding(20px 50px 20px 50px);
+        border-bottom:1px solid black;margin-bottom:30px;
+
+        @include archivo;font-size:25px;font-weight: 500;line-height:30px;
+        margin-bottom:25px;color:$black;
+
+        @include maxScreen($mobile1){
+            font-size:16px;line-height:25px;@include padding(20px 30px 20px 30px);
+        }
+    }
+
+
+    .read-body{
+        width:100%;word-break:break-all;@include padding(20px 50px 20px 50px);
+
+        @include archivo;font-size:18px;font-weight: 400;line-height:22px;color:$grey;
+
+        @include maxScreen($mobile1){
+            font-size:12px;line-height:17px;@include padding(20px 30px 20px 30px);
+        }
+    }
+
+
+
 }
 
 

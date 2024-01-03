@@ -6,17 +6,23 @@ import Search_Bar from '../components/Search-Bar'
 import Ham_menu from '../components/Ham-menu'
 import { User } from '../contexts/Auth'
 import useLogin from '../custom hooks/useLogin'
-import { useContext } from 'react'
+import { useContext,useState } from 'react'
+import ReadNotification from '../components/ReadNotification'
 
 
 
 const Notifications = (props) => {
 
     const{setLogin} = useContext(User);
+    const[show,setShow] = useState(false);
     let login = localStorage.getItem("gen-z") || '';
 
 
     useLogin(setLogin);
+
+    const pop = ()=>{
+        setShow(true);
+    }
 
 
     return login !== '' ?(
@@ -25,16 +31,16 @@ const Notifications = (props) => {
             <Ham_menu/>
             <Search_Bar/>
             <div className="notification-container">
-                <div className="delete-all">
+                {/* <div className="delete-all">
                     <div>
                         Mark All As Read
                     </div>
                     <div>
                         Delete All
                     </div>
-                </div>
+                </div> */}
 
-                <Link className="notifications-hint">
+                <Link className="notifications-hint" onClick={pop}>
                     <div className="notification-snippet-header">
                         Subscription
                     </div>
@@ -43,7 +49,7 @@ const Notifications = (props) => {
                     </div>
                 </Link>
 
-                <Link className="notifications-hint green-hint">
+                <Link className="notifications-hint green-hint"  onClick={pop}>
                     <div className="notification-snippet-header">
                         Subscription
                     </div>
@@ -55,6 +61,7 @@ const Notifications = (props) => {
 
                 
             </div>
+            {show && <ReadNotification hide={setShow}/>}
         </>
     ): <Navigate to='/'/>
 }
