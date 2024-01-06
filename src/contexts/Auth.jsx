@@ -1,4 +1,4 @@
-import { createContext,useState } from "react";
+import { createContext,useState,useRef } from "react";
 
 const User = createContext();
 
@@ -9,10 +9,37 @@ const Auth = ({children}) => {
         image:null
     });
 
+    const[slideWidth,setSlideWidth] = useState(null);
+    const parent = useRef(null);
+
+    const moveSlide = (pos)=>{
+        if(slideWidth == null ){
+            return
+        }else{
+            
+            if(pos == "front"){
+
+                parent.current.scrollBy({
+                    left:slideWidth+10,
+                    behavior: 'smooth'
+                });
+
+            }else{
+
+                parent.current.scrollBy({
+                    left:-slideWidth-10,
+                    behavior: 'smooth'
+                });
+
+            }
+
+        }
+    }
+
 
     return (
         <div>
-            <User.Provider value={{login,setLogin,details,setDetails}}>
+            <User.Provider value={{login,setLogin,details,setDetails,slideWidth,setSlideWidth,parent,moveSlide}}>
                 {children}
             </User.Provider>
         </div>
