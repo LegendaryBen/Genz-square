@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 const Magazine_snippets = ({data}) => {
 
     return (
-        <Link to='/magazine'className='Magazine-snippets'>
+        <Link to={`/magazine/${data.id}`} className='Magazine-snippets'>
             <div className='Magazine-snippets-img'>
-                <Arrow image={map} cls=''/>
+                <Arrow image={data.image} cls=''/>
             </div>
             <div className="Magazine-snippets-info">
                 <div className="snippets-topic">

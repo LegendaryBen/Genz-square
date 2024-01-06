@@ -17,7 +17,7 @@ const Read_Magazine = ({data}) => {
                 {data.title}
             </div>
             <div className="Read-author">
-                {data.storyBy}
+               By  {data.storyBy}
             </div>
             <div className="Read-date">
                 {data.date_added}
