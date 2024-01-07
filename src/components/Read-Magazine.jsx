@@ -27,7 +27,7 @@ const Read_Magazine = ({data}) => {
             </div>
             <div className="Read-socials">
                 <div className="Image-by">
-                    Image by {data.imageSource.length > 13 ? data.imageSource.slice(0,11)+"...":data.imageSource}
+                    Image by {data.imageSource.length > 30 ? data.imageSource.slice(0,27)+"...":data.imageSource}
                 </div>
                 <div className="Read-socials-icons">
                     <Link>

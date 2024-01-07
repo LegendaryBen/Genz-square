@@ -80,7 +80,7 @@ body {
 }
 @media only screen and (max-width: 563px) {
   .Header span {
-    font-size: 17px;
+    font-size: 14px;
     line-height: 17px;
     transform: translateX(20px);
   }
@@ -100,7 +100,7 @@ body {
 }
 .Header .subscribe .sub-btn {
   text-decoration: none;
-  background-color: #d30000;
+  background-color: #00C24E;
   color: #FFFFFF;
   padding: 15px 30px;
   font-weight: 600;
@@ -109,7 +109,7 @@ body {
   transition: 300ms;
 }
 .Header .subscribe .sub-btn:hover {
-  background-color: darkred;
+  background-color: #00C24E;
 }
 @media only screen and (max-width: 1023px) {
   .Header .subscribe .sub-btn {
@@ -119,7 +119,7 @@ body {
 }
 @media only screen and (max-width: 563px) {
   .Header .subscribe .sub-btn {
-    font-size: 13px;
+    font-size: 10px;
     padding: 10px 10px;
   }
 }
@@ -236,7 +236,7 @@ body {
 }
 @media only screen and (max-width: 563px) {
   .categories {
-    height: 50px;
+    height: 30px;
   }
 }
 .categories .cat-container {
@@ -258,7 +258,7 @@ body {
 }
 @media only screen and (max-width: 563px) {
   .categories .cat-container {
-    min-width: 900px;
+    min-width: 600px;
   }
 }
 .categories .cat-options {
@@ -269,11 +269,19 @@ body {
   font-weight: 200;
   font-size: 18px;
   line-height: 29px;
+  font-weight: 500;
 }
 .categories .cat-options:hover {
   font-weight: 600;
   font-size: 24px;
   text-decoration: underline;
+}
+@media only screen and (max-width: 563px) {
+  .categories .cat-options {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+  }
 }
 
 .News-container {
@@ -337,6 +345,13 @@ body {
     margin: 7px 0px;
   }
 }
+@media only screen and (max-width: 563px) {
+  .News-tip .box .box-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+}
 .News-tip .box .box-header {
   width: 100%;
   color: black;
@@ -378,7 +393,7 @@ body {
 @media only screen and (max-width: 563px) {
   .News-tip .box .box-hint {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 15px;
   }
 }
 .News-tip .box .news-writer {
@@ -444,7 +459,7 @@ body {
 
 .News-slides {
   width: 100%;
-  height: 280px;
+  height: auto;
   display: flex;
   flex-direction: row;
   margin-top: 60px;
@@ -453,7 +468,7 @@ body {
 }
 @media only screen and (max-width: 1023px) {
   .News-slides {
-    height: 540px;
+    height: auto;
     flex-basis: 50%;
     margin-top: 10px;
     overflow: auto;
@@ -461,7 +476,6 @@ body {
 }
 @media only screen and (max-width: 563px) {
   .News-slides {
-    height: 520px;
     margin-top: 40px;
   }
 }
@@ -473,7 +487,7 @@ body {
 
 .Slides {
   min-width: 650px;
-  height: 100%;
+  height: auto;
   margin-right: 15px;
 }
 @media only screen and (max-width: 1023px) {
@@ -484,9 +498,9 @@ body {
 .Slides a {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   max-width: 650px;
-  height: 100%;
+  height: auto;
   text-decoration: none;
   background-color: #FAFAFA;
   transition: 300ms;
@@ -506,16 +520,28 @@ body {
 .Slides .space {
   padding-left: 15px;
 }
+.Slides .img-slide {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  padding: 0px 10px 0px 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .Slides .img-slide {
+    width: 100%;
+    height: 200px;
+    padding: 0px 0px 0px 0px;
+  }
+}
 .Slides .slide-section {
   width: 50%;
   height: 100%;
   padding: 0px 10px 0px 0px;
-  object-fit: cover;
 }
 @media only screen and (max-width: 1023px) {
   .Slides .slide-section {
     width: 100%;
-    height: 50%;
+    height: auto;
     padding: 0px 0px 0px 0px;
   }
 }
@@ -523,6 +549,7 @@ body {
   color: #d30000;
   margin: 10px 0px;
   padding: 0px;
+  word-break: break-all;
 }
 @media only screen and (max-width: 1023px) {
   .Slides .slide-section .text {
@@ -544,7 +571,7 @@ body {
   .Slides .slide-section .text-head {
     padding: 0px 10px;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 19px;
   }
 }
 .Slides .slide-section .text-hint {
@@ -555,11 +582,13 @@ body {
   color: grey;
   margin: 10px 0px;
   padding: 0px;
+  word-break: break-all;
 }
 @media only screen and (max-width: 1023px) {
   .Slides .slide-section .text-hint {
     padding: 0px 10px;
     font-size: 13px;
+    line-height: 13px;
   }
 }
 .Slides .slide-section .text-writer {
@@ -569,11 +598,13 @@ body {
   line-height: 13px;
   color: #707070;
   padding: 0px;
+  word-break: break-all;
 }
 @media only screen and (max-width: 1023px) {
   .Slides .slide-section .text-writer {
     padding: 0px 10px;
     font-size: 10px;
+    line-height: 10px;
   }
 }
 .Slides .slide-section .text-date {
@@ -590,9 +621,6 @@ body {
     padding: 0px 10px;
     font-size: 10px;
   }
-}
-.Slides img {
-  object-fit: cover;
 }
 
 .arrow-parent-container {
@@ -1231,6 +1259,13 @@ body {
     margin: 7px 0px;
   }
 }
+@media only screen and (max-width: 563px) {
+  .News-tip2 .box-special2 .box-text2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+}
 .News-tip2 .box-special2 .box-header2 {
   width: 100%;
   color: black;
@@ -1254,8 +1289,8 @@ body {
 }
 @media only screen and (max-width: 563px) {
   .News-tip2 .box-special2 .box-header2 {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 .News-tip2 .box-special2 .box-hint2 {
@@ -1270,8 +1305,8 @@ body {
 }
 @media only screen and (max-width: 563px) {
   .News-tip2 .box-special2 .box-hint2 {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 15px;
   }
 }
 .News-tip2 .box-special2 .tiny {
@@ -1283,6 +1318,12 @@ body {
   line-height: 20px;
   color: black;
   word-break: break-all;
+}
+@media only screen and (max-width: 563px) {
+  .News-tip2 .box-special2 .tiny {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .News-tip2 .box-special2 .tiny img {
   margin-right: 10px;
@@ -1298,6 +1339,12 @@ body {
   line-height: 17px;
   color: grey;
   word-break: break-all;
+}
+@media only screen and (max-width: 563px) {
+  .News-tip2 .box-special2 .box-special1-date {
+    font-size: 14px;
+    line-height: 15px;
+  }
 }
 .News-tip2 .box-special2 .readmore {
   text-decoration: none;
@@ -1324,14 +1371,14 @@ body {
 @media only screen and (max-width: 563px) {
   .News-tip2 .box-special2 .readmore {
     width: 150px;
-    font-size: 15px;
+    font-size: 14px;
     height: 34px;
   }
 }
 
 .Magazine-snippets-container {
   width: 100%;
-  height: 420px;
+  height: auto;
   margin-top: 60px;
   padding: 0px 60px;
   display: flex;
@@ -1351,9 +1398,9 @@ body {
   }
 }
 .Magazine-snippets-container .snippets-container {
-  height: 100%;
+  height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
   width: 100%;
@@ -1367,25 +1414,26 @@ body {
   }
 }
 .Magazine-snippets-container .snippets-container .Magazine-snippets {
-  height: 100%;
+  height: auto;
   flex-basis: auto;
   background-color: #FAFAFA;
   text-decoration: none;
   margin-bottom: 0px;
   width: 24%;
   margin-right: 1%;
+  padding-bottom: 10px;
 }
 @media only screen and (max-width: 1023px) {
   .Magazine-snippets-container .snippets-container .Magazine-snippets {
     margin-top: 20px;
-    height: 420px;
+    height: auto;
     flex-basis: auto;
     width: 100%;
   }
 }
 .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-img {
   width: 100%;
-  height: 45%;
+  height: 200px;
 }
 .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-img img {
   width: 100%;
@@ -1405,6 +1453,12 @@ body {
   margin-bottom: 10px;
   word-break: break-all;
 }
+@media only screen and (max-width: 563px) {
+  .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippets-topic {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
 .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-msg {
   color: black;
   font-family: "Clash Display", sans-serif;
@@ -1418,6 +1472,12 @@ body {
   .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-msg {
     font-size: 16px;
     line-height: 18px;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-msg {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-id {
@@ -1444,6 +1504,12 @@ body {
     font-size: 13px;
   }
 }
+@media only screen and (max-width: 563px) {
+  .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-id span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
 .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-date {
   color: #707070;
   font-family: "Archivo", sans-serif;
@@ -1451,6 +1517,12 @@ body {
   font-weight: 400;
   line-height: 13px;
   word-break: break-all;
+}
+@media only screen and (max-width: 563px) {
+  .Magazine-snippets-container .snippets-container .Magazine-snippets .Magazine-snippets-info .snippet-date {
+    font-size: 10px;
+    line-height: 11px;
+  }
 }
 
 .Footer {
@@ -1497,6 +1569,12 @@ body {
   line-height: 25px;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 563px) {
+  .Footer .News-letter .News-letter-one .letter-topic {
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
 .Footer .News-letter .News-letter-one .letter-info {
   color: #707070;
   font-family: "Archivo", sans-serif;
@@ -1504,6 +1582,12 @@ body {
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 563px) {
+  .Footer .News-letter .News-letter-one .letter-info {
+    font-size: 13px;
+    line-height: 15px;
+  }
 }
 .Footer .News-letter .Subcribe-now {
   display: flex;
@@ -1546,6 +1630,12 @@ body {
   border: none;
   background-color: #FAFAFA;
 }
+@media only screen and (max-width: 563px) {
+  .Footer .News-letter .Subcribe-now .subscribe-msg input {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
 .Footer .News-letter .Subcribe-now .sub-msg {
   height: 20px;
   width: 20px;
@@ -1557,7 +1647,7 @@ body {
   padding: 14px 30px;
   transition: 300ms;
   transform: translateX(0px);
-  background-color: #d30000;
+  background-color: #00C24E;
   border: none;
   color: #FFFFFF;
   font-family: "Archivo", sans-serif;
@@ -1567,12 +1657,14 @@ body {
   width: auto;
 }
 .Footer .News-letter .Subcribe-now .submit:hover {
-  background-color: darkred;
+  background-color: #00C24E;
 }
 @media only screen and (max-width: 563px) {
   .Footer .News-letter .Subcribe-now .submit {
     width: 100%;
     transform: translateX(-5px);
+    font-size: 12px;
+    line-height: 13px;
   }
 }
 .Footer .News-letter .News-letter-two {
@@ -1597,6 +1689,12 @@ body {
   line-height: 25px;
   margin-bottom: 25px;
 }
+@media only screen and (max-width: 563px) {
+  .Footer .News-letter .News-letter-two .name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 .Footer .News-letter .News-letter-two .podcast {
   color: #707070;
   font-family: "Archivo", sans-serif;
@@ -1605,6 +1703,12 @@ body {
   font-weight: 400;
   line-height: 17px;
   margin-bottom: 15px;
+}
+@media only screen and (max-width: 563px) {
+  .Footer .News-letter .News-letter-two .podcast {
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
 .Footer .News-letter .News-letter-two .podcast1 {
   color: #707070;
@@ -1635,6 +1739,8 @@ body {
 @media only screen and (max-width: 563px) {
   .Footer .socials .copyright {
     margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 13px;
   }
 }
 .Footer .socials .main-socials {
@@ -1736,6 +1842,12 @@ body {
   height: 24px;
   object-fit: contain;
 }
+@media only screen and (max-width: 563px) {
+  .sidebar .cancle img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .sidebar .cancle .mobile-genz {
   color: black;
   font-family: "Clash Display", sans-serif;
@@ -1749,9 +1861,10 @@ body {
     display: block;
   }
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 563px) {
   .sidebar .cancle .mobile-genz {
-    display: none;
+    font-size: 12px;
+    line-height: 13px;
   }
 }
 .sidebar .cancle a {
@@ -1770,6 +1883,13 @@ body {
 @media only screen and (max-width: 1023px) {
   .sidebar .cancle a {
     display: flex;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .sidebar .cancle a {
+    font-size: 10px;
+    line-height: 10px;
+    padding: 6px 20px;
   }
 }
 .sidebar .Mobile-search-box {
@@ -1831,6 +1951,12 @@ body {
   font-weight: 600;
   line-height: 25px;
 }
+@media only screen and (max-width: 563px) {
+  .sidebar .ham-sections a {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 .sidebar .products {
   padding: 18px 20px;
   text-decoration: none;
@@ -1840,6 +1966,12 @@ body {
   font-weight: 600;
   line-height: 25px;
   margin-bottom: 0px;
+}
+@media only screen and (max-width: 563px) {
+  .sidebar .products {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 .sidebar .main-products {
   font-family: "Archivo", sans-serif;
@@ -1852,6 +1984,12 @@ body {
 .sidebar .main-products a {
   text-decoration: none;
   color: #707070;
+}
+@media only screen and (max-width: 563px) {
+  .sidebar .main-products {
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
 .sidebar .side-socials {
   padding: 20px 20px;
@@ -1868,6 +2006,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+}
+@media only screen and (max-width: 563px) {
+  .sidebar .social-msg {
+    font-size: 12px;
+    line-height: 13px;
+  }
 }
 
 .Read-magazine {

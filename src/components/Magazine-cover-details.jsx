@@ -3,6 +3,10 @@ import genz from '../images/gen-z.svg'
 import { Link } from 'react-router-dom'
 
 const Magazine_cover_details = () => {
+
+    let login = localStorage.getItem("gen-z")|| "";
+
+
     return (
         <div className='cover-details'>
             <div className='logo'>
@@ -28,7 +32,7 @@ const Magazine_cover_details = () => {
             <div className="code">
                 And so much more! Use code  <span className='code-special'>GZSQUARE70</span> 
             </div>
-            <Link to="/">Learn More</Link>
+            {login == '' ? <Link to="/sign-up">Learn More</Link> :<Link to="/plans">Subscribe</Link>}
         </div>
     )
 }
