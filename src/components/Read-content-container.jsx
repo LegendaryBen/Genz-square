@@ -8,7 +8,7 @@ const Read_content_container = ({data,data2,skip,type}) => {
     return (
         <div className='Read-content-container'>
             <div className="Hidden-content">
-                  <div className="content">
+                <div className="content">
                     {data.body.length > 12364 ? data.body.slice(0,6182)+"..." :data.body}
                 </div>
                 <div className="overlay-content"></div>
