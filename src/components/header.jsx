@@ -17,6 +17,7 @@ import axios from 'axios';
 const Header = () => {
     const{slideOut} = useContext(Ham);
     const {down} = useContext(Search);
+    const {note} = useContext(User);
     let login = localStorage.getItem("gen-z") || '';
     const[image,setImage] = useState(null);
 
@@ -72,7 +73,7 @@ const Header = () => {
                     </Link>
                     <Link className='sub-children' to='/notifications'>
                         <Arrow image={bell} cls="no-dot"/>
-                        <Arrow image={dot} cls="dot"/>
+                        {note && <Arrow image={dot} cls="dot"/>}
                     </Link>
                     <Link to='/profile' className='sub-children'>
                         <Arrow image={image == null ? user : image} cls="no-dot"/>

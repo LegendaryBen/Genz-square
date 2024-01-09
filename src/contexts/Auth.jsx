@@ -11,6 +11,7 @@ const Auth = ({children}) => {
 
     const[slideWidth,setSlideWidth] = useState(null);
     const parent = useRef(null);
+    const[note,setNote] = useState(false);
 
     const moveSlide = (pos)=>{
         if(slideWidth == null ){
@@ -39,7 +40,7 @@ const Auth = ({children}) => {
 
     return (
         <div>
-            <User.Provider value={{login,setLogin,details,setDetails,slideWidth,setSlideWidth,parent,moveSlide}}>
+            <User.Provider value={{login,setLogin,details,setDetails,slideWidth,setSlideWidth,parent,moveSlide,note,setNote}}>
                 {children}
             </User.Provider>
         </div>
