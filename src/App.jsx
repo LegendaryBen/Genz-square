@@ -10,8 +10,9 @@ const Login = lazy(()=> import("./pages/Login"));
 const SignUp = lazy(()=> import("./pages/SignUp"));
 const Trending = lazy(()=> import("./pages/Trending"));
 const Users = lazy(()=> import("./pages/Users"));
-const Profile = lazy(()=>import("./pages/Profile"))
-const Forgot = lazy(()=>import("./pages/Forgot_Password"))
+const Profile = lazy(()=>import("./pages/Profile"));
+const Forgot = lazy(()=>import("./pages/Forgot_Password"));
+const Not_Found = lazy(()=>import("./pages/Not_Found"));
 import Profile_home from './pages/Profile-home'
 const Profile_password = lazy(()=>import('./pages/Profile-password'))
 const Profile_email = lazy(()=>import('./pages/Profile-email'))
@@ -75,6 +76,11 @@ function App() {
              <Route path='/forgot-password' element={
               <Suspense fallback="loading...">
                 <Forgot/>
+              </Suspense>
+            }/>
+             <Route path='*' element={
+              <Suspense fallback="loading...">
+                <Not_Found/>
               </Suspense>
             }/>
             <Route path='/profile' element={

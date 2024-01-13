@@ -3971,6 +3971,38 @@ canvas.react-pdf__Page__canvas{
 }
 
 
+.not-found{
+
+    width:100%;height:100vh;overflow: auto;@include flex;@include align(center);
+    @include justify(center);
+
+
+    .p{
+        width:500px;min-height:300px;
+
+
+        .main-p{
+            font-size:6em;font-weight:bold;color:#343a40;
+            width:100%;text-align: center;@include archivo;margin-bottom:10px;
+        }
+
+        .page-n{
+            font-size:1.5em;color:#495057;width:100%;text-align:center;
+            @include archivo;
+        }
+
+        .back-home{
+            width:100%;margin-top:20px;text-align: center;
+            @include archivo;
+
+            a{
+                text-decoration:none;color:#007bff;font-weight:bold;font-size:1.2em;
+            }
+        }
+    }
+}
+
+
 
 
 @keyframes load {
