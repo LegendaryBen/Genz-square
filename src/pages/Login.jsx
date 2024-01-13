@@ -108,6 +108,7 @@ const Login = () => {
                    <Inputs label="Password" placeholder="Enter your password" val={password} change={setPassword}/>
                    <Submit text='Log In' change={submitForm}/>
                    <Sign_in text='Sign Up' suggest='Don’t have an account?' to='/sign-up'/>
+                   <Sign_in text='Recover account' suggest='Forgot Password?' to='/forgot-password'/>
                 </div>
             </div>
             <div className="userStyle">
